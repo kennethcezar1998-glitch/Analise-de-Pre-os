@@ -1,0 +1,432 @@
+2026-08-12 13:58:32,203 - INFO - ============================================================
+2026-08-12 13:58:32,205 - INFO - INICIANDO ROBÔ DE GERENCIAMENTO DE COLEÇÕES - SPORTBAY
+2026-08-12 13:58:32,205 - INFO - ============================================================
+2026-08-12 13:58:32,206 - INFO - Lendo planilha: c:\Users\Protork\Desktop\Analise de preços site\Atualização de coleções\ATUALIZAÇÃO DE COLEÇÕES.xlsx
+2026-08-12 13:58:32,731 - INFO - Coleção alvo: 'Oferta do Dia'
+2026-08-12 13:58:32,731 - INFO - Total de shortHashes a adicionar: 16
+2026-08-12 13:58:38,631 - INFO - Acessando página de login...
+2026-08-12 13:58:41,769 - INFO - ✓ Login realizado com sucesso
+2026-08-12 13:58:41,769 - INFO - Navegando direto para: https://www.marketplace.sportbay.com.br/dashboard/categories
+2026-08-12 13:58:43,121 - INFO - ✓ Página de lista de categorias/coleções carregada
+2026-08-12 13:58:43,127 - INFO - Procurando coleção: 'Oferta do Dia'
+2026-08-12 13:58:47,617 - INFO - ✓ Coleção aberta para edição
+2026-08-12 13:58:47,618 - INFO - Removendo produtos atuais da coleção...
+2026-08-12 13:58:49,160 - INFO -   ➖ Produto removido (total até agora: 1)
+2026-08-12 13:58:50,086 - INFO -   ➖ Produto removido (total até agora: 2)
+2026-08-12 13:58:50,952 - INFO -   ➖ Produto removido (total até agora: 3)
+2026-08-12 13:58:51,706 - INFO -   ➖ Produto removido (total até agora: 4)
+2026-08-12 13:58:52,606 - INFO -   ➖ Produto removido (total até agora: 5)
+2026-08-12 13:58:53,685 - INFO -   ➖ Produto removido (total até agora: 6)
+2026-08-12 13:58:54,507 - INFO -   ➖ Produto removido (total até agora: 7)
+2026-08-12 13:58:55,117 - INFO -   ➖ Produto removido (total até agora: 8)
+2026-08-12 13:58:55,748 - INFO -   ➖ Produto removido (total até agora: 9)
+2026-08-12 13:58:56,700 - INFO -   ➖ Produto removido (total até agora: 10)
+2026-08-12 13:58:57,726 - INFO -   ➖ Produto removido (total até agora: 11)
+2026-08-12 13:59:08,924 - INFO - ✓ Remoção concluída — 11 produto(s) removido(s)
+2026-08-12 13:59:08,924 - INFO - Removendo filtro de Merchant 'Sportbay'...
+2026-08-12 13:59:09,106 - INFO - ✓ Filtro de Merchant removido e confirmado (tag não existe mais no DOM)
+2026-08-12 13:59:09,106 - INFO - Adicionando 16 produto(s) por shortHash...
+2026-08-12 13:59:09,129 - INFO -   Total de produtos na coleção antes de adicionar: 0
+2026-08-12 13:59:12,033 - INFO -   ➕ Produto adicionado: P-4B5YTT09OV (total 0 → 1)
+2026-08-12 13:59:14,966 - INFO -   ➕ Produto adicionado: P-EP27HR8IMQ (total 1 → 2)
+2026-08-12 13:59:17,917 - WARNING -   ⚠ shortHash 'P-5OHAUAQSN4': código '126178' não bate com o SKU da linha ('', Merchant: '') — pulando para não arriscar adicionar o produto errado
+2026-08-12 13:59:22,479 - INFO -   ➕ Produto adicionado: P-F4AXIG0GOS (total 2 → 3)
+2026-08-12 13:59:34,025 - WARNING -   ⚠ shortHash 'P-28JK3COFFP': tabela não convergiu para 1 resultado novo (contagem no timeout: 10) — pesquisando novamente...
+2026-08-12 13:59:36,656 - INFO -   ➕ Produto adicionado: P-28JK3COFFP (total 3 → 4)
+2026-08-12 13:59:39,500 - INFO -   ➕ Produto adicionado: P-3BFQSZZ0CL (total 4 → 5)
+2026-08-12 13:59:42,373 - INFO -   ➕ Produto adicionado: P-A7KRR79S2P (total 5 → 6)
+2026-08-12 13:59:45,129 - INFO -   ➕ Produto adicionado: P-971MV5XKII (total 6 → 7)
+2026-08-12 13:59:48,186 - INFO -   ➕ Produto adicionado: P-VSABUEC4IZ (total 7 → 8)
+2026-08-12 13:59:50,873 - INFO -   ➕ Produto adicionado: P-76NGUW9GFR (total 8 → 9)
+2026-08-12 13:59:53,813 - INFO -   ➕ Produto adicionado: P-BCJ67V3E0D (total 9 → 10)
+2026-08-12 13:59:56,393 - INFO -   ➕ Produto adicionado: P-D8Y64DA4OI (total 10 → 11)
+2026-08-12 13:59:59,398 - INFO -   ➕ Produto adicionado: P-A8441BTXN2 (total 11 → 12)
+2026-08-12 14:00:02,388 - INFO -   ➕ Produto adicionado: P-25HP3G0BQ9 (total 12 → 13)
+2026-08-12 14:00:05,169 - INFO -   ➕ Produto adicionado: P-378ERPQPJF (total 13 → 14)
+2026-08-12 14:00:08,655 - INFO -   ➕ Produto adicionado: P-80LR23WGOS (total 14 → 15)
+2026-08-12 14:00:08,852 - INFO - ✓ Adição concluída — 15 adicionado(s), 0 não encontrado(s), 0 sem efeito, 1 com código divergente
+2026-08-12 14:00:08,852 - WARNING -   shortHashes com código divergente do SKU (não adicionados): ['P-5OHAUAQSN4']
+2026-08-12 14:00:08,853 - INFO - Salvando alterações...
+2026-08-12 14:00:09,054 - INFO - ✓ Alterações salvas com sucesso
+2026-08-12 14:00:09,055 - INFO - Conferindo resultado final da coleção...
+2026-08-12 14:00:15,068 - ERROR -   ✗ DIVERGÊNCIA FINAL — esperado: 16 | encontrado na coleção: 0 | diferença: 16
+2026-08-12 14:00:17,133 - INFO - ============================================================
+2026-08-12 14:00:17,133 - INFO - ✓ FLUXO CONCLUÍDO
+2026-08-12 14:00:17,133 - INFO - ============================================================
+2026-08-12 14:00:19,525 - INFO - Chrome fechado
+2026-08-12 14:00:19,526 - INFO - ============================================================
+2026-08-12 14:00:19,526 - INFO - RESUMO DE TEMPOS POR FASE (MEDIR_TEMPOS=True)
+2026-08-12 14:00:19,526 - INFO -   busca                       39.35s total |   16x | média 2.459s |  48.9%
+2026-08-12 14:00:19,526 - INFO -   remocao_item                20.81s total |   12x | média 1.734s |  25.8%
+2026-08-12 14:00:19,526 - INFO -   confirmacao_contador        14.00s total |   15x | média 0.933s |  17.4%
+2026-08-12 14:00:19,526 - INFO -   limpeza_filtro               4.56s total |   16x | média 0.285s |   5.7%
+2026-08-12 14:00:19,527 - INFO -   clique                       1.34s total |   15x | média 0.089s |   1.7%
+2026-08-12 14:00:19,527 - INFO -   validacao_sku                0.47s total |   16x | média 0.030s |   0.6%
+2026-08-12 14:00:19,527 - INFO -   TOTAL MEDIDO                80.53s
+2026-08-12 14:00:19,527 - INFO - ============================================================
+2026-08-12 14:34:48,565 - INFO - ============================================================
+2026-08-12 14:34:48,565 - INFO - INICIANDO ROBÔ DE GERENCIAMENTO DE COLEÇÕES - SPORTBAY
+2026-08-12 14:34:48,566 - INFO - ============================================================
+2026-08-12 14:34:48,566 - INFO - Lendo planilha: c:\Users\Protork\Desktop\Analise de preços site\Atualização de coleções\ATUALIZAÇÃO DE COLEÇÕES.xlsx
+2026-08-12 14:34:48,909 - INFO - Coleção alvo: 'Mais Potência'
+2026-08-12 14:34:48,910 - INFO - Total de shortHashes a adicionar: 14
+2026-08-12 14:34:49,901 - INFO - Acessando página de login...
+2026-08-12 14:34:52,972 - INFO - ✓ Login realizado com sucesso
+2026-08-12 14:34:52,973 - INFO - Navegando direto para: https://www.marketplace.sportbay.com.br/dashboard/categories
+2026-08-12 14:34:54,219 - INFO - ✓ Página de lista de categorias/coleções carregada
+2026-08-12 14:34:54,219 - INFO - Procurando coleção: 'Mais Potência'
+2026-08-12 14:34:58,502 - INFO - ✓ Coleção aberta para edição
+2026-08-12 14:34:58,502 - INFO - Removendo produtos atuais da coleção...
+2026-08-12 14:35:00,365 - INFO -   ➖ Produto removido (total até agora: 1)
+2026-08-12 14:35:01,130 - INFO -   ➖ Produto removido (total até agora: 2)
+2026-08-12 14:35:01,710 - INFO -   ➖ Produto removido (total até agora: 3)
+2026-08-12 14:35:02,363 - INFO -   ➖ Produto removido (total até agora: 4)
+2026-08-12 14:35:03,034 - INFO -   ➖ Produto removido (total até agora: 5)
+2026-08-12 14:35:03,722 - INFO -   ➖ Produto removido (total até agora: 6)
+2026-08-12 14:35:04,321 - INFO -   ➖ Produto removido (total até agora: 7)
+2026-08-12 14:35:05,192 - INFO -   ➖ Produto removido (total até agora: 8)
+2026-08-12 14:35:05,876 - INFO -   ➖ Produto removido (total até agora: 9)
+2026-08-12 14:35:06,566 - INFO -   ➖ Produto removido (total até agora: 10)
+2026-08-12 14:35:08,450 - INFO -   ➖ Produto removido (total até agora: 11)
+2026-08-12 14:35:19,654 - INFO - ✓ Remoção concluída — 11 produto(s) removido(s)
+2026-08-12 14:35:19,654 - INFO - Removendo filtro de Merchant 'Sportbay'...
+2026-08-12 14:35:19,895 - INFO - ✓ Filtro de Merchant removido e confirmado (tag não existe mais no DOM)
+2026-08-12 14:35:19,895 - INFO - Adicionando 14 produto(s) por shortHash...
+2026-08-12 14:35:19,926 - INFO -   Total de produtos na coleção antes de adicionar: 0
+2026-08-12 14:35:22,762 - INFO -   ➕ Produto adicionado: P-CLHVJCSSLT (total 0 → 1)
+2026-08-12 14:35:25,427 - INFO -   ➕ Produto adicionado: P-1SCVGM87OC (total 1 → 2)
+2026-08-12 14:35:28,422 - INFO -   ➕ Produto adicionado: P-12X4J04NQF (total 2 → 3)
+2026-08-12 14:35:31,196 - INFO -   ➕ Produto adicionado: P-DUURWXUGAN (total 3 → 4)
+2026-08-12 14:35:34,687 - INFO -   ➕ Produto adicionado: P-5NVW8J8H30 (total 4 → 5)
+2026-08-12 14:35:37,477 - INFO -   ➕ Produto adicionado: P-4HR0HK6O8G (total 5 → 6)
+2026-08-12 14:35:40,128 - INFO -   ➕ Produto adicionado: P-2FM063KBK1 (total 6 → 7)
+2026-08-12 14:35:42,759 - INFO -   ➕ Produto adicionado: P-6VABUFLVPB (total 7 → 8)
+2026-08-12 14:35:45,560 - INFO -   ➕ Produto adicionado: P-5PSBJO90X1 (total 8 → 9)
+2026-08-12 14:35:48,019 - INFO -   ➕ Produto adicionado: P-ARHX3TKMVR (total 9 → 10)
+2026-08-12 14:35:50,702 - INFO -   ➕ Produto adicionado: P-E2GND2N3PV (total 10 → 11)
+2026-08-12 14:35:53,423 - INFO -   ➕ Produto adicionado: P-EY5WACLXCZ (total 11 → 12)
+2026-08-12 14:35:56,110 - INFO -   ➕ Produto adicionado: P-C7V6A6R4R4 (total 12 → 13)
+2026-08-12 14:35:58,541 - INFO -   ➕ Produto adicionado: P-47WFMD5H1L (total 13 → 14)
+2026-08-12 14:35:58,677 - INFO - ✓ Adição concluída — 14 adicionado(s), 0 não encontrado(s), 0 sem efeito, 0 com código divergente
+2026-08-12 14:35:58,678 - INFO - Salvando alterações...
+2026-08-12 14:35:58,850 - INFO - ✓ Alterações salvas com sucesso
+2026-08-12 14:35:58,850 - INFO - Conferindo resultado final da coleção...
+2026-08-12 14:36:00,954 - INFO -   ✓ Contagem final confere: 14 produto(s) na coleção
+2026-08-12 14:36:00,954 - INFO - ============================================================
+2026-08-12 14:36:00,955 - INFO - ✓ FLUXO CONCLUÍDO
+2026-08-12 14:36:00,956 - INFO - ============================================================
+2026-08-12 14:36:03,237 - INFO - Chrome fechado
+2026-08-12 14:36:03,237 - INFO - ============================================================
+2026-08-12 14:36:03,238 - INFO - RESUMO DE TEMPOS POR FASE (MEDIR_TEMPOS=True)
+2026-08-12 14:36:03,238 - INFO -   busca                       23.98s total |   14x | média 1.713s |  40.5%
+2026-08-12 14:36:03,238 - INFO -   remocao_item                20.50s total |   12x | média 1.708s |  34.6%
+2026-08-12 14:36:03,238 - INFO -   confirmacao_contador        10.43s total |   14x | média 0.745s |  17.6%
+2026-08-12 14:36:03,239 - INFO -   limpeza_filtro               2.87s total |   14x | média 0.205s |   4.8%
+2026-08-12 14:36:03,239 - INFO -   clique                       1.35s total |   14x | média 0.097s |   2.3%
+2026-08-12 14:36:03,239 - INFO -   validacao_sku                0.12s total |   14x | média 0.008s |   0.2%
+2026-08-12 14:36:03,239 - INFO -   TOTAL MEDIDO                59.25s
+2026-08-12 14:36:03,239 - INFO - ============================================================
+2026-08-12 14:37:24,704 - INFO - ============================================================
+2026-08-12 14:37:24,704 - INFO - INICIANDO ROBÔ DE GERENCIAMENTO DE COLEÇÕES - SPORTBAY
+2026-08-12 14:37:24,705 - INFO - ============================================================
+2026-08-12 14:37:24,705 - INFO - Lendo planilha: c:\Users\Protork\Desktop\Analise de preços site\Atualização de coleções\ATUALIZAÇÃO DE COLEÇÕES.xlsx
+2026-08-12 14:37:24,984 - INFO - Coleção alvo: 'Mais Vendidos em Capacetes'
+2026-08-12 14:37:24,984 - INFO - Total de shortHashes a adicionar: 14
+2026-08-12 14:37:25,823 - INFO - Acessando página de login...
+2026-08-12 14:37:28,749 - INFO - ✓ Login realizado com sucesso
+2026-08-12 14:37:28,750 - INFO - Navegando direto para: https://www.marketplace.sportbay.com.br/dashboard/categories
+2026-08-12 14:37:30,058 - INFO - ✓ Página de lista de categorias/coleções carregada
+2026-08-12 14:37:30,059 - INFO - Procurando coleção: 'Mais Vendidos em Capacetes'
+2026-08-12 14:37:34,375 - INFO - ✓ Coleção aberta para edição
+2026-08-12 14:37:34,375 - INFO - Removendo produtos atuais da coleção...
+2026-08-12 14:37:36,391 - INFO -   ➖ Produto removido (total até agora: 1)
+2026-08-12 14:37:37,223 - INFO -   ➖ Produto removido (total até agora: 2)
+2026-08-12 14:37:38,017 - INFO -   ➖ Produto removido (total até agora: 3)
+2026-08-12 14:37:38,983 - INFO -   ➖ Produto removido (total até agora: 4)
+2026-08-12 14:37:39,912 - INFO -   ➖ Produto removido (total até agora: 5)
+2026-08-12 14:37:40,637 - INFO -   ➖ Produto removido (total até agora: 6)
+2026-08-12 14:37:41,746 - INFO -   ➖ Produto removido (total até agora: 7)
+2026-08-12 14:37:42,572 - INFO -   ➖ Produto removido (total até agora: 8)
+2026-08-12 14:37:53,709 - INFO - ✓ Remoção concluída — 8 produto(s) removido(s)
+2026-08-12 14:37:53,709 - INFO - Removendo filtro de Merchant 'Sportbay'...
+2026-08-12 14:37:53,895 - INFO - ✓ Filtro de Merchant removido e confirmado (tag não existe mais no DOM)
+2026-08-12 14:37:53,895 - INFO - Adicionando 14 produto(s) por shortHash...
+2026-08-12 14:37:53,916 - INFO -   Total de produtos na coleção antes de adicionar: 0
+2026-08-12 14:37:56,675 - INFO -   ➕ Produto adicionado: P-DB1SCFOR39 (total 0 → 1)
+2026-08-12 14:37:59,283 - INFO -   ➕ Produto adicionado: P-EVKN70J9L3 (total 1 → 2)
+2026-08-12 14:38:02,101 - INFO -   ➕ Produto adicionado: P-82FQMWLQQE (total 2 → 3)
+2026-08-12 14:38:04,920 - INFO -   ➕ Produto adicionado: P-36ICMN7CJ5 (total 3 → 4)
+2026-08-12 14:38:08,233 - INFO -   ➕ Produto adicionado: P-59BKMISOK6 (total 4 → 5)
+2026-08-12 14:38:10,922 - INFO -   ➕ Produto adicionado: P-39J97Y80G9 (total 5 → 6)
+2026-08-12 14:38:14,132 - INFO -   ➕ Produto adicionado: P-615GJSJ3UB (total 6 → 7)
+2026-08-12 14:38:16,604 - INFO -   ➕ Produto adicionado: P-9HDNHT0DJT (total 7 → 8)
+2026-08-12 14:38:19,408 - INFO -   ➕ Produto adicionado: P-79BZV6J200 (total 8 → 9)
+2026-08-12 14:38:22,024 - INFO -   ➕ Produto adicionado: P-4QV5PYUOWF (total 9 → 10)
+2026-08-12 14:38:24,909 - INFO -   ➕ Produto adicionado: P-9RZSC042BT (total 10 → 11)
+2026-08-12 14:38:27,527 - INFO -   ➕ Produto adicionado: P-T0VRPECIR2 (total 11 → 12)
+2026-08-12 14:38:30,456 - INFO -   ➕ Produto adicionado: P-EPOE1JXNPT (total 12 → 13)
+2026-08-12 14:38:32,949 - INFO -   ➕ Produto adicionado: P-2C530YHUZG (total 13 → 14)
+2026-08-12 14:38:33,088 - INFO - ✓ Adição concluída — 14 adicionado(s), 0 não encontrado(s), 0 sem efeito, 0 com código divergente
+2026-08-12 14:38:33,088 - INFO - Salvando alterações...
+2026-08-12 14:38:33,269 - INFO - ✓ Alterações salvas com sucesso
+2026-08-12 14:38:33,269 - INFO - Conferindo resultado final da coleção...
+2026-08-12 14:38:35,698 - ERROR -   ✗ DIVERGÊNCIA FINAL — esperado: 14 | encontrado na coleção: 0 | diferença: 14
+2026-08-12 14:38:37,878 - INFO - ============================================================
+2026-08-12 14:38:37,879 - INFO - ✓ FLUXO CONCLUÍDO
+2026-08-12 14:38:37,879 - INFO - ============================================================
+2026-08-12 14:38:40,274 - INFO - Chrome fechado
+2026-08-12 14:38:40,274 - INFO - ============================================================
+2026-08-12 14:38:40,274 - INFO - RESUMO DE TEMPOS POR FASE (MEDIR_TEMPOS=True)
+2026-08-12 14:38:40,275 - INFO -   busca                       23.18s total |   14x | média 1.656s |  40.0%
+2026-08-12 14:38:40,275 - INFO -   remocao_item                18.76s total |    9x | média 2.085s |  32.4%
+2026-08-12 14:38:40,275 - INFO -   confirmacao_contador        12.83s total |   14x | média 0.916s |  22.1%
+2026-08-12 14:38:40,275 - INFO -   limpeza_filtro               2.11s total |   14x | média 0.151s |   3.6%
+2026-08-12 14:38:40,275 - INFO -   clique                       0.98s total |   14x | média 0.070s |   1.7%
+2026-08-12 14:38:40,276 - INFO -   validacao_sku                0.07s total |   14x | média 0.005s |   0.1%
+2026-08-12 14:38:40,276 - INFO -   TOTAL MEDIDO                57.93s
+2026-08-12 14:38:40,276 - INFO - ============================================================
+2026-08-12 14:42:53,580 - INFO - ============================================================
+2026-08-12 14:42:53,580 - INFO - INICIANDO ROBÔ DE GERENCIAMENTO DE COLEÇÕES - SPORTBAY
+2026-08-12 14:42:53,580 - INFO - ============================================================
+2026-08-12 14:42:53,581 - INFO - Lendo planilha: c:\Users\Protork\Desktop\Analise de preços site\Atualização de coleções\ATUALIZAÇÃO DE COLEÇÕES.xlsx
+2026-08-12 14:42:53,876 - INFO - Coleção alvo: 'Renove sua Moto'
+2026-08-12 14:42:53,882 - INFO - Total de shortHashes a adicionar: 12
+2026-08-12 14:42:54,814 - INFO - Acessando página de login...
+2026-08-12 14:42:57,563 - INFO - ✓ Login realizado com sucesso
+2026-08-12 14:42:57,564 - INFO - Navegando direto para: https://www.marketplace.sportbay.com.br/dashboard/categories
+2026-08-12 14:42:58,728 - INFO - ✓ Página de lista de categorias/coleções carregada
+2026-08-12 14:42:58,729 - INFO - Procurando coleção: 'Renove sua Moto'
+2026-08-12 14:43:03,319 - INFO - ✓ Coleção aberta para edição
+2026-08-12 14:43:03,319 - INFO - Removendo produtos atuais da coleção...
+2026-08-12 14:43:05,087 - INFO -   ➖ Produto removido (total até agora: 1)
+2026-08-12 14:43:05,855 - INFO -   ➖ Produto removido (total até agora: 2)
+2026-08-12 14:43:06,441 - INFO -   ➖ Produto removido (total até agora: 3)
+2026-08-12 14:43:07,229 - INFO -   ➖ Produto removido (total até agora: 4)
+2026-08-12 14:43:07,975 - INFO -   ➖ Produto removido (total até agora: 5)
+2026-08-12 14:43:08,748 - INFO -   ➖ Produto removido (total até agora: 6)
+2026-08-12 14:43:09,734 - INFO -   ➖ Produto removido (total até agora: 7)
+2026-08-12 14:43:10,527 - INFO -   ➖ Produto removido (total até agora: 8)
+2026-08-12 14:43:11,344 - INFO -   ➖ Produto removido (total até agora: 9)
+2026-08-12 14:43:12,020 - INFO -   ➖ Produto removido (total até agora: 10)
+2026-08-12 14:43:12,666 - INFO -   ➖ Produto removido (total até agora: 11)
+2026-08-12 14:43:23,772 - INFO - ✓ Remoção concluída — 11 produto(s) removido(s)
+2026-08-12 14:43:23,772 - INFO - Removendo filtro de Merchant 'Sportbay'...
+2026-08-12 14:43:24,025 - INFO - ✓ Filtro de Merchant removido e confirmado (tag não existe mais no DOM)
+2026-08-12 14:43:24,025 - INFO - Adicionando 12 produto(s) por shortHash...
+2026-08-12 14:43:24,059 - INFO -   Total de produtos na coleção antes de adicionar: 0
+2026-08-12 14:43:26,535 - INFO -   ➕ Produto adicionado: P-4R8NIZC37Y (total 0 → 1)
+2026-08-12 14:43:29,039 - INFO -   ➕ Produto adicionado: P-9E5QA4UOQL (total 1 → 2)
+2026-08-12 14:43:31,822 - INFO -   ➕ Produto adicionado: P-63US57R2BU (total 2 → 3)
+2026-08-12 14:43:34,370 - INFO -   ➕ Produto adicionado: P-D4BGGEPYLB (total 3 → 4)
+2026-08-12 14:43:37,043 - INFO -   ➕ Produto adicionado: P-BDGQL5M8H0 (total 4 → 5)
+2026-08-12 14:43:39,608 - INFO -   ➕ Produto adicionado: P-DIHV2Z73VS (total 5 → 6)
+2026-08-12 14:43:42,184 - INFO -   ➕ Produto adicionado: P-HEYR6GG0IW (total 6 → 7)
+2026-08-12 14:43:44,641 - INFO -   ➕ Produto adicionado: P-EB2T5J8ZYN (total 7 → 8)
+2026-08-12 14:43:47,161 - INFO -   ➕ Produto adicionado: P-CI5XQE44JQ (total 8 → 9)
+2026-08-12 14:43:49,792 - INFO -   ➕ Produto adicionado: P-8VH6MWNTWR (total 9 → 10)
+2026-08-12 14:43:52,513 - INFO -   ➕ Produto adicionado: P-C7D6BD8WW4 (total 10 → 11)
+2026-08-12 14:43:55,322 - INFO -   ➕ Produto adicionado: P-6NT4M8ZQMB (total 11 → 12)
+2026-08-12 14:43:55,521 - INFO - ✓ Adição concluída — 12 adicionado(s), 0 não encontrado(s), 0 sem efeito, 0 com código divergente
+2026-08-12 14:43:55,521 - INFO - Salvando alterações...
+2026-08-12 14:43:55,688 - INFO - ✓ Alterações salvas com sucesso
+2026-08-12 14:43:55,689 - INFO - Conferindo resultado final da coleção...
+2026-08-12 14:43:58,377 - INFO -   ✓ Contagem final confere: 12 produto(s) na coleção
+2026-08-12 14:43:58,379 - INFO - ============================================================
+2026-08-12 14:43:58,380 - INFO - ✓ FLUXO CONCLUÍDO
+2026-08-12 14:43:58,380 - INFO - ============================================================
+2026-08-12 14:44:00,684 - INFO - Chrome fechado
+2026-08-12 14:44:00,715 - INFO - ============================================================
+2026-08-12 14:44:00,716 - INFO - RESUMO DE TEMPOS POR FASE (MEDIR_TEMPOS=True)
+2026-08-12 14:44:00,716 - INFO -   remocao_item                19.68s total |   12x | média 1.640s |  38.5%
+2026-08-12 14:44:00,717 - INFO -   busca                       19.46s total |   12x | média 1.622s |  38.1%
+2026-08-12 14:44:00,717 - INFO -   confirmacao_contador         8.98s total |   12x | média 0.749s |  17.6%
+2026-08-12 14:44:00,721 - INFO -   limpeza_filtro               2.22s total |   12x | média 0.185s |   4.3%
+2026-08-12 14:44:00,721 - INFO -   clique                       0.73s total |   12x | média 0.061s |   1.4%
+2026-08-12 14:44:00,725 - INFO -   validacao_sku                0.06s total |   12x | média 0.005s |   0.1%
+2026-08-12 14:44:00,748 - INFO -   TOTAL MEDIDO                51.14s
+2026-08-12 14:44:00,749 - INFO - ============================================================
+2026-08-14 10:28:21,049 - INFO - ============================================================
+2026-08-14 10:28:21,049 - INFO - INICIANDO ROBÔ DE GERENCIAMENTO DE COLEÇÕES - SPORTBAY
+2026-08-14 10:28:21,050 - INFO - ============================================================
+2026-08-14 10:28:21,050 - INFO - Lendo planilha: c:\Users\Protork\Desktop\Analise de preços site\Atualização de coleções\ATUALIZAÇÃO DE COLEÇÕES.xlsx
+2026-08-14 10:28:21,376 - INFO - Coleção alvo: 'Promoções do Dia'
+2026-08-14 10:28:21,376 - INFO - Total de shortHashes a adicionar: 62
+2026-08-14 10:28:25,656 - INFO - Acessando página de login...
+2026-08-14 10:28:28,435 - INFO - ✓ Login realizado com sucesso
+2026-08-14 10:28:28,435 - INFO - Navegando direto para: https://www.marketplace.sportbay.com.br/dashboard/categories
+2026-08-14 10:28:29,751 - INFO - ✓ Página de lista de categorias/coleções carregada
+2026-08-14 10:28:29,768 - INFO - Procurando coleção: 'Promoções do Dia'
+2026-08-14 10:28:33,739 - INFO - ✓ Coleção aberta para edição
+2026-08-14 10:28:33,739 - INFO - Removendo produtos atuais da coleção...
+2026-08-14 10:28:35,562 - INFO -   ➖ Produto removido (total até agora: 1)
+2026-08-14 10:28:36,403 - INFO -   ➖ Produto removido (total até agora: 2)
+2026-08-14 10:28:37,169 - INFO -   ➖ Produto removido (total até agora: 3)
+2026-08-14 10:28:37,867 - INFO -   ➖ Produto removido (total até agora: 4)
+2026-08-14 10:28:38,674 - INFO -   ➖ Produto removido (total até agora: 5)
+2026-08-14 10:28:39,712 - INFO -   ➖ Produto removido (total até agora: 6)
+2026-08-14 10:28:40,687 - INFO -   ➖ Produto removido (total até agora: 7)
+2026-08-14 10:28:41,542 - INFO -   ➖ Produto removido (total até agora: 8)
+2026-08-14 10:28:42,191 - INFO -   ➖ Produto removido (total até agora: 9)
+2026-08-14 10:28:42,925 - INFO -   ➖ Produto removido (total até agora: 10)
+2026-08-14 10:28:43,827 - INFO -   ➖ Produto removido (total até agora: 11)
+2026-08-14 10:28:44,491 - INFO -   ➖ Produto removido (total até agora: 12)
+2026-08-14 10:28:45,124 - INFO -   ➖ Produto removido (total até agora: 13)
+2026-08-14 10:28:45,903 - INFO -   ➖ Produto removido (total até agora: 14)
+2026-08-14 10:28:46,685 - INFO -   ➖ Produto removido (total até agora: 15)
+2026-08-14 10:28:47,335 - INFO -   ➖ Produto removido (total até agora: 16)
+2026-08-14 10:28:47,988 - INFO -   ➖ Produto removido (total até agora: 17)
+2026-08-14 10:28:48,756 - INFO -   ➖ Produto removido (total até agora: 18)
+2026-08-14 10:28:49,538 - INFO -   ➖ Produto removido (total até agora: 19)
+2026-08-14 10:28:50,253 - INFO -   ➖ Produto removido (total até agora: 20)
+2026-08-14 10:28:51,250 - INFO -   ➖ Produto removido (total até agora: 21)
+2026-08-14 10:28:52,292 - INFO -   ➖ Produto removido (total até agora: 22)
+2026-08-14 10:28:52,954 - INFO -   ➖ Produto removido (total até agora: 23)
+2026-08-14 10:28:53,573 - INFO -   ➖ Produto removido (total até agora: 24)
+2026-08-14 10:28:54,404 - INFO -   ➖ Produto removido (total até agora: 25)
+2026-08-14 10:28:55,095 - INFO -   ➖ Produto removido (total até agora: 26)
+2026-08-14 10:28:55,728 - INFO -   ➖ Produto removido (total até agora: 27)
+2026-08-14 10:28:56,499 - INFO -   ➖ Produto removido (total até agora: 28)
+2026-08-14 10:28:57,167 - INFO -   ➖ Produto removido (total até agora: 29)
+2026-08-14 10:28:57,860 - INFO -   ➖ Produto removido (total até agora: 30)
+2026-08-14 10:28:58,559 - INFO -   ➖ Produto removido (total até agora: 31)
+2026-08-14 10:28:59,244 - INFO -   ➖ Produto removido (total até agora: 32)
+2026-08-14 10:29:00,393 - INFO -   ➖ Produto removido (total até agora: 33)
+2026-08-14 10:29:00,945 - INFO -   ➖ Produto removido (total até agora: 34)
+2026-08-14 10:29:01,666 - INFO -   ➖ Produto removido (total até agora: 35)
+2026-08-14 10:29:02,467 - INFO -   ➖ Produto removido (total até agora: 36)
+2026-08-14 10:29:03,245 - INFO -   ➖ Produto removido (total até agora: 37)
+2026-08-14 10:29:03,785 - INFO -   ➖ Produto removido (total até agora: 38)
+2026-08-14 10:29:04,636 - INFO -   ➖ Produto removido (total até agora: 39)
+2026-08-14 10:29:05,238 - INFO -   ➖ Produto removido (total até agora: 40)
+2026-08-14 10:29:05,967 - INFO -   ➖ Produto removido (total até agora: 41)
+2026-08-14 10:29:06,865 - INFO -   ➖ Produto removido (total até agora: 42)
+2026-08-14 10:29:07,835 - INFO -   ➖ Produto removido (total até agora: 43)
+2026-08-14 10:29:08,458 - INFO -   ➖ Produto removido (total até agora: 44)
+2026-08-14 10:29:09,064 - INFO -   ➖ Produto removido (total até agora: 45)
+2026-08-14 10:29:09,778 - INFO -   ➖ Produto removido (total até agora: 46)
+2026-08-14 10:29:10,429 - INFO -   ➖ Produto removido (total até agora: 47)
+2026-08-14 10:29:11,025 - INFO -   ➖ Produto removido (total até agora: 48)
+2026-08-14 10:29:11,670 - INFO -   ➖ Produto removido (total até agora: 49)
+2026-08-14 10:29:12,365 - INFO -   ➖ Produto removido (total até agora: 50)
+2026-08-14 10:29:13,196 - INFO -   ➖ Produto removido (total até agora: 51)
+2026-08-14 10:29:13,915 - INFO -   ➖ Produto removido (total até agora: 52)
+2026-08-14 10:29:14,568 - INFO -   ➖ Produto removido (total até agora: 53)
+2026-08-14 10:29:15,338 - INFO -   ➖ Produto removido (total até agora: 54)
+2026-08-14 10:29:15,996 - INFO -   ➖ Produto removido (total até agora: 55)
+2026-08-14 10:29:16,780 - INFO -   ➖ Produto removido (total até agora: 56)
+2026-08-14 10:29:17,419 - INFO -   ➖ Produto removido (total até agora: 57)
+2026-08-14 10:29:18,511 - INFO -   ➖ Produto removido (total até agora: 58)
+2026-08-14 10:29:19,344 - INFO -   ➖ Produto removido (total até agora: 59)
+2026-08-14 10:29:20,103 - INFO -   ➖ Produto removido (total até agora: 60)
+2026-08-14 10:29:31,351 - INFO - ✓ Remoção concluída — 60 produto(s) removido(s)
+2026-08-14 10:29:31,352 - INFO - Removendo filtro de Merchant 'Sportbay'...
+2026-08-14 10:29:31,539 - INFO - ✓ Filtro de Merchant removido e confirmado (tag não existe mais no DOM)
+2026-08-14 10:29:31,539 - INFO - Adicionando 62 produto(s) por shortHash...
+2026-08-14 10:29:31,559 - INFO -   Total de produtos na coleção antes de adicionar: 0
+2026-08-14 10:29:41,711 - WARNING -   ⚠ shortHash 'P-ANLDG969WO': tabela não convergiu para o resultado desta busca (contagem no timeout: 10) — pesquisando novamente...
+2026-08-14 10:29:51,885 - WARNING -   ⚠ shortHash 'P-ANLDG969WO': tabela não convergiu para o resultado desta busca mesmo após repetir (contagem no timeout: 1) — pulando
+2026-08-14 10:30:02,108 - WARNING -   ⚠ shortHash 'P-6HB76BSI23': tabela não convergiu para o resultado desta busca (contagem no timeout: 1) — pesquisando novamente...
+2026-08-14 10:30:12,407 - WARNING -   ⚠ shortHash 'P-6HB76BSI23': tabela não convergiu para o resultado desta busca mesmo após repetir (contagem no timeout: 1) — pulando
+2026-08-14 10:30:22,656 - WARNING -   ⚠ shortHash 'P-36ICMN7CJ5': tabela não convergiu para o resultado desta busca (contagem no timeout: 1) — pesquisando novamente...
+2026-08-14 10:30:32,818 - WARNING -   ⚠ shortHash 'P-36ICMN7CJ5': tabela não convergiu para o resultado desta busca mesmo após repetir (contagem no timeout: 1) — pulando
+2026-08-14 10:30:42,979 - WARNING -   ⚠ shortHash 'P-3L4ZG7W6X0': tabela não convergiu para o resultado desta busca (contagem no timeout: 1) — pesquisando novamente...
+2026-08-14 10:30:53,262 - WARNING -   ⚠ shortHash 'P-3L4ZG7W6X0': tabela não convergiu para o resultado desta busca mesmo após repetir (contagem no timeout: 1) — pulando
+2026-08-14 10:31:03,415 - WARNING -   ⚠ shortHash 'P-1NZRGAPH6Z': tabela não convergiu para o resultado desta busca (contagem no timeout: 1) — pesquisando novamente...
+2026-08-14 10:31:13,603 - WARNING -   ⚠ shortHash 'P-1NZRGAPH6Z': tabela não convergiu para o resultado desta busca mesmo após repetir (contagem no timeout: 1) — pulando
+2026-08-14 11:03:09,574 - INFO - ============================================================
+2026-08-14 11:03:09,574 - INFO - INICIANDO ROBÔ DE GERENCIAMENTO DE COLEÇÕES - SPORTBAY
+2026-08-14 11:03:09,575 - INFO - ============================================================
+2026-08-14 11:03:09,575 - INFO - Lendo planilha: c:\Users\Protork\Desktop\Analise de preços site\Atualização de coleções\ATUALIZAÇÃO DE COLEÇÕES.xlsx
+2026-08-14 11:03:09,942 - INFO - Coleção alvo: 'Promoções do Dia'
+2026-08-14 11:03:09,942 - INFO - Total de shortHashes a adicionar: 62
+2026-08-14 11:03:11,517 - INFO - Acessando página de login...
+2026-08-14 11:03:14,834 - INFO - ✓ Login realizado com sucesso
+2026-08-14 11:03:14,834 - INFO - Navegando direto para: https://www.marketplace.sportbay.com.br/dashboard/categories
+2026-08-14 11:03:16,127 - INFO - ✓ Página de lista de categorias/coleções carregada
+2026-08-14 11:03:16,132 - INFO - Procurando coleção: 'Promoções do Dia'
+2026-08-14 11:03:20,702 - INFO - ✓ Coleção aberta para edição
+2026-08-14 11:03:20,703 - INFO - Removendo produtos atuais da coleção...
+2026-08-14 11:03:21,997 - INFO - ✓ Coleção já está sem produtos ('Nenhum produto encontrado') — nada a remover, indo direto para a Seleção Manual de Produtos
+2026-08-14 11:03:21,997 - INFO - Removendo filtro de Merchant 'Sportbay'...
+2026-08-14 11:03:22,255 - INFO - ✓ Filtro de Merchant removido e confirmado (tag não existe mais no DOM)
+2026-08-14 11:03:22,255 - INFO - Adicionando 62 produto(s) por shortHash...
+2026-08-14 11:03:22,297 - INFO -   Total de produtos na coleção antes de adicionar: 0
+2026-08-14 11:03:25,213 - INFO -   ➕ Produto adicionado: P-ANLDG969WO — Capacete Fechado Pro Tork R8 Vis. Fumê (SKU PAI-116746A) (total 0 → 1)
+2026-08-14 11:03:27,796 - INFO -   ➕ Produto adicionado: P-6HB76BSI23 — Capacete Fechado Pro Tork Sport Moto 788 (SKU PAI-110731A) (total 1 → 2)
+2026-08-14 11:03:30,212 - INFO -   ➕ Produto adicionado: P-36ICMN7CJ5 — Capacete Aberto New Liberty Three Pro Tork (SKU 110866) (total 2 → 3)
+2026-08-14 11:03:32,671 - INFO -   ➕ Produto adicionado: P-3L4ZG7W6X0 — Capacete Fechado Pro Tork Evolution 788 G8 Evo (SKU PAI-119943) (total 3 → 4)
+2026-08-14 11:03:35,055 - INFO -   ➕ Produto adicionado: P-1NZRGAPH6Z — Capacete Sport Moto 788 Pro Tork com Viseira Fumê (SKU 124969) (total 4 → 5)
+2026-08-14 11:03:37,247 - INFO -   ➕ Produto adicionado: P-59BKMISOK6 — Capacete Fechado New Liberty Four Viseira Fumê Pro Tork (SKU 116695) (total 5 → 6)
+2026-08-14 11:03:39,396 - INFO -   ➕ Produto adicionado: P-2BBKLOH3WL — Capacete Aberto New Atomic Solid Fosco Pro Tork (SKU 5478) (total 6 → 7)
+2026-08-14 11:03:41,836 - INFO -   ➕ Produto adicionado: P-F4AXIG0GOS — Capacete Escamoteável Attack Evo Fosco Pro Tork (SKU 117524) (total 7 → 8)
+2026-08-14 11:03:44,186 - INFO -   ➕ Produto adicionado: P-808ACCI9K2 — Capacete Pro Tork New Liberty Four (SKU 4634) (total 8 → 9)
+2026-08-14 11:03:46,492 - INFO -   ➕ Produto adicionado: P-69G0S3I18N — Capacete New Atomic Elite Pro Tork (SKU 119949) (total 9 → 10)
+2026-08-14 11:03:48,818 - INFO -   ➕ Produto adicionado: P-28JK3COFFP — Capacete Aberto New Liberty 3 Frequency Pro Tork (SKU 127051) (total 10 → 11)
+2026-08-14 11:03:51,023 - INFO -   ➕ Produto adicionado: P-43E67HI2WZ — Capacete Sport Moto For Girls Pro Tork (SKU 5170) (total 11 → 12)
+2026-08-14 11:03:53,226 - INFO -   ➕ Produto adicionado: P-2RTJESJ2YW — Escapamento Powercore 3 Steel Technology NXR Bros 160 2016-2025 Pro Tork (SKU 127020) (total 12 → 13)
+2026-08-14 11:03:55,528 - INFO -   ➕ Produto adicionado: P-4KWQGIPG2V — Bauleto Plástico Superior 28 Litros Pro Tork Smart Box (SKU PAI-5501A) (total 13 → 14)
+2026-08-14 11:03:57,645 - INFO -   ➕ Produto adicionado: P-12X4J04NQF — Ponteira Modelo Original CBX 250 Twister 2002-2008 Pro Tork (SKU 1223) (total 14 → 15)
+2026-08-14 11:03:59,747 - INFO -   ➕ Produto adicionado: P-6KDGUKC9UP — Baú Moto 80 Litros Pro Tork (SKU 112178) (total 15 → 16)
+2026-08-14 11:04:01,966 - INFO -   ➕ Produto adicionado: P-5QWTN8WDRZ — Baú 45 Litros Smart Box 2 Pro Tork (SKU 5499) (total 16 → 17)
+2026-08-14 11:04:04,317 - INFO -   ➕ Produto adicionado: P-971MV5XKII — Escapamento Competition para Titan 150 2009 a 2013 e Fan 150 2009 a 2013 e Fan 125 2009 a 2014 Pro Tork (SKU 119822) (total 17 → 18)
+2026-08-14 11:04:06,459 - INFO -   ➕ Produto adicionado: P-D6TD92N9T5 — Escapamento Powercore 3 Steel Technology para NXR Bros 125 2003 a 2005 Pro Tork (SKU 126442) (total 18 → 19)
+2026-08-14 11:04:08,794 - INFO -   ➕ Produto adicionado: P-AKDY0PGAYF — Kit Carenagem 4 Peças Cromo Forte Biz 125 2011/13 (SKU PAI-123481) (total 19 → 20)
+2026-08-14 11:04:11,048 - INFO -   ➕ Produto adicionado: P-E8T46IGA5V — Escapamento Competition para YBR 125 2002 a 2008 Pro Tork (SKU 126643) (total 20 → 21)
+2026-08-14 11:04:13,179 - INFO -   ➕ Produto adicionado: P-4HR0HK6O8G — Escapamento Powercore 4 CRF 230 2008-2020 Pro Tork (SKU 119490) (total 21 → 22)
+2026-08-14 11:04:15,498 - INFO -   ➕ Produto adicionado: P-BDGQL5M8H0 — Kit Carenagem 9 Peças XRE 300 2010 a 2012 Pro Tork (SKU 110864) (total 22 → 23)
+2026-08-14 11:04:17,659 - INFO -   ➕ Produto adicionado: P-2FM063KBK1 — Escapamento Powercore 4 para CRF 250F 2019 e 2025 Pro Tork (SKU 119503) (total 23 → 24)
+2026-08-14 11:04:19,814 - INFO -   ➕ Produto adicionado: P-6VABUFLVPB — Escapamento Powercore 3 Steel Technology para NXR Bros 150 2009 a 2015 Pro Tork (SKU 126441) (total 24 → 25)
+2026-08-14 11:04:22,151 - INFO -   ➕ Produto adicionado: P-7UAWSPJJJG — Escapamento Powercore 4 Pro Series CRF 300F 2025 Pro Tork (SKU 127025) (total 25 → 26)
+2026-08-14 11:04:24,295 - INFO -   ➕ Produto adicionado: P-5PSBJO90X1 — Escapamento Competition para Titan 125 KS 2000 a 2004 e Fan 125 2004 a 2008 Pro Tork (SKU 119804) (total 26 → 27)
+2026-08-14 11:04:26,735 - INFO -   ➕ Produto adicionado: P-9VS8T9OFW6 — Kit Carenagem 3 Peças Cromo Forte Ybr 125 2000/08 (SKU PAI-123496) (total 27 → 28)
+2026-08-14 11:04:29,156 - INFO -   ➕ Produto adicionado: P-9PGSYW3ESE — Protetor De Mão Pro Tork Hps (SKU PAI-422A) (total 28 → 29)
+2026-08-14 11:04:31,264 - INFO -   ➕ Produto adicionado: P-4A5WPZG0IM — Alça Modelo Especial para CBX 250 Twister 2001 a 2008 Cromo Forte (SKU 123137) (total 29 → 30)
+2026-08-14 11:04:33,402 - INFO -   ➕ Produto adicionado: P-1EB8MIBY54 — Espelho Retrovisor Pro Tork Original Cbx 200 (par) (SKU PAI-117150) (total 30 → 31)
+2026-08-14 11:04:35,631 - INFO -   ➕ Produto adicionado: P-1CBBVNVATN — Protetor De Motor Pro Tork Barra Dupla Fan 125 2014/15 (SKU PAI-3621) (total 31 → 32)
+2026-08-14 11:04:37,748 - INFO -   ➕ Produto adicionado: P-CGMX1C5ROG — Protetor De Carenagem Cromo Forte Shield Com Pedaleira Retrátil Nxr 150 2009/ Nxr 160 (SKU PAI-125649) (total 32 → 33)
+2026-08-14 11:04:39,819 - INFO -   ➕ Produto adicionado: P-76NGUW9GFR — Baú Moto Stronger 90 Litros Pro Tork (SKU 127063) (total 33 → 34)
+2026-08-14 11:04:42,086 - INFO -   ➕ Produto adicionado: P-F1Q3IXTIJB — Protetor Traseiro Pro Tork Cb 400/450 (SKU PAI-122671) (total 34 → 35)
+2026-08-14 11:04:44,181 - INFO -   ➕ Produto adicionado: P-PK0BCYI0QE — Protetor de Motor Francês Mata Cachorro para Suzuki Yes Pro Tork (SKU 1954) (total 35 → 36)
+2026-08-14 11:04:46,300 - INFO -   ➕ Produto adicionado: P-BFOSISI6GT — Pinhão 14 Dentes Pro Tork Web 100 (SKU PAI-2162) (total 36 → 37)
+2026-08-14 11:04:48,542 - INFO -   ➕ Produto adicionado: P-8Z643RVTV8 — Protetor De Motor Pro Tork Francês Cb 400/450 (SKU PAI-1918) (total 37 → 38)
+2026-08-14 11:04:50,645 - INFO -   ➕ Produto adicionado: P-41G45J22NZ — Alça Cromo Forte Especial Cbx 200 Strada 1993/03 (SKU PAI-123135) (total 38 → 39)
+2026-08-14 11:04:52,988 - INFO -   ➕ Produto adicionado: P-139KX49DSG — Protetor De Mão Em Alumínio Pro Tork Hps 2 (SKU PAI-123483) (total 39 → 40)
+2026-08-14 11:04:55,314 - INFO -   ➕ Produto adicionado: P-D9BRXC20WF — Protetor De Motor Cromo Forte Barra Dupla Suzuki Intruder 125 (SKU PAI-125324) (total 40 → 41)
+2026-08-14 11:04:57,471 - INFO -   ➕ Produto adicionado: P-1C4NV32HOZ — Protetor De Motor Cromo Forte Barra Dupla Nxr 150 Bros 2009/14 / Nxr 160 Bros (SKU PAI-125326) (total 41 → 42)
+2026-08-14 11:04:59,590 - INFO -   ➕ Produto adicionado: P-51WLS4JCLC — Protetor de Carenagem Modelo Armor com Pedaleira Retrátil para Fazer 250 2010 a 2014 Pro Tork (SKU 120009) (total 42 → 43)
+2026-08-14 11:05:01,844 - INFO -   ➕ Produto adicionado: P-1LG2VKH3SG — Protetor de Motor Barra Dupla para XRE 300 Pro Tork (SKU 1976) (total 43 → 44)
+2026-08-14 11:05:03,975 - INFO -   ➕ Produto adicionado: P-A3E2OSV32X — Protetor Traseiro Cromo Forte Cg 125 1979/89 / Today 125 1990/94 / Titan 125 1995/99 (SKU PAI-125945) (total 44 → 45)
+2026-08-14 11:05:06,229 - INFO -   ➕ Produto adicionado: P-2LJ0DYQNJP — Protetor De Motor Super Adventure Street Titan 150 2004/09 / Titan 125/150 / Fan 2009 (SKU PAI-113290) (total 45 → 46)
+2026-08-14 11:05:08,650 - INFO -   ➕ Produto adicionado: P-CTF7AWVVVN — Alça Cromo Forte Especial Falcon 400 (SKU PAI-123139) (total 46 → 47)
+2026-08-14 11:05:10,789 - INFO -   ➕ Produto adicionado: P-2Y471A7C7Z — Protetor de Motor Modelo Tradicional para NXR Bros 125 2003 a 2008 e NXR Bros 150 2003 a 2008 Pro Tork (SKU 124577) (total 47 → 48)
+2026-08-14 11:05:13,059 - INFO -   ➕ Produto adicionado: P-CB900RWF7E — Protetor De Escape Pro Tork Modelo Original Tela Cbx 250 Twister 2001/08 (SKU PAI-112389) (total 48 → 49)
+2026-08-14 11:05:15,338 - INFO -   ➕ Produto adicionado: P-BLKTZPL3ZA — Protetor De Carenagem Super Adventure Cb 250 Twister 2015 (SKU PAI-119994) (total 49 → 50)
+2026-08-14 11:05:17,478 - INFO -   ➕ Produto adicionado: P-C3K179DA99 — Alça Pro Tork Especial Shineray Phoenix 49 (SKU PAI-123944) (total 50 → 51)
+2026-08-14 11:05:19,728 - INFO -   ➕ Produto adicionado: P-BE9ZFHEMN6 — Alça Traseira Modelo Original Lado Direito para Titan 160 2015 a 2023 Pro Tork (SKU 126655) (total 51 → 52)
+2026-08-14 11:05:22,031 - INFO -   ➕ Produto adicionado: P-B33C6OU2AN — Alça Cromo Forte Especial Bros 125/150 2003/08 (SKU PAI-123141) (total 52 → 53)
+2026-08-14 11:05:24,190 - INFO -   ➕ Produto adicionado: P-EOI0OQOFDS — Protetor De Motor Pro Tork Racing Sport Titan 150 / Fan 125/150 2009/13 (SKU PAI-1991) (total 53 → 54)
+2026-08-14 11:05:26,333 - INFO -   ➕ Produto adicionado: P-9WR9XIPU0N — Protetor Lateral De Carenagem Super Adventure Titan 150 / Fan 125/150 /start 160 2009/13 (par) (SKU PAI-119989) (total 54 → 55)
+2026-08-14 11:05:28,637 - INFO -   ➕ Produto adicionado: P-105Y8EIQXT — Alça Modelo Arrow para CB 250 Twister 2015 Pro Tork (SKU 116370) (total 55 → 56)
+2026-08-14 11:05:30,756 - INFO -   ➕ Produto adicionado: P-1Z5467N90R — Espelho Retrovisor Pro Tork Esportivo Oval (par) (SKU PAI-117156) (total 56 → 57)
+2026-08-14 11:05:32,876 - INFO -   ➕ Produto adicionado: P-7XG19GNI0A — Espelho Retrovisor Pro Tork Original Nxr Bros 160 2015 (par) (SKU PAI-5391) (total 57 → 58)
+2026-08-14 11:05:35,162 - INFO -   ➕ Produto adicionado: P-4EQ4AR2OJP — Alça Pro Tork Modelo Original Crypton 110 (SKU PAI-116928) (total 58 → 59)
+2026-08-14 11:05:37,551 - INFO -   ➕ Produto adicionado: P-LBWKYCH6N5 — Bicicleta Aro 24 Ultra Bikes Rebaixada Solid 18 Marchas (SKU PAI-111606A) (total 59 → 60)
+2026-08-14 11:05:39,865 - INFO -   ➕ Produto adicionado: P-5WRGWOYRV4 — Bicicleta Aro 26 Ultra Bikes Summer Solid [sem Marchas] (SKU PAI-116329A) (total 60 → 61)
+2026-08-14 11:05:42,400 - INFO -   ➕ Produto adicionado: P-1PVUNJTOYL — Bicicleta Aro 16 Ultra Bikes Kids T Masculina (SKU PAI-117618A) (total 61 → 62)
+2026-08-14 11:05:42,429 - INFO - ✓ Adição concluída — 62 adicionado(s), 0 não encontrado(s), 0 sem efeito, 0 com código divergente
+2026-08-14 11:05:42,430 - INFO - Salvando alterações...
+2026-08-14 11:05:42,840 - INFO - ✓ Alterações salvas com sucesso
+2026-08-14 11:05:42,840 - INFO - Conferindo resultado final da coleção...
+2026-08-14 11:05:48,462 - ERROR -   ✗ DIVERGÊNCIA FINAL — esperado: 62 | encontrado na coleção: 0 | diferença: 62
+2026-08-14 11:05:50,472 - INFO - ============================================================
+2026-08-14 11:05:50,472 - INFO - ✓ FLUXO CONCLUÍDO
+2026-08-14 11:05:50,472 - INFO - ============================================================
+2026-08-14 11:05:52,841 - INFO - Chrome fechado
+2026-08-14 11:05:52,841 - INFO - ============================================================
+2026-08-14 11:05:52,842 - INFO - RESUMO DE TEMPOS POR FASE (MEDIR_TEMPOS=True)
+2026-08-14 11:05:52,842 - INFO -   busca                       97.81s total |   62x | média 1.578s |  69.8%
+2026-08-14 11:05:52,842 - INFO -   confirmacao_contador        41.51s total |   62x | média 0.670s |  29.6%
+2026-08-14 11:05:52,842 - INFO -   clique                       0.78s total |   62x | média 0.013s |   0.6%
+2026-08-14 11:05:52,842 - INFO -   validacao_sku                0.00s total |   62x | média 0.000s |   0.0%
+2026-08-14 11:05:52,842 - INFO -   TOTAL MEDIDO               140.10s
+2026-08-14 11:05:52,843 - INFO - ============================================================

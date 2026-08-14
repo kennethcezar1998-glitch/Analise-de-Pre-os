@@ -1,0 +1,167 @@
+09:30:10 | INFO    | 1 linha(s) para processar. Salvar: NÃO (teste)
+09:30:14 | INFO    | Abrindo a tela de login...
+09:30:18 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:30:18 | INFO    | ======================================================================
+09:30:18 | INFO    | COLEÇÃO "Oferta do Dia" — 1 produto(s)
+09:30:19 | ERROR   | Falha ao abrir a coleção "Oferta do Dia": Coleção "Oferta do Dia" não encontrada na seção Coleções.
+09:30:23 | INFO    | ======================================================================
+09:30:23 | INFO    | linha 2    | 125622       | ordem 3    | Oferta do Dia        | ERRO
+09:30:23 | INFO    | 0 de 1 processados com sucesso.
+09:30:38 | INFO    | Abrindo a tela de login...
+09:30:42 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:31:14 | INFO    | 1 linha(s) para processar. Salvar: NÃO (teste)
+09:31:15 | INFO    | Abrindo a tela de login...
+09:31:19 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:31:19 | INFO    | ======================================================================
+09:31:19 | INFO    | COLEÇÃO "Oferta do Dia" — 1 produto(s)
+09:31:25 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+09:31:26 | INFO    | 10 produtos lidos na coleção.
+09:31:26 | INFO    | ----------------------------------------------------------------------
+09:31:26 | INFO    | Linha 2 | SKU 125622 (painel: 125622) | ordem 3 | Bota Motocross Articulada Jett Lite New Color Grey
+09:31:30 | INFO    | Ordenação: "4" -> "3".
+09:31:30 | INFO    | MODO TESTE: "Atualizar" localizado, mas NÃO foi clicado.
+09:31:30 | INFO    | Captura de tela salva em C:\Users\Protork\Desktop\Analise de preços site\Ordenação de Produtos\teste_ordenacao.png
+09:31:33 | INFO    | ======================================================================
+09:31:33 | INFO    | linha 2    | 125622       | ordem 3    | Oferta do Dia        | TESTE (não salvo)
+09:31:33 | INFO    | 1 de 1 processados com sucesso.
+09:31:54 | INFO    | Abrindo a tela de login...
+09:31:58 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:32:04 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+09:32:28 | INFO    | Abrindo a tela de login...
+09:32:32 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:32:38 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+09:33:38 | INFO    | 1 linha(s) para processar. Salvar: NÃO (teste)
+09:33:39 | INFO    | Abrindo a tela de login...
+09:33:43 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:33:43 | INFO    | ======================================================================
+09:33:43 | INFO    | COLEÇÃO "Oferta do Dia" — 1 produto(s)
+09:33:49 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+09:33:50 | INFO    | Produtos por página: 10 -> maior opção (16 produtos na coleção).
+09:33:50 | WARNING | A coleção informa 16 produtos, mas só 0 foram lidos.
+09:33:50 | INFO    | 0 produtos lidos na coleção.
+09:33:50 | ERROR   | Linha 2: SKU 125622 não está na coleção "Oferta do Dia".
+09:33:53 | INFO    | ======================================================================
+09:33:53 | INFO    | linha 2    | 125622       | ordem 3    | Oferta do Dia        | NÃO ENCONTRADO
+09:33:53 | INFO    | 0 de 1 processados com sucesso.
+09:34:21 | INFO    | 1 linha(s) para processar. Salvar: NÃO (teste)
+09:34:22 | INFO    | Abrindo a tela de login...
+09:34:26 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:34:26 | INFO    | ======================================================================
+09:34:26 | INFO    | COLEÇÃO "Oferta do Dia" — 1 produto(s)
+09:34:32 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+09:34:34 | INFO    | Produtos por página: 10 -> maior opção (16 produtos na coleção).
+09:34:35 | INFO    | 16 produtos lidos na coleção.
+09:34:35 | INFO    | ----------------------------------------------------------------------
+09:34:35 | INFO    | Linha 2 | SKU 125622 (painel: 125622) | ordem 3 | Bota Motocross Articulada Jett Lite New Color Grey
+09:34:40 | INFO    | Ordenação: "4" -> "3".
+09:34:40 | INFO    | MODO TESTE: "Atualizar" localizado, mas NÃO foi clicado.
+09:34:40 | INFO    | Captura de tela salva em C:\Users\Protork\Desktop\Analise de preços site\Ordenação de Produtos\teste_ordenacao.png
+09:34:43 | INFO    | ======================================================================
+09:34:43 | INFO    | linha 2    | 125622       | ordem 3    | Oferta do Dia        | TESTE (não salvo)
+09:34:43 | INFO    | 1 de 1 processados com sucesso.
+09:35:12 | INFO    | 1 linha(s) para processar. Salvar: NÃO (teste)
+09:35:13 | INFO    | Abrindo a tela de login...
+09:35:17 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:35:17 | INFO    | ======================================================================
+09:35:17 | INFO    | COLEÇÃO "Oferta do Dia" — 1 produto(s)
+09:35:24 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+09:35:25 | INFO    | Produtos por página: 10 -> maior opção (16 produtos na coleção).
+09:35:27 | INFO    | 16 produtos lidos na coleção.
+09:35:27 | INFO    | ----------------------------------------------------------------------
+09:35:27 | INFO    | Linha 2 | SKU 125622 (painel: 125622) | ordem 3 | Bota Motocross Articulada Jett Lite New Color Grey
+09:35:31 | INFO    | Ordenação: "4" -> "3".
+09:35:31 | INFO    | Captura de tela salva em C:\Users\Protork\Desktop\Analise de preços site\Ordenação de Produtos\teste_ordenacao.png
+09:35:31 | INFO    | MODO TESTE: "Atualizar" localizado, mas NÃO foi clicado.
+09:35:34 | INFO    | ======================================================================
+09:35:34 | INFO    | linha 2    | 125622       | ordem 3    | Oferta do Dia        | TESTE (não salvo)
+09:35:34 | INFO    | 1 de 1 processados com sucesso.
+09:37:32 | INFO    | 16 linha(s) para processar. Salvar: sim
+09:37:33 | INFO    | Abrindo a tela de login...
+09:37:37 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+09:37:37 | INFO    | ======================================================================
+09:37:37 | INFO    | COLEÇÃO "Oferta do Dia" — 16 produto(s)
+09:37:43 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+09:37:44 | INFO    | Produtos por página: 10 -> maior opção (16 produtos na coleção).
+09:37:46 | INFO    | 16 produtos lidos na coleção.
+09:37:46 | INFO    | ----------------------------------------------------------------------
+09:37:46 | INFO    | Linha 2 | SKU 125622 (painel: 125622) | ordem 3 | Bota Motocross Articulada Jett Lite New Color Grey
+09:37:49 | INFO    | Ordenação: "4" -> "3".
+09:37:53 | INFO    | Salvo.
+09:37:53 | INFO    | ----------------------------------------------------------------------
+09:37:53 | INFO    | Linha 3 | SKU 119610A (painel: 119610) | ordem 10 | Calça Motocross Insane X Pro Tork
+09:38:00 | INFO    | Ordenação: "9" -> "10".
+09:38:03 | INFO    | Salvo.
+09:38:03 | INFO    | ----------------------------------------------------------------------
+09:38:03 | INFO    | Linha 4 | SKU 124885 (painel: 124885) | ordem 6 | Escapamento Powercore 3 Steel Technology para XR 250 Tornado Pro Tork
+09:38:09 | INFO    | Ordenação: "" -> "6".
+09:38:13 | INFO    | Salvo.
+09:38:13 | INFO    | ----------------------------------------------------------------------
+09:38:13 | INFO    | Linha 5 | SKU 127063 (painel: 127063) | ordem 14 | Baú Moto Stronger 90 Litros Pro Tork
+09:38:19 | INFO    | Ordenação: "" -> "14".
+09:38:22 | INFO    | Salvo.
+09:38:22 | INFO    | ----------------------------------------------------------------------
+09:38:22 | INFO    | Linha 6 | SKU 121016 (painel: 121016) | ordem 15 | Capacete Pro Tork Fast Tech Limited Edition
+09:38:25 | INFO    | Ordenação: "" -> "15".
+09:38:28 | INFO    | Salvo.
+09:38:28 | INFO    | ----------------------------------------------------------------------
+09:38:28 | INFO    | Linha 7 | SKU 119822 (painel: 119822) | ordem 16 | Escapamento Competition para Titan 150 2009 a 2013 e Fan 150 2009 a 2013 e Fan 125 2009 a 2014 Pro Tork
+09:38:33 | INFO    | Ordenação: "" -> "16".
+09:38:36 | INFO    | Salvo.
+09:38:36 | INFO    | ----------------------------------------------------------------------
+09:38:36 | INFO    | Linha 8 | SKU 126178 (painel: 126178) | ordem 4 | Capacete Aberto New Atomic Universe Brilhante Pro Tork
+09:38:39 | INFO    | Ordenação: "10" -> "4".
+09:38:43 | INFO    | Salvo.
+09:38:43 | INFO    | ----------------------------------------------------------------------
+09:38:43 | INFO    | Linha 9 | SKU 119603A (painel: PAI-119603A) | ordem 11 | Camisa Motocross Adulto Pro Tork Insane X
+09:38:48 | INFO    | Ordenação: "" -> "11".
+09:38:51 | INFO    | Salvo.
+09:38:51 | INFO    | ----------------------------------------------------------------------
+09:38:51 | INFO    | Linha 10 | SKU 5501A (painel: PAI-5501A) | ordem 12 | Bauleto Plástico Superior 28 Litros Pro Tork Smart Box
+09:38:56 | INFO    | Ordenação: "" -> "12".
+09:39:00 | INFO    | Salvo.
+09:39:00 | INFO    | ----------------------------------------------------------------------
+09:39:00 | INFO    | Linha 11 | SKU 110002 (painel: PAI-110002) | ordem 9 | Camisa Motocross Adulto Pro Tork Insane
+09:39:03 | INFO    | Ordenação: "" -> "9".
+09:39:06 | INFO    | Salvo.
+09:39:06 | INFO    | ----------------------------------------------------------------------
+09:39:06 | INFO    | Linha 12 | SKU 119943 (painel: PAI-119943) | ordem 5 | Capacete Fechado Pro Tork Evolution 788 G8 Evo
+09:39:10 | INFO    | Ordenação: "" -> "5".
+09:39:13 | INFO    | Salvo.
+09:39:13 | INFO    | ----------------------------------------------------------------------
+09:39:13 | INFO    | Linha 13 | SKU 4902A (painel: 4902) | ordem 7 | Bota Motocross Jett Lite
+09:39:19 | INFO    | Ordenação: "" -> "7".
+09:39:22 | INFO    | Salvo.
+09:39:22 | INFO    | ----------------------------------------------------------------------
+09:39:22 | INFO    | Linha 14 | SKU 116746A (painel: PAI-116746A) | ordem 1 | Capacete Fechado Pro Tork R8 Vis. Fumê
+09:39:26 | INFO    | Ordenação: "" -> "1".
+09:39:29 | INFO    | Salvo.
+09:39:29 | INFO    | ----------------------------------------------------------------------
+09:39:29 | INFO    | Linha 15 | SKU 317 (painel: 317) | ordem 8 | Calça Motocross Insane in Black Pro Tork
+09:39:35 | INFO    | Ordenação: "" -> "8".
+09:39:38 | INFO    | Salvo.
+09:39:38 | INFO    | ----------------------------------------------------------------------
+09:39:38 | INFO    | Linha 16 | SKU 127051 (painel: 127051) | ordem 13 | Capacete Aberto New Liberty 3 Frequency Pro Tork
+09:39:42 | INFO    | Ordenação: "7" -> "13".
+09:39:45 | INFO    | Salvo.
+09:39:45 | INFO    | ----------------------------------------------------------------------
+09:39:45 | INFO    | Linha 17 | SKU 117524A (painel: 117524) | ordem 2 | Capacete Escamoteável Attack Evo Fosco Pro Tork
+09:39:50 | INFO    | Ordenação: "1" -> "2".
+09:39:54 | INFO    | Salvo.
+09:39:57 | INFO    | ======================================================================
+09:39:57 | INFO    | linha 2    | 125622       | ordem 3    | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 3    | 119610A      | ordem 10   | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 4    | 124885       | ordem 6    | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 5    | 127063       | ordem 14   | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 6    | 121016       | ordem 15   | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 7    | 119822       | ordem 16   | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 8    | 126178       | ordem 4    | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 9    | 119603A      | ordem 11   | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 10   | 5501A        | ordem 12   | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 11   | 110002       | ordem 9    | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 12   | 119943       | ordem 5    | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 13   | 4902A        | ordem 7    | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 14   | 116746A      | ordem 1    | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 15   | 317          | ordem 8    | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 16   | 127051       | ordem 13   | Oferta do Dia        | OK
+09:39:57 | INFO    | linha 17   | 117524A      | ordem 2    | Oferta do Dia        | OK
+09:39:57 | INFO    | 16 de 16 processados com sucesso.

@@ -1,0 +1,207 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    COMANDOS PRONTOS PARA COPIAR E COLAR                   ║
+║              Pricing Intelligence - Pro Tork Marketplace Monitor           ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+IMPORTANTE: Certifique-se que todos os 4 arquivos estão na mesma pasta:
+  ✓ pricing_intelligence_pro_tork.py
+  ✓ requirements.txt
+  ✓ setup_helper.py
+  ✓ executar_analise.py
+  ✓ analise_de_preços.xlsx
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 1️⃣ INSTALAÇÃO (Execute uma vez)
+
+### OPÇÃO A: Automática (RECOMENDADA - MAIS FÁCIL)
+
+🪟 WINDOWS:
+────────────────────────────────────────────────────────────────────────────
+python setup_helper.py install
+────────────────────────────────────────────────────────────────────────────
+
+🍎 MAC / 🐧 LINUX:
+────────────────────────────────────────────────────────────────────────────
+python3 setup_helper.py install
+────────────────────────────────────────────────────────────────────────────
+
+### OPÇÃO B: Manual (Se preferir passo a passo)
+
+🪟 WINDOWS:
+────────────────────────────────────────────────────────────────────────────
+pip install -r requirements.txt
+python -m playwright install chromium
+────────────────────────────────────────────────────────────────────────────
+
+🍎 MAC / 🐧 LINUX:
+────────────────────────────────────────────────────────────────────────────
+pip3 install -r requirements.txt
+python3 -m playwright install chromium
+────────────────────────────────────────────────────────────────────────────
+
+Aguarde ~3-5 minutos para concluir.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 2️⃣ TESTAR INSTALAÇÃO (Opcional mas recomendado)
+
+🪟 WINDOWS:
+────────────────────────────────────────────────────────────────────────────
+python setup_helper.py test
+────────────────────────────────────────────────────────────────────────────
+
+🍎 MAC / 🐧 LINUX:
+────────────────────────────────────────────────────────────────────────────
+python3 setup_helper.py test
+────────────────────────────────────────────────────────────────────────────
+
+Procure por: "✓ TODOS OS TESTES PASSARAM"
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 3️⃣ EXECUTAR ANÁLISE (Principal)
+
+🪟 WINDOWS:
+────────────────────────────────────────────────────────────────────────────
+python executar_analise.py
+────────────────────────────────────────────────────────────────────────────
+
+🍎 MAC / 🐧 LINUX:
+────────────────────────────────────────────────────────────────────────────
+python3 executar_analise.py
+────────────────────────────────────────────────────────────────────────────
+
+Aguarde 1-2 minutos.
+Será criado: resultado_analise_precos.xlsx
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 4️⃣ TESTAR COM DEMO (3 produtos de teste)
+
+🪟 WINDOWS:
+────────────────────────────────────────────────────────────────────────────
+python setup_helper.py demo
+────────────────────────────────────────────────────────────────────────────
+
+🍎 MAC / 🐧 LINUX:
+────────────────────────────────────────────────────────────────────────────
+python3 setup_helper.py demo
+────────────────────────────────────────────────────────────────────────────
+
+Teste sem usar sua planilha.
+Será criado: demo_resultado.xlsx
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 5️⃣ SETUP COMPLETO (Install + Test + Demo)
+
+🪟 WINDOWS:
+────────────────────────────────────────────────────────────────────────────
+python setup_helper.py full
+────────────────────────────────────────────────────────────────────────────
+
+🍎 MAC / 🐧 LINUX:
+────────────────────────────────────────────────────────────────────────────
+python3 setup_helper.py full
+────────────────────────────────────────────────────────────────────────────
+
+Tudo em um comando. Aguarde ~15 minutos.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 🔄 ANÁLISES FUTURAS (Toda semana)
+
+Para atualizar seus dados, simplesmente execute novamente:
+
+🪟 WINDOWS:
+────────────────────────────────────────────────────────────────────────────
+python executar_analise.py
+────────────────────────────────────────────────────────────────────────────
+
+🍎 MAC / 🐧 LINUX:
+────────────────────────────────────────────────────────────────────────────
+python3 executar_analise.py
+────────────────────────────────────────────────────────────────────────────
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 🆘 SOLUÇÃO RÁPIDA DE PROBLEMAS
+
+### "ModuleNotFoundError: No module named 'pandas'"
+Solução: Execute novo pip install
+─────────────────────────────────────────────────────────────────────────────
+pip install -r requirements.txt  # ou pip3 para Mac/Linux
+─────────────────────────────────────────────────────────────────────────────
+
+### "FileNotFoundError: analise_de_preços.xlsx"
+Solução: Colocar arquivo na mesma pasta ou renomear
+
+### "TimeoutError" ao executar
+Solução: Tente novamente (problema temporário de conexão)
+
+### Processo muito lento
+Solução: Normal para 9 produtos. Aguarde 2-3 minutos completos.
+
+### Muitos "não encontrados" (N/A) no resultado
+Solução: Alguns produtos podem ter nomes muito específicos.
+         Verificar manualmente no Mercado Livre e Shopee.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 📱 DÚVIDAS FREQUENTES
+
+P: Posso usar em Windows?
+R: Sim! Use "python" ao invés de "python3"
+
+P: Quanto tempo demora?
+R: Instalação: 5 min | Análise: 2 min | Total primeira vez: ~10 min
+
+P: Preciso fazer login em alguma conta?
+R: Não. Script usa APIs públicas e não requer autenticação.
+
+P: Meu antivírus bloqueou?
+R: Playwright abre um navegador real. É seguro, mas pode gerar alerta.
+   Adicionar à whitelist se necessário.
+
+P: Posso rodar todos os dias?
+R: Sim! Execute quantas vezes quiser.
+   Apenas sobrescreve o arquivo anterior.
+
+P: Como armazenar histórico?
+R: Antes de executar novamente, renomear resultado anterior:
+   resultado_analise_precos.xlsx → resultado_20240115.xlsx
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 🎯 SEQUÊNCIA RECOMENDADA
+
+1️⃣  python setup_helper.py install      (Setup inicial)
+2️⃣  python setup_helper.py test         (Validar)
+3️⃣  python executar_analise.py          (Sua análise!)
+4️⃣  Abrir resultado_analise_precos.xlsx (Ver resultados)
+5️⃣  (Repetir passo 3 toda semana)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+## 📊 PRÓXIMAS ANÁLISES
+
+Toda segunda-feira:
+
+🪟 WINDOWS:
+────────────────────────────────────────────────────────────────────────────
+python executar_analise.py
+────────────────────────────────────────────────────────────────────────────
+
+🍎 MAC / 🐧 LINUX:
+────────────────────────────────────────────────────────────────────────────
+python3 executar_analise.py
+────────────────────────────────────────────────────────────────────────────
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Tudo pronto! 🚀
+
+Comece agora com o comando de instalação acima!
+
+═══════════════════════════════════════════════════════════════════════════════

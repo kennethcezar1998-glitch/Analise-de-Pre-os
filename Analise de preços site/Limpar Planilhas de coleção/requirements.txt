@@ -1,0 +1,70 @@
+# ╔════════════════════════════════════════════════════════════════════════════╗
+# ║     PRICING INTELLIGENCE SYSTEM - PRO TORK MARKETPLACE MONITOR              ║
+# ║                          DEPENDÊNCIAS PYTHON                                ║
+# ║                                                                             ║
+# ║  Instale com: pip install -r requirements.txt                              ║
+# ╚════════════════════════════════════════════════════════════════════════════╝
+
+# ═══════════════════════════════════════════════════════════════════════════
+# MANIPULAÇÃO DE DADOS
+# ═══════════════════════════════════════════════════════════════════════════
+
+pandas>=2.0.0              # Processamento e análise de dados em DataFrames
+openpyxl>=3.1.0           # Suporte para salvar em Excel (XLSX)
+numpy>=1.24.0             # Computações numéricas
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# WEB SCRAPING E HTTP
+# ═══════════════════════════════════════════════════════════════════════════
+
+requests>=2.31.0          # Requisições HTTP sincronizadas (para Mercado Livre API)
+playwright>=1.40.0        # Automação de navegador headless (para Shopee)
+aiohttp>=3.9.0            # Requisições HTTP assíncronas (opcional, para otimizações futuras)
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PROCESSAMENTO E MATCHING DE STRINGS
+# ═══════════════════════════════════════════════════════════════════════════
+
+rapidfuzz>=3.4.0          # Fuzzy string matching inteligente (RapidFuzz - core logic)
+# Alternativa: fuzzywuzzy>=0.18.0 (mais lento, não recomendado)
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# ASYNC/AWAIT E CONCORRÊNCIA
+# ═══════════════════════════════════════════════════════════════════════════
+
+# asyncio é built-in no Python 3.7+, nenhuma instalação necessária
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# LOGGING E DEBUGGING (OPCIONAL)
+# ═══════════════════════════════════════════════════════════════════════════
+
+# logging é built-in no Python, nenhuma instalação necessária
+# Para debug avançado (opcional):
+# python-dotenv>=1.0.0      # Para gerenciar variáveis de ambiente
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# INSTALAÇÃO DO PLAYWRIGHT BROWSER (IMPORTANTE!)
+# ═══════════════════════════════════════════════════════════════════════════
+
+# Após instalar playwright, execute:
+# playwright install chromium
+# 
+# Ou em uma etapa separada (CI/CD):
+# python -m playwright install chromium
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# VERSÕES ESPECÍFICAS TESTADAS (OPCIONAL)
+# ═══════════════════════════════════════════════════════════════════════════
+
+# pandas==2.1.3
+# requests==2.31.0
+# playwright==1.40.0
+# rapidfuzz==3.4.0
+# openpyxl==3.11.0
+# numpy==1.24.3
