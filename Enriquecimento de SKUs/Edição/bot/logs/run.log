@@ -1,0 +1,92 @@
+2026-08-11 11:09:26,320 [INFO] 1 linha(s) de tag lidas -> 1 registro(s) a editar.
+2026-08-11 11:09:27,725 [INFO] Abrindo página de login...
+2026-08-11 11:09:31,532 [INFO] Login OK, sessão iniciada.
+2026-08-11 11:09:31,532 [INFO] [1/1] SKU Sportbay=110731 | SKU Seller=PAI-110731A (1 tag(s) novas)
+2026-08-11 11:09:34,908 [INFO]   3 resultado(s) para SKU "110731" - usando o primeiro.
+2026-08-11 11:09:39,972 [INFO]   Tag "Recursos da Viseira" / "Botão automático" -> "Recursos da Viseira — Botão automático / Sistema automático para abertura da viseira, trazendo facilidade de uso." (score 0.99)
+2026-08-11 11:09:40,291 [INFO]   [DRY-RUN] não vou clicar em Salvar. Screenshot: C:\Users\Protork\Desktop\Enriquecimento de SKUs\Edição\bot\logs\dry_run_grupo_1.png
+2026-08-11 11:09:41,014 [INFO] Concluído: 1 registro(s) ok, 0 registro(s) com falha.
+2026-08-11 11:11:04,960 [INFO] 1 linha(s) de tag lidas -> 1 registro(s) a editar.
+2026-08-11 11:11:06,487 [INFO] Abrindo página de login...
+2026-08-11 11:11:09,965 [INFO] Login OK, sessão iniciada.
+2026-08-11 11:11:09,965 [INFO] [1/1] SKU Sportbay=110731 | SKU Seller=PAI-110731A (1 tag(s) novas)
+2026-08-11 11:11:13,030 [INFO]   3 resultado(s) para SKU "110731" - procurando a linha com SKU/Seller exatos.
+2026-08-11 11:11:17,701 [INFO]   Tag "Recursos da Viseira" / "Botão automático" -> "Recursos da Viseira — Botão automático / Sistema automático para abertura da viseira, trazendo facilidade de uso." (score 0.99)
+2026-08-11 11:11:17,931 [INFO]   [DRY-RUN] não vou clicar em Salvar. Screenshot: C:\Users\Protork\Desktop\Enriquecimento de SKUs\Edição\bot\logs\dry_run_grupo_1.png
+2026-08-11 11:11:18,822 [INFO] Concluído: 1 registro(s) ok, 0 registro(s) com falha.
+2026-08-11 11:13:46,875 [INFO] 1 linha(s) de tag lidas -> 1 registro(s) a editar.
+2026-08-11 11:13:48,378 [INFO] Abrindo página de login...
+2026-08-11 11:13:52,048 [INFO] Login OK, sessão iniciada.
+2026-08-11 11:13:52,049 [INFO] [1/1] SKU Sportbay=110731 | SKU Seller=PAI-110731A (1 tag(s) novas)
+2026-08-11 11:14:01,002 [INFO]   Tag "Recursos da Viseira" / "Botão automático" -> "Recursos da Viseira — Botão automático / Sistema automático para abertura da viseira, trazendo facilidade de uso." (score 0.99)
+2026-08-11 11:14:01,286 [INFO]   [DRY-RUN] não vou clicar em Salvar. Screenshot: C:\Users\Protork\Desktop\Enriquecimento de SKUs\Edição\bot\logs\dry_run_grupo_1.png
+2026-08-11 11:14:01,846 [INFO] Concluído: 1 registro(s) ok, 0 registro(s) com falha.
+2026-08-11 11:14:54,476 [INFO] 1 linha(s) de tag lidas -> 1 registro(s) a editar.
+2026-08-11 11:14:55,653 [INFO] Abrindo página de login...
+2026-08-11 11:14:58,971 [INFO] Login OK, sessão iniciada.
+2026-08-11 11:14:58,980 [INFO] [1/1] SKU Sportbay=110731 | SKU Seller=PAI-110731A (1 tag(s) novas)
+2026-08-11 11:15:07,283 [INFO]   Tag "Recursos da Viseira" / "Botão automático" -> "Recursos da Viseira — Botão automático / Sistema automático para abertura da viseira, trazendo facilidade de uso." (score 0.99)
+2026-08-11 11:15:07,554 [INFO]   Salvo com sucesso.
+2026-08-11 11:15:08,038 [INFO] Concluído: 1 registro(s) ok, 0 registro(s) com falha.
+2026-08-11 17:02:06,909 [INFO] 1 linha(s) de tag lidas -> 1 registro(s) a editar.
+2026-08-11 17:02:08,277 [INFO] Abrindo página de login...
+2026-08-11 17:02:11,400 [INFO] Login OK, sessão iniciada.
+2026-08-11 17:02:11,400 [INFO] [1/1] SKU Sportbay=116735 | SKU Seller=PAI-116735A (1 tag(s) novas)
+2026-08-11 17:02:21,859 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-11 17:02:22,121 [INFO]   Salvo com sucesso.
+2026-08-11 17:02:22,536 [INFO] Concluído: 1 registro(s) ok, 0 registro(s) com falha.
+2026-08-11 17:13:12,024 [INFO] 1 linha(s) de tag lidas -> 1 registro(s) a editar.
+2026-08-11 17:13:13,328 [INFO] Abrindo página de login...
+2026-08-11 17:13:16,732 [INFO] Login OK, sessão iniciada.
+2026-08-11 17:13:16,734 [INFO] [1/1] SKU Sportbay=116735 | SKU Seller=PAI-116735A (1 tag(s) novas)
+2026-08-11 17:13:36,061 [ERROR] Erro inesperado no grupo 1 (SKU 116735)
+Traceback (most recent call last):
+  File "c:\Users\Protork\Desktop\Enriquecimento de SKUs\Edição\bot\edit_bot.py", line 470, in main
+    ok = process_group(page, group, grupo_lookup, i, start + len(groups), args.dry_run,
+                        pendencias, nao_encontrados)
+  File "c:\Users\Protork\Desktop\Enriquecimento de SKUs\Edição\bot\edit_bot.py", line 407, in process_group
+    add_tag_global(page, row, grupo_lookup, pendencias)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Protork\Desktop\Enriquecimento de SKUs\Edição\bot\edit_bot.py", line 337, in add_tag_global
+    ok, score, chosen = autocomplete_select(
+                        ~~~~~~~~~~~~~~~~~~~^
+        page,
+        ^^^^^
+    ...<3 lines>...
+        threshold=TAG_MATCH_THRESHOLD,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Protork\Desktop\Enriquecimento de SKUs\Edição\bot\edit_bot.py", line 226, in autocomplete_select
+    listbox.wait_for(state="visible", timeout=DEFAULT_TIMEOUT)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20048, in wait_for
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for(timeout=to_milliseconds(timeout), state=state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 741, in wait_for
+    await self._frame.wait_for_selector(
+        self._selector, strict=True, timeout=timeout, state=state
+    )
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 372, in wait_for_selector
+    await self._channel.send(
+        "waitForSelector", self._timeout, locals_to_params(locals())
+    )
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.wait_for: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("ul[role=\"listbox\"]").last to be visible
+

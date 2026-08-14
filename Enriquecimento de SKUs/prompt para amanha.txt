@@ -1,0 +1,28 @@
+quero um bot para automatizar o enriquecimento de SKUs
+
+para isso o bot irá ler a planilha "Tags para enriquecimento"
+
+depois irá abrir essa página https://www.marketplace.sportbay.com.br/auth/jwt/login?returnTo=%2Fdashboard%2Fauction%2Flist
+
+
+
+ele irá logar com esse usuário 
+
+usuário: kennethacacio.sportbay
+
+senha: 123@mudar
+
+
+
+depois de logado ele vai percorrer o caminho no menu OPERAÇÃO > Enriquecimento de SKU > Criar
+
+ele vai clicar em Criar
+
+
+
+com a página aberta, ele vai identificar da seguinte forma:
+
+os códigos para serem colocados em "Código SKU da Sportbay" estão na coluna A
+
+os códigos para serem colocados em "Código SKU do seller" estão na coluna B
+

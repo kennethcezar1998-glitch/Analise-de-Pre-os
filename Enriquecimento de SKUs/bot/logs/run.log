@@ -1,0 +1,860 @@
+2026-08-11 08:45:54,333 [INFO] 6 linha(s) de tag lidas -> 1 grupo(s) de SKU a processar.
+2026-08-11 08:45:58,162 [INFO] Abrindo página de login...
+2026-08-11 08:46:01,728 [INFO] Login OK, sessão iniciada.
+2026-08-11 08:46:01,729 [INFO] [1/1] SKU Sportbay=116746 | SKU Seller=PAI-116746A (6 tag(s))
+2026-08-11 08:46:05,537 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 08:46:06,741 [ERROR] Erro inesperado no grupo 1 (SKU 116746)
+Traceback (most recent call last):
+  File "C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\enrich_bot.py", line 401, in main
+    ok = process_group(page, group, grupo_lookup, i, start + len(groups), args.dry_run, pendencias)
+  File "C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\enrich_bot.py", line 341, in process_group
+    add_tag_global(page, row, grupo_lookup, pendencias)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\enrich_bot.py", line 296, in add_tag_global
+    ok, score, chosen = autocomplete_select(
+                        ~~~~~~~~~~~~~~~~~~~^
+        page,
+        ^^^^^
+    ...<3 lines>...
+        threshold=TAG_MATCH_THRESHOLD,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\enrich_bot.py", line 211, in autocomplete_select
+    field.fill("")
+    ~~~~~~~~~~^^^^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17780, in fill
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.fill(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 216, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 610, in fill
+    await self._fill(**locals_to_params(locals()))
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 622, in _fill
+    await self._channel.send("fill", self._timeout, locals_to_params(locals()))
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Protork\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.fill: Error: strict mode violation: get_by_label("Tag global") resolved to 2 elements:
+    1) <input value="" id=":rb:" type="text" role="combobox" autocomplete="off" spellcheck="false" aria-invalid="false" aria-expanded="true" autocapitalize="none" aria-autocomplete="list" aria-controls=":rb:-listbox" placeholder="Buscar e selecionar uma tag" class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1vyoetn"/> aka get_by_role("combobox", name="Tag global")
+    2) <ul role="listbox" id=":rb:-listbox" aria-labelledby=":rb:-label" class="MuiAutocomplete-listbox css-tred2y">…</ul> aka get_by_role("listbox", name="Tag global")
+
+Call log:
+  - waiting for get_by_label("Tag global")
+
+2026-08-11 08:46:07,564 [INFO] Concluído: 0 grupo(s) ok, 1 grupo(s) com falha.
+2026-08-11 08:46:44,783 [INFO] 6 linha(s) de tag lidas -> 1 grupo(s) de SKU a processar.
+2026-08-11 08:46:46,094 [INFO] Abrindo página de login...
+2026-08-11 08:46:49,365 [INFO] Login OK, sessão iniciada.
+2026-08-11 08:46:49,365 [INFO] [1/1] SKU Sportbay=116746 | SKU Seller=PAI-116746A (6 tag(s))
+2026-08-11 08:46:53,335 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 08:46:55,271 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 08:46:57,443 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: reduz a claridade solar e oferece conforto visual." (score 0.99)
+2026-08-11 08:47:00,579 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 08:47:03,165 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 08:47:05,769 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 08:47:08,202 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 08:47:08,202 [INFO]   [DRY-RUN] não vou clicar em Salvar.
+2026-08-11 08:47:08,731 [INFO] Concluído: 1 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-11 08:47:30,555 [INFO] 6 linha(s) de tag lidas -> 1 grupo(s) de SKU a processar.
+2026-08-11 08:47:32,000 [INFO] Abrindo página de login...
+2026-08-11 08:47:35,573 [INFO] Login OK, sessão iniciada.
+2026-08-11 08:47:35,573 [INFO] [1/1] SKU Sportbay=116746 | SKU Seller=PAI-116746A (6 tag(s))
+2026-08-11 08:47:38,137 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 08:47:39,570 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 08:47:41,830 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 08:47:44,123 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: reduz a claridade solar e oferece conforto visual." (score 0.99)
+2026-08-11 08:47:47,327 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 08:47:49,829 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 08:47:52,382 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 08:47:54,752 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 08:47:54,964 [INFO]   [DRY-RUN] não vou clicar em Salvar. Screenshot: C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\logs\dry_run_grupo_1.png
+2026-08-11 08:47:55,579 [INFO] Concluído: 1 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-11 08:50:15,238 [INFO] 6 linha(s) de tag lidas -> 1 grupo(s) de SKU a processar.
+2026-08-11 08:50:16,500 [INFO] Abrindo página de login...
+2026-08-11 08:50:20,044 [INFO] Login OK, sessão iniciada.
+2026-08-11 08:50:20,045 [INFO] [1/1] SKU Sportbay=116746 | SKU Seller=PAI-116746A (6 tag(s))
+2026-08-11 08:50:22,794 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 08:50:24,078 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 08:50:25,980 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 08:50:28,063 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: reduz a claridade solar e oferece conforto visual." (score 0.99)
+2026-08-11 08:50:31,202 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 08:50:33,737 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 08:50:36,372 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 08:50:38,677 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 08:50:38,917 [INFO]   [DRY-RUN] não vou clicar em Salvar. Screenshot: C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\logs\dry_run_grupo_1.png
+2026-08-11 08:50:39,697 [INFO] Concluído: 1 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-11 09:13:18,762 [INFO] 6 linha(s) de tag lidas -> 1 grupo(s) de SKU a processar.
+2026-08-11 09:13:20,484 [INFO] Abrindo página de login...
+2026-08-11 09:13:23,922 [INFO] Login OK, sessão iniciada.
+2026-08-11 09:13:23,923 [INFO] [1/1] SKU Sportbay=116746 | SKU Seller=PAI-116746A (6 tag(s))
+2026-08-11 09:13:26,011 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 09:13:27,530 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 09:13:29,406 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 09:13:31,508 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.62)
+2026-08-11 09:13:34,541 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 09:13:37,062 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 09:13:39,630 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 09:13:41,949 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 09:13:42,190 [INFO]   Salvo com sucesso.
+2026-08-11 09:13:42,572 [INFO] Concluído: 1 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-11 09:40:10,245 [INFO] 7 linha(s) de tag lidas -> 2 grupo(s) de SKU a processar.
+2026-08-11 09:40:11,987 [INFO] Abrindo página de login...
+2026-08-11 09:40:15,688 [INFO] Login OK, sessão iniciada.
+2026-08-11 09:40:15,688 [INFO] [1/2] SKU Sportbay=119943 | SKU Seller=PAI-119943 (6 tag(s))
+2026-08-11 09:40:18,335 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 09:40:19,703 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 09:40:21,623 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 09:40:23,557 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 09:40:26,694 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 09:40:29,306 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 09:40:31,982 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 09:40:34,351 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 09:40:34,576 [INFO]   [DRY-RUN] não vou clicar em Salvar. Screenshot: C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\logs\dry_run_grupo_1.png
+2026-08-11 09:40:34,576 [INFO] [2/2] SKU Sportbay=110731 | SKU Seller=PAI-110731A (1 tag(s))
+2026-08-11 09:40:37,239 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 09:40:38,605 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 09:40:40,541 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 09:40:40,715 [INFO]   [DRY-RUN] não vou clicar em Salvar. Screenshot: C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\logs\dry_run_grupo_2.png
+2026-08-11 09:40:41,616 [INFO] Concluído: 2 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-11 09:55:50,389 [INFO] 15 linha(s) de tag lidas -> 2 grupo(s) de SKU a processar.
+2026-08-11 09:55:52,084 [INFO] Abrindo página de login...
+2026-08-11 09:55:55,561 [INFO] Login OK, sessão iniciada.
+2026-08-11 09:55:55,564 [INFO] [1/2] SKU Sportbay=119943 | SKU Seller=PAI-119943 (8 tag(s))
+2026-08-11 09:55:57,793 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 09:55:59,126 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 09:56:01,095 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 09:56:02,964 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 09:56:06,134 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 09:56:08,653 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 09:56:11,206 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 09:56:13,508 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 09:56:16,678 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 09:56:19,950 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-11 09:56:20,220 [INFO]   Salvo com sucesso.
+2026-08-11 09:56:20,220 [INFO] [2/2] SKU Sportbay=110731 | SKU Seller=PAI-110731A (7 tag(s))
+2026-08-11 09:56:22,688 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 09:56:23,937 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 09:56:25,822 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 09:56:27,673 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 09:56:30,776 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 09:56:33,330 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 09:56:35,933 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 09:56:38,301 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 09:56:41,420 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 09:56:41,677 [INFO]   Salvo com sucesso.
+2026-08-11 09:56:42,377 [INFO] Concluído: 2 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-11 16:26:19,333 [INFO] 31 linha(s) de tag lidas -> 4 grupo(s) de SKU a processar.
+2026-08-11 16:26:24,376 [INFO] Abrindo página de login...
+2026-08-11 16:26:27,877 [INFO] Login OK, sessão iniciada.
+2026-08-11 16:26:27,878 [INFO] [1/4] SKU Sportbay=110866 | SKU Seller=PAI-110866A (7 tag(s))
+2026-08-11 16:26:30,666 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 16:26:31,984 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 16:26:33,787 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-11 16:26:35,617 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 16:26:38,650 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 16:26:41,200 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 16:26:43,795 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 16:26:46,086 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 16:26:49,253 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 16:26:49,491 [INFO]   Salvo com sucesso.
+2026-08-11 16:26:49,492 [INFO] [2/4] SKU Sportbay=117524 | SKU Seller=PAI-117524A (8 tag(s))
+2026-08-11 16:26:51,753 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 16:26:53,009 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 16:26:55,111 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-11 16:26:56,914 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 16:27:00,025 [INFO]   Tag "Recursos da Viseira" / "Viseira Solar Interna" -> "Recursos da Viseira — Viseira Solar Interna / Viseira solar interna retrátil: proteção prática contra o sol." (score 0.99)
+2026-08-11 16:27:03,457 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-11 16:27:05,914 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 16:27:08,464 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 16:27:10,779 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 16:27:13,924 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 16:27:14,177 [INFO]   Salvo com sucesso.
+2026-08-11 16:27:14,180 [INFO] [3/4] SKU Sportbay=124969 | SKU Seller=PAI-124969 (8 tag(s))
+2026-08-11 16:27:16,516 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 16:27:18,009 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 16:27:19,865 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 16:27:21,946 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-11 16:27:24,950 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 16:27:27,457 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 16:27:29,990 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 16:27:32,282 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 16:27:35,325 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 16:27:38,256 [INFO]   Tag "Recursos da Viseira" / "Botão automático" -> "Recursos da Viseira — Botão automático / Sistema automático para abertura da viseira, trazendo facilidade de uso." (score 0.99)
+2026-08-11 16:27:38,511 [INFO]   Salvo com sucesso.
+2026-08-11 16:27:38,511 [INFO] [4/4] SKU Sportbay=124963 | SKU Seller=PAI-124963 (8 tag(s))
+2026-08-11 16:27:40,810 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 16:27:42,264 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 16:27:44,152 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 16:27:46,243 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-11 16:27:49,718 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-11 16:27:52,209 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 16:27:54,725 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 16:27:57,031 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 16:28:00,052 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 16:28:03,503 [INFO]   Tag "Recursos" / "Estabilizador aerodinâmico" -> "Recursos — Estabilizador aerodinâmico / Estabilizador aerodinâmico: reduz turbulências em alta velocidade." (score 0.99)
+2026-08-11 16:28:03,756 [INFO]   Salvo com sucesso.
+2026-08-11 16:28:04,207 [INFO] Concluído: 4 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-11 16:59:13,005 [INFO] 43 linha(s) de tag lidas -> 6 grupo(s) de SKU a processar.
+2026-08-11 16:59:14,443 [INFO] Abrindo página de login...
+2026-08-11 16:59:17,706 [INFO] Login OK, sessão iniciada.
+2026-08-11 16:59:17,707 [INFO] [1/6] SKU Sportbay=121163 | SKU Seller=PAI-121163 (7 tag(s))
+2026-08-11 16:59:20,318 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 16:59:21,603 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 16:59:23,452 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-11 16:59:25,354 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 16:59:28,474 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 16:59:30,993 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 16:59:33,513 [INFO]   Tag "Marca" / "Etceter" -> "Marca — Etceter / Produto original Etceter, focado em estilo, conforto e segurança." (score 0.99)
+2026-08-11 16:59:35,952 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 16:59:39,169 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 16:59:39,408 [INFO]   Salvo com sucesso.
+2026-08-11 16:59:39,408 [INFO] [2/6] SKU Sportbay=116735 | SKU Seller=PAI-116735A (8 tag(s))
+2026-08-11 16:59:41,872 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 16:59:43,191 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 16:59:45,302 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-11 16:59:47,404 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-11 16:59:49,947 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 16:59:52,240 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 16:59:54,717 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:00:11,969 [WARNING]   Linha Excel 14: nenhuma Tag global bateu com confiança suficiente (melhor score 0.00) para "Certificação DOT Certificação americana DOT: atende a altos padrões de segurança." - pulei, revisar manualmente
+2026-08-11 17:00:15,121 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 17:00:18,240 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 17:00:18,496 [INFO]   Salvo com sucesso.
+2026-08-11 17:00:18,496 [INFO] [3/6] SKU Sportbay=117523 | SKU Seller=PAI-117523A (8 tag(s))
+2026-08-11 17:00:20,845 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 17:00:22,872 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 17:00:25,163 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-11 17:00:27,004 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 17:00:30,406 [INFO]   Tag "Recursos da Viseira" / "Viseira Solar Interna" -> "Recursos da Viseira — Viseira Solar Interna / Viseira solar interna retrátil: proteção prática contra o sol." (score 0.99)
+2026-08-11 17:00:34,040 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-11 17:00:36,626 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:00:39,260 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 17:00:41,614 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 17:00:44,749 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 17:00:44,989 [INFO]   Salvo com sucesso.
+2026-08-11 17:00:44,989 [INFO] [4/6] SKU Sportbay=116695 | SKU Seller=PAI-116695A (6 tag(s))
+2026-08-11 17:00:47,522 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 17:00:49,005 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 17:00:50,848 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 17:00:52,957 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-11 17:00:56,084 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 17:00:58,672 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:01:01,366 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 17:01:03,703 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 17:01:03,943 [INFO]   Salvo com sucesso.
+2026-08-11 17:01:03,943 [INFO] [5/6] SKU Sportbay=116086 | SKU Seller=PAI-116086A (6 tag(s))
+2026-08-11 17:01:06,474 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 17:01:08,207 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 17:01:10,723 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 17:01:12,593 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 17:01:15,231 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 17:01:17,782 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:01:20,352 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 17:01:22,621 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 17:01:22,892 [INFO]   Salvo com sucesso.
+2026-08-11 17:01:22,892 [INFO] [6/6] SKU Sportbay=119949 | SKU Seller=PAI-119949 (8 tag(s))
+2026-08-11 17:01:25,575 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 17:01:27,289 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 17:01:29,126 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-11 17:01:30,950 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 17:01:34,513 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-11 17:01:37,001 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:01:39,587 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 17:01:41,921 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 17:01:45,042 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 17:01:48,248 [INFO]   Tag "Recursos da Viseira" / "Viseira Solar Interna" -> "Recursos da Viseira — Viseira Solar Interna / Viseira solar interna retrátil: proteção prática contra o sol." (score 0.99)
+2026-08-11 17:01:48,501 [INFO]   Salvo com sucesso.
+2026-08-11 17:01:48,930 [INFO] Concluído: 6 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-11 17:01:48,930 [WARNING] 1 tag(s) pulada(s) por falta de correspondência confiável:
+2026-08-11 17:01:48,930 [WARNING]   Excel linha 14: SKU 116735/PAI-116735A Grupo="Certificação" Facet="DOT" - motivo: tag sem match confiável (score 0.00)
+2026-08-11 17:13:51,168 [INFO] 31 linha(s) de tag lidas -> 4 grupo(s) de SKU a processar.
+2026-08-11 17:13:52,940 [INFO] Abrindo página de login...
+2026-08-11 17:13:56,192 [INFO] Login OK, sessão iniciada.
+2026-08-11 17:13:56,193 [INFO] [1/4] SKU Sportbay=4634A | SKU Seller=PAI-4634A (6 tag(s))
+2026-08-11 17:13:58,602 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 17:13:59,965 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 17:14:01,888 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-11 17:14:03,762 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 17:14:06,869 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 17:14:09,443 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:14:11,975 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 17:14:14,278 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 17:14:14,521 [INFO]   Salvo com sucesso.
+2026-08-11 17:14:14,522 [INFO] [2/4] SKU Sportbay=121059 | SKU Seller=PAI-121059 (7 tag(s))
+2026-08-11 17:14:17,053 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 17:14:18,320 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 17:14:20,103 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-11 17:14:22,223 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-11 17:14:25,289 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-11 17:14:27,794 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:14:30,347 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 17:14:32,649 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 17:14:35,752 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 17:14:35,993 [INFO]   Salvo com sucesso.
+2026-08-11 17:14:35,993 [INFO] [3/4] SKU Sportbay=116249 | SKU Seller=PAI-116249A (9 tag(s))
+2026-08-11 17:14:38,289 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 17:14:39,657 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 17:14:41,905 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-11 17:14:43,759 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 17:14:46,980 [INFO]   Tag "Recursos da Viseira" / "Viseira Solar Interna" -> "Recursos da Viseira — Viseira Solar Interna / Viseira solar interna retrátil: proteção prática contra o sol." (score 0.99)
+2026-08-11 17:14:50,118 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-11 17:14:52,806 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:14:55,573 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 17:14:57,910 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 17:15:00,645 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 17:15:03,000 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-11 17:15:03,236 [INFO]   Salvo com sucesso.
+2026-08-11 17:15:03,236 [INFO] [4/4] SKU Sportbay=126178 | SKU Seller=PAI-126178 (9 tag(s))
+2026-08-11 17:15:05,684 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-11 17:15:07,000 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-11 17:15:08,855 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-11 17:15:10,725 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-11 17:15:14,290 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-11 17:15:16,829 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-11 17:15:19,350 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-11 17:15:21,639 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-11 17:15:24,805 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-11 17:15:28,039 [INFO]   Tag "Recursos da Viseira" / "Viseira Solar Interna" -> "Recursos da Viseira — Viseira Solar Interna / Viseira solar interna retrátil: proteção prática contra o sol." (score 0.99)
+2026-08-11 17:15:30,395 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-11 17:15:30,631 [INFO]   Salvo com sucesso.
+2026-08-11 17:15:30,945 [INFO] Concluído: 4 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-12 16:40:26,836 [INFO] 50 linha(s) de tag lidas -> 6 grupo(s) de SKU a processar.
+2026-08-12 16:40:32,227 [INFO] Abrindo página de login...
+2026-08-12 16:40:35,684 [INFO] Login OK, sessão iniciada.
+2026-08-12 16:40:35,685 [INFO] [1/6] SKU Sportbay=5478A | SKU Seller=PAI-5478A (8 tag(s))
+2026-08-12 16:40:38,134 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 16:40:39,604 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-12 16:40:41,539 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-12 16:40:43,354 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-12 16:40:46,559 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-12 16:40:49,129 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-12 16:40:51,549 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-12 16:40:54,684 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-12 16:40:57,904 [INFO]   Tag "Recursos da Viseira" / "Viseira Solar Interna" -> "Recursos da Viseira — Viseira Solar Interna / Viseira solar interna retrátil: proteção prática contra o sol." (score 0.99)
+2026-08-12 16:41:00,389 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-12 16:41:00,644 [INFO]   Salvo com sucesso.
+2026-08-12 16:41:00,645 [INFO] [2/6] SKU Sportbay=126199 | SKU Seller=PAI-126199 (10 tag(s))
+2026-08-12 16:41:03,209 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 16:41:04,725 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-12 16:41:06,579 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-12 16:41:08,449 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-12 16:41:12,072 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-12 16:41:14,660 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-12 16:41:16,994 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-12 16:41:20,129 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-12 16:41:23,364 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-12 16:41:26,869 [INFO]   Tag "Recursos" / "Estabilizador aerodinâmico" -> "Recursos — Estabilizador aerodinâmico / Estabilizador aerodinâmico: reduz turbulências em alta velocidade." (score 0.99)
+2026-08-12 16:41:29,354 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-12 16:41:31,722 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-12 16:41:31,987 [INFO]   Salvo com sucesso.
+2026-08-12 16:41:31,989 [INFO] [3/6] SKU Sportbay=119768A | SKU Seller=PAI-119768A (9 tag(s))
+2026-08-12 16:41:34,409 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 16:41:35,834 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-12 16:41:37,724 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-12 16:41:39,579 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-12 16:41:42,629 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-12 16:41:44,999 [INFO]   Tag "Marca" / "Mixs" -> "Marca — Mixs / Qualidade e design moderno no segmento" (score 0.98)
+2026-08-12 16:41:47,304 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-12 16:41:50,422 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-12 16:41:53,694 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-12 16:41:57,164 [INFO]   Tag "Recursos" / "Estabilizador aerodinâmico" -> "Recursos — Estabilizador aerodinâmico / Estabilizador aerodinâmico: reduz turbulências em alta velocidade." (score 0.99)
+2026-08-12 16:41:59,699 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-12 16:41:59,952 [INFO]   Salvo com sucesso.
+2026-08-12 16:41:59,953 [INFO] [4/6] SKU Sportbay=124915 | SKU Seller=PAI-124915 (8 tag(s))
+2026-08-12 16:42:02,402 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 16:42:03,904 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-12 16:42:05,759 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-12 16:42:07,595 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-12 16:42:11,164 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-12 16:42:13,634 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-12 16:42:16,184 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-12 16:42:18,489 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-12 16:42:21,574 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-12 16:42:25,059 [INFO]   Tag "Recursos" / "Estabilizador aerodinâmico" -> "Recursos — Estabilizador aerodinâmico / Estabilizador aerodinâmico: reduz turbulências em alta velocidade." (score 0.99)
+2026-08-12 16:42:25,328 [INFO]   Salvo com sucesso.
+2026-08-12 16:42:25,328 [INFO] [5/6] SKU Sportbay=127025 | SKU Seller=PAI-127025 (6 tag(s))
+2026-08-12 16:42:27,777 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 16:42:29,244 [INFO]   Categoria "PEÇAS" -> "PEÇAS" (score 1.00)
+2026-08-12 16:42:31,164 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-12 16:42:33,234 [INFO]   Tag "Tipo de Peça" / "Escapamento" -> "Tipo de Peça — Escapamento / Escapamento para moto: proporciona maior rendimento e melhor desempenho." (score 0.99)
+2026-08-12 16:42:36,469 [INFO]   Tag "Linha da Peça" / "Powercore 4 Pro Series" -> "Linha da Peça — Powercore 4 Pro Series / Alta performance e ronco esportivo." (score 0.99)
+2026-08-12 16:42:39,274 [INFO]   Tag "Compatibilidade de Modelo (Spec)" / "CRF 300F 2025" -> "Compatibilidade de Modelo (Spec) — CRF 300F 2025 / Desenvolvido sob medida para a moto Honda CRF 300F 2025." (score 0.99)
+2026-08-12 16:42:42,979 [INFO]   Tag "Material" / "Ponteira Fabricada em Alumínio" -> "Material — Ponteira Fabricada em Alumínio / Ponteira em alumínio: leveza, alta durabilidade e resistência." (score 0.99)
+2026-08-12 16:42:46,964 [INFO]   Tag "Material" / "Curva do Motor Fabricada em Aço Inox" -> "Material — Curva do Motor Fabricada em Aço Inox / Curva do motor em aço inox: anticorrosão garantindo maior vida útil." (score 0.99)
+2026-08-12 16:42:47,200 [INFO]   Salvo com sucesso.
+2026-08-12 16:42:47,201 [INFO] [6/6] SKU Sportbay=119944 | SKU Seller=PAI-119944 (9 tag(s))
+2026-08-12 16:42:49,682 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 16:42:50,900 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-12 16:42:52,749 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-12 16:42:54,604 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-12 16:42:57,674 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-12 16:43:00,194 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-12 16:43:02,714 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-12 16:43:05,099 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-12 16:43:08,233 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Jugular com Sistema / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-12 16:43:11,509 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-12 16:43:13,809 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-12 16:43:14,044 [INFO]   Salvo com sucesso.
+2026-08-12 16:43:14,432 [INFO] Concluído: 6 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-12 17:08:14,159 [INFO] 24 linha(s) de tag lidas -> 3 grupo(s) de SKU a processar.
+2026-08-12 17:08:15,615 [INFO] Abrindo página de login...
+2026-08-12 17:08:18,692 [INFO] Login OK, sessão iniciada.
+2026-08-12 17:08:18,694 [INFO] [1/3] SKU Sportbay=125024 | SKU Seller=PAI-125024 (8 tag(s))
+2026-08-12 17:08:21,023 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 17:08:22,273 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-12 17:08:24,104 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-12 17:08:26,297 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-12 17:08:29,399 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-12 17:08:32,050 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-12 17:08:34,369 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-12 17:08:37,196 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-12 17:08:39,692 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-12 17:08:42,004 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-12 17:08:42,365 [INFO]   Salvo com sucesso.
+2026-08-12 17:08:42,365 [INFO] [2/3] SKU Sportbay=116186A | SKU Seller=PAI-116186A (7 tag(s))
+2026-08-12 17:08:44,863 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 17:08:46,081 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-12 17:08:48,232 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-12 17:08:50,026 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-12 17:08:53,054 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-12 17:08:55,575 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-12 17:08:57,823 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-12 17:09:00,694 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-12 17:09:04,347 [INFO]   Tag "Ventilação" / "Entradas e saídas reguláveis" -> "Ventilação — Entradas e saídas reguláveis / Entradas e saídas de ar reguláveis para garantir um maior conforto e frescor na pilotagem" (score 0.99)
+2026-08-12 17:09:04,589 [INFO]   Salvo com sucesso.
+2026-08-12 17:09:04,589 [INFO] [3/3] SKU Sportbay=121016 | SKU Seller=PAI-121016 (9 tag(s))
+2026-08-12 17:09:06,865 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-12 17:09:08,305 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-12 17:09:10,236 [INFO]   Tag "Tipo de Capacete" / "Off-Road" -> "Tipo de Capacete — Off-Road / Design off-road: ideal para motocross, trilhas e terrenos adversos." (score 0.99)
+2026-08-12 17:09:12,806 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-12 17:09:16,344 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-12 17:09:18,878 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-12 17:09:21,181 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-12 17:09:23,651 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-12 17:09:25,905 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-12 17:09:30,274 [INFO]   Tag "Sistema de Retenção" / "Cinta jugular com fechamento em duas argolas" -> "Sistema de Retenção — Cinta jugular com fechamento em duas argolas / Fechamento duplo D em duas argolas: máxima segurança em pistas." (score 0.99)
+2026-08-12 17:09:33,376 [INFO]   Tag "Recursos" / "Pala com regulagem" -> "Recursos — Pala com regulagem / Pala ajustável: ajuste de altura personalizado contra o sol e lama." (score 0.99)
+2026-08-12 17:09:33,618 [INFO]   Salvo com sucesso.
+2026-08-12 17:09:33,907 [INFO] Concluído: 3 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-13 13:49:11,931 [INFO] 47 linha(s) de tag lidas -> 7 grupo(s) de SKU a processar.
+2026-08-13 13:49:17,150 [INFO] Abrindo página de login...
+2026-08-13 13:49:20,928 [INFO] Login OK, sessão iniciada.
+2026-08-13 13:49:20,930 [INFO] [1/7] SKU Sportbay=121060 | SKU Seller=PAI-121060 (7 tag(s))
+2026-08-13 13:49:23,482 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 13:49:24,756 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 13:49:26,650 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-13 13:49:28,735 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-13 13:49:31,738 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 13:49:34,292 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 13:49:36,647 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 13:49:39,449 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 13:49:41,965 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 13:49:42,207 [INFO]   Salvo com sucesso.
+2026-08-13 13:49:42,207 [INFO] [2/7] SKU Sportbay=119776A | SKU Seller=PAI-119776A (8 tag(s))
+2026-08-13 13:49:44,553 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 13:49:46,007 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 13:49:47,841 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-13 13:49:49,709 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.95)
+2026-08-13 13:49:52,794 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 13:49:55,123 [INFO]   Tag "Marca" / "Mixs" -> "Marca — Mixs / Qualidade e design moderno no segmento" (score 0.98)
+2026-08-13 13:49:57,405 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 13:50:00,231 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 13:50:03,684 [INFO]   Tag "Recursos" / "Estabilizador aerodinâmico" -> "Recursos — Estabilizador aerodinâmico / Estabilizador aerodinâmico: reduz turbulências em alta velocidade." (score 0.99)
+2026-08-13 13:50:06,170 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 13:50:06,413 [INFO]   Salvo com sucesso.
+2026-08-13 13:50:06,414 [INFO] [3/7] SKU Sportbay=124886 | SKU Seller=PAI-124886 (5 tag(s))
+2026-08-13 13:50:08,912 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 13:50:10,263 [INFO]   Categoria "PEÇAS" -> "PEÇAS" (score 1.00)
+2026-08-13 13:50:12,162 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 13:50:14,215 [INFO]   Tag "Tipo de Peça" / "Escapamento" -> "Tipo de Peça — Escapamento / Escapamento para moto: proporciona maior rendimento e melhor desempenho." (score 0.99)
+2026-08-13 13:50:16,867 [INFO]   Tag "Material" / "Aço Carbono" -> "Material — Aço Carbono / Confeccionado em aço carbono para suportar calor e pressão." (score 0.99)
+2026-08-13 13:50:20,355 [INFO]   Tag "Linha da Peça" / "Powercore 3 Steel Technology" -> "Linha da Peça — Powercore 3 Steel Technology / Linha Powercore 3 Steel Technology: engenharia em aço para alto rendimento." (score 0.99)
+2026-08-13 13:50:23,424 [INFO]   Tag "Compatibilidade de Modelo (Spec)" / "CRF 230F 2007-2020" -> "Compatibilidade de Modelo (Spec) — CRF 230F 2007-2020 / Compatível com a moto Honda CRF 230F dos anos 2007 a 2020." (score 0.99)
+2026-08-13 13:50:23,665 [INFO]   Salvo com sucesso.
+2026-08-13 13:50:23,665 [INFO] [4/7] SKU Sportbay=757A | SKU Seller=PAI-757A (5 tag(s))
+2026-08-13 13:50:25,928 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 13:50:27,999 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 13:50:29,902 [INFO]   Tag "Tipo de Capacete" / "Off-Road" -> "Tipo de Capacete — Off-Road / Design off-road: ideal para motocross, trilhas e terrenos adversos." (score 0.99)
+2026-08-13 13:50:32,397 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 13:50:35,186 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 13:50:37,050 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 13:50:41,571 [INFO]   Tag "Sistema de Retenção" / "Cinta jugular com fechamento em duas argolas" -> "Sistema de Retenção — Cinta jugular com fechamento em duas argolas / Fechamento duplo D em duas argolas: máxima segurança em pistas." (score 0.99)
+2026-08-13 13:50:41,808 [INFO]   Salvo com sucesso.
+2026-08-13 13:50:41,808 [INFO] [5/7] SKU Sportbay=127020 | SKU Seller=PAI-127020 (5 tag(s))
+2026-08-13 13:50:44,800 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 13:50:45,962 [INFO]   Categoria "PEÇAS" -> "PEÇAS" (score 1.00)
+2026-08-13 13:50:47,886 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 13:50:49,943 [INFO]   Tag "Tipo de Peça" / "Escapamento" -> "Tipo de Peça — Escapamento / Escapamento para moto: proporciona maior rendimento e melhor desempenho." (score 0.99)
+2026-08-13 13:50:52,601 [INFO]   Tag "Material" / "Aço Carbono" -> "Material — Aço Carbono / Confeccionado em aço carbono para suportar calor e pressão." (score 0.99)
+2026-08-13 13:50:56,119 [INFO]   Tag "Linha da Peça" / "Powercore 3 Steel Technology" -> "Linha da Peça — Powercore 3 Steel Technology / Linha Powercore 3 Steel Technology: engenharia em aço para alto rendimento." (score 0.99)
+2026-08-13 13:50:59,300 [INFO]   Tag "Compatibilidade de Modelo (Spec)" / "NXR Bros 160 2016-2025" -> "Compatibilidade de Modelo (Spec) — NXR Bros 160 2016-2025 / Encaixe sob medida para modelos Honda NXR Bros 160 de 2016 a 2025." (score 0.99)
+2026-08-13 13:50:59,538 [INFO]   Salvo com sucesso.
+2026-08-13 13:50:59,538 [INFO] [6/7] SKU Sportbay=124921 | SKU Seller=PAI-124921 (9 tag(s))
+2026-08-13 13:51:01,861 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 13:51:03,360 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 13:51:05,217 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-13 13:51:07,291 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-13 13:51:10,768 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-13 13:51:13,270 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 13:51:15,538 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 13:51:18,378 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 13:51:21,616 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-13 13:51:24,081 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 13:51:26,388 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-13 13:51:26,639 [INFO]   Salvo com sucesso.
+2026-08-13 13:51:26,641 [INFO] [7/7] SKU Sportbay=116674A | SKU Seller=PAI-116674A (8 tag(s))
+2026-08-13 13:51:28,939 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 13:51:30,972 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 13:51:32,885 [INFO]   Tag "Tipo de Capacete" / "Infantil" -> "Tipo de Capacete — Infantil / Capacete infantil: ergonomia e tamanho projetados para crianças." (score 0.99)
+2026-08-13 13:51:34,981 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira com 1,5 mm de espessura." (score 0.98)
+2026-08-13 13:51:37,586 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 13:51:39,933 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 13:51:42,781 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 13:51:46,092 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 13:51:49,234 [INFO]   Tag "Recursos da Viseira" / "Viseira anti-risco" -> "Recursos da Viseira — Viseira anti-risco / Viseira em Policarbonato de alto impacto com tratamento anti-risco" (score 0.99)
+2026-08-13 13:51:51,730 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 13:51:51,980 [INFO]   Salvo com sucesso.
+2026-08-13 13:51:52,611 [INFO] Concluído: 7 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-13 14:36:21,137 [INFO] 59 linha(s) de tag lidas -> 8 grupo(s) de SKU a processar.
+2026-08-13 14:36:22,701 [INFO] Abrindo página de login...
+2026-08-13 14:36:25,733 [INFO] Login OK, sessão iniciada.
+2026-08-13 14:36:25,749 [INFO] [1/8] SKU Sportbay=4634 | SKU Seller=PAI-4634A (6 tag(s))
+2026-08-13 14:36:28,096 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 14:36:29,465 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 14:36:31,333 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-13 14:36:33,269 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.95)
+2026-08-13 14:36:36,303 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 14:36:38,803 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 14:36:41,348 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 14:36:43,663 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 14:36:43,900 [INFO]   Salvo com sucesso.
+2026-08-13 14:36:43,901 [INFO] [2/8] SKU Sportbay=5478 | SKU Seller=PAI-5478A (8 tag(s))
+2026-08-13 14:36:46,448 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 14:36:47,700 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 14:36:49,553 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-13 14:36:51,419 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.95)
+2026-08-13 14:36:54,484 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 14:36:57,043 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 14:36:59,343 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 14:37:02,473 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.90)
+2026-08-13 14:37:05,889 [INFO]   Tag "Recursos da Viseira" / "Viseira Solar Interna" -> "Recursos da Viseira — Viseira Solar Interna / Viseira solar interna retrátil: proteção prática contra o sol." (score 0.99)
+2026-08-13 14:37:08,463 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 14:37:08,807 [INFO]   Salvo com sucesso.
+2026-08-13 14:37:08,808 [INFO] [3/8] SKU Sportbay=119768 | SKU Seller=PAI-119768A (9 tag(s))
+2026-08-13 14:37:11,306 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 14:37:12,594 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 14:37:14,558 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-13 14:37:16,448 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.95)
+2026-08-13 14:37:19,613 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 14:37:22,083 [INFO]   Tag "Marca" / "Mixs" -> "Marca — Mixs / Qualidade e design moderno no segmento" (score 0.98)
+2026-08-13 14:37:24,423 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 14:37:27,923 [INFO]   Tag "Sistema de Retenção" / "Jugular com Sistema" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.90)
+2026-08-13 14:37:31,458 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-13 14:37:35,078 [INFO]   Tag "Recursos" / "Estabilizador aerodinâmico" -> "Recursos — Estabilizador aerodinâmico / Estabilizador aerodinâmico: reduz turbulências em alta velocidade." (score 0.99)
+2026-08-13 14:37:37,798 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 14:37:38,173 [INFO]   Salvo com sucesso.
+2026-08-13 14:37:38,177 [INFO] [4/8] SKU Sportbay=116186 | SKU Seller=PAI-116186A (7 tag(s))
+2026-08-13 14:37:40,585 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 14:37:41,970 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 14:37:44,123 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-13 14:37:45,923 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.95)
+2026-08-13 14:37:48,978 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 14:37:51,498 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 14:37:53,783 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 14:37:56,825 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 14:38:00,733 [INFO]   Tag "Ventilação" / "Entradas e saídas reguláveis" -> "Ventilação — Entradas e saídas reguláveis / Entradas e saídas de ar reguláveis para garantir um maior conforto e frescor na pilotagem" (score 0.99)
+2026-08-13 14:38:00,989 [INFO]   Salvo com sucesso.
+2026-08-13 14:38:01,019 [INFO] [5/8] SKU Sportbay=119776 | SKU Seller=PAI-119776A (8 tag(s))
+2026-08-13 14:38:03,658 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 14:38:05,009 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 14:38:07,163 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-13 14:38:08,998 [INFO]   Tag "Tipo de Viseira" / "Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.95)
+2026-08-13 14:38:11,583 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 14:38:13,938 [INFO]   Tag "Marca" / "Mixs" -> "Marca — Mixs / Qualidade e design moderno no segmento" (score 0.98)
+2026-08-13 14:38:16,242 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 14:38:19,072 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 14:38:22,548 [INFO]   Tag "Recursos" / "Estabilizador aerodinâmico" -> "Recursos — Estabilizador aerodinâmico / Estabilizador aerodinâmico: reduz turbulências em alta velocidade." (score 0.99)
+2026-08-13 14:38:25,018 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 14:38:25,252 [INFO]   Salvo com sucesso.
+2026-08-13 14:38:25,253 [INFO] [6/8] SKU Sportbay=757 | SKU Seller=PAI-757A (5 tag(s))
+2026-08-13 14:38:27,790 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 14:38:29,098 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 14:38:31,035 [INFO]   Tag "Tipo de Capacete" / "Off-Road" -> "Tipo de Capacete — Off-Road / Design off-road: ideal para motocross, trilhas e terrenos adversos." (score 0.99)
+2026-08-13 14:38:33,370 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 14:38:35,929 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 14:38:38,243 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 14:38:42,613 [INFO]   Tag "Sistema de Retenção" / "Cinta jugular com fechamento em duas argolas" -> "Sistema de Retenção — Cinta jugular com fechamento em duas argolas / Fechamento duplo D em duas argolas: máxima segurança em pistas." (score 0.99)
+2026-08-13 14:38:42,867 [INFO]   Salvo com sucesso.
+2026-08-13 14:38:42,868 [INFO] [7/8] SKU Sportbay=116674 | SKU Seller=PAI-116674A (8 tag(s))
+2026-08-13 14:38:45,317 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 14:38:46,583 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 14:38:48,488 [INFO]   Tag "Tipo de Capacete" / "Infantil" -> "Tipo de Capacete — Infantil / Capacete infantil: ergonomia e tamanho projetados para crianças." (score 0.99)
+2026-08-13 14:38:50,827 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira com 1,5 mm de espessura." (score 0.98)
+2026-08-13 14:38:53,418 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 14:38:55,748 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 14:38:58,678 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 14:39:02,103 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 14:39:05,258 [INFO]   Tag "Recursos da Viseira" / "Viseira anti-risco" -> "Recursos da Viseira — Viseira anti-risco / Viseira em Policarbonato de alto impacto com tratamento anti-risco" (score 0.99)
+2026-08-13 14:39:07,808 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 14:39:08,060 [INFO]   Salvo com sucesso.
+2026-08-13 14:39:08,060 [INFO] [8/8] SKU Sportbay=5351 | SKU Seller=PAI-5351A (8 tag(s))
+2026-08-13 14:39:10,576 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 14:39:11,876 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 14:39:14,013 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-13 14:39:16,213 [INFO]   Tag "Tipo de Viseira" / "Viseira Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-13 14:39:19,253 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 14:39:21,808 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 14:39:24,053 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 14:39:26,878 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 14:39:29,348 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 14:39:32,898 [INFO]   Tag "Ventilação" / "Entradas e saídas reguláveis" -> "Ventilação — Entradas e saídas reguláveis / Entradas e saídas de ar reguláveis para garantir um maior conforto e frescor na pilotagem" (score 0.99)
+2026-08-13 14:39:33,151 [INFO]   Salvo com sucesso.
+2026-08-13 14:39:33,520 [INFO] Concluído: 8 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-13 15:23:50,080 [INFO] 60 linha(s) de tag lidas -> 9 grupo(s) de SKU a processar.
+2026-08-13 15:23:51,596 [INFO] Abrindo página de login...
+2026-08-13 15:23:55,059 [INFO] Login OK, sessão iniciada.
+2026-08-13 15:23:55,061 [INFO] [1/9] SKU Sportbay=119952 | SKU Seller=PAI-119952 (8 tag(s))
+2026-08-13 15:23:57,594 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 15:23:58,895 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 15:24:00,831 [INFO]   Tag "Tipo de Capacete" / "Off-Road" -> "Tipo de Capacete — Off-Road / Design off-road: ideal para motocross, trilhas e terrenos adversos." (score 0.99)
+2026-08-13 15:24:03,490 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-13 15:24:07,075 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-13 15:24:09,696 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 15:24:12,016 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 15:24:14,530 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 15:24:18,885 [INFO]   Tag "Sistema de Retenção" / "Cinta jugular com fechamento em duas argolas" -> "Sistema de Retenção — Cinta jugular com fechamento em duas argolas / Fechamento duplo D em duas argolas: máxima segurança em pistas." (score 0.99)
+2026-08-13 15:24:21,985 [INFO]   Tag "Recursos" / "Pala com regulagem" -> "Recursos — Pala com regulagem / Pala ajustável: ajuste de altura personalizado contra o sol e lama." (score 0.99)
+2026-08-13 15:24:22,279 [INFO]   Salvo com sucesso.
+2026-08-13 15:24:22,280 [INFO] [2/9] SKU Sportbay=1223 | SKU Seller=PAI-1223 (5 tag(s))
+2026-08-13 15:24:24,860 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 15:24:26,325 [INFO]   Categoria "PEÇAS" -> "PEÇAS" (score 1.00)
+2026-08-13 15:24:28,230 [INFO]   Tag "Tipo de Peça" / "Ponteira" -> "Tipo de Peça — Ponteira / -" (score 0.96)
+2026-08-13 15:24:30,460 [INFO]   Tag "Linha da Peça" / "Modelo Original" -> "Linha da Peça — Modelo Original / -" (score 0.97)
+2026-08-13 15:24:32,800 [INFO]   Tag "Material" / "Aço" -> "Material — Aço / -" (score 0.93)
+2026-08-13 15:24:36,215 [INFO]   Tag "Compatibilidade de Modelo (Spec)" / "CBX 250 Twister 2002-2008" -> "Compatibilidade de Modelo (Spec) — CBX 250 Twister 2002-2008 / Aplicação: Honda CBX 250 Twister (anos 2002 a 2008)." (score 0.99)
+2026-08-13 15:24:38,789 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 15:24:39,024 [INFO]   Salvo com sucesso.
+2026-08-13 15:24:39,024 [INFO] [3/9] SKU Sportbay=119950 | SKU Seller=PAI-119950 (9 tag(s))
+2026-08-13 15:24:41,619 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 15:24:42,905 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 15:24:45,014 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-13 15:24:47,250 [INFO]   Tag "Tipo de Viseira" / "Viseira Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-13 15:24:50,819 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-13 15:24:53,350 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 15:24:55,625 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 15:24:58,459 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 15:25:01,714 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-13 15:25:04,960 [INFO]   Tag "Recursos da Viseira" / "Viseira Solar Interna" -> "Recursos da Viseira — Viseira Solar Interna / Viseira solar interna retrátil: proteção prática contra o sol." (score 0.99)
+2026-08-13 15:25:07,534 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 15:25:07,769 [INFO]   Salvo com sucesso.
+2026-08-13 15:25:07,769 [INFO] [4/9] SKU Sportbay=124853 | SKU Seller=PAI-124853 (8 tag(s))
+2026-08-13 15:25:10,284 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 15:25:11,602 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 15:25:13,405 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-13 15:25:15,644 [INFO]   Tag "Tipo de Viseira" / "Viseira Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-13 15:25:18,709 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 15:25:21,249 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 15:25:23,519 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 15:25:26,354 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 15:25:28,874 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 15:25:31,189 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-13 15:25:31,425 [INFO]   Salvo com sucesso.
+2026-08-13 15:25:31,426 [INFO] [5/9] SKU Sportbay=117310 | SKU Seller=PAI-117310 (4 tag(s))
+2026-08-13 15:25:33,751 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 15:25:35,204 [INFO]   Categoria "PEÇAS" -> "PEÇAS" (score 1.00)
+2026-08-13 15:25:37,494 [INFO]   Tag "Marca" / "Super Adventure" -> "Marca — Super Adventure / Sinônimo de alta resistência." (score 0.98)
+2026-08-13 15:25:39,134 [INFO]   Tag "Material" / "Aço" -> "Material — Aço / -" (score 0.93)
+2026-08-13 15:25:42,134 [INFO]   Tag "Tipo de Peça" / "Cavalete Traseiro" -> "Tipo de Peça — Cavalete Traseiro / -" (score 0.97)
+2026-08-13 15:25:44,759 [INFO]   Tag "Compatibilidade de Modelo (Spec)" / "Universal" -> "Compatibilidade de Modelo (Spec) — Universal / -" (score 0.98)
+2026-08-13 15:25:45,022 [INFO]   Salvo com sucesso.
+2026-08-13 15:25:45,022 [INFO] [6/9] SKU Sportbay=126976 | SKU Seller=PAI-126976 (8 tag(s))
+2026-08-13 15:25:47,336 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 15:25:48,818 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 15:25:50,709 [INFO]   Tag "Tipo de Capacete" / "Infantil" -> "Tipo de Capacete — Infantil / Capacete infantil: ergonomia e tamanho projetados para crianças." (score 0.99)
+2026-08-13 15:25:52,858 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira com 1,5 mm de espessura." (score 0.98)
+2026-08-13 15:25:55,893 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 15:25:58,478 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 15:26:00,794 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 15:26:03,603 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 15:26:06,118 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 15:26:09,203 [INFO]   Tag "Recursos da Viseira" / "Viseira anti-risco" -> "Recursos da Viseira — Viseira anti-risco / Viseira em Policarbonato de alto impacto com tratamento anti-risco" (score 0.99)
+2026-08-13 15:26:09,446 [INFO]   Salvo com sucesso.
+2026-08-13 15:26:09,446 [INFO] [7/9] SKU Sportbay=4902A | SKU Seller=PAI-4902A (3 tag(s))
+2026-08-13 15:26:12,061 [INFO]   Curva ABC "Curva B" selecionada.
+2026-08-13 15:26:13,395 [INFO]   Categoria "EQUIPAMENTOS" -> "EQUIPAMENTOS" (score 1.00)
+2026-08-13 15:26:15,093 [INFO]   Tag "Marca" / "Jett" -> "Marca — Jett / Bota Jett: estrutura articulada, conforto e absorção de impactos." (score 0.99)
+2026-08-13 15:26:17,268 [INFO]   Tag "Tipo de Proteção" / "Bota Motocross" -> "Tipo de Proteção — Bota Motocross / -" (score 0.97)
+2026-08-13 15:26:20,183 [INFO]   Tag "Público-alvo" / "Pilotos Off-Road" -> "Público-alvo — Pilotos Off-Road / -" (score 0.97)
+2026-08-13 15:26:20,424 [INFO]   Salvo com sucesso.
+2026-08-13 15:26:20,424 [INFO] [8/9] SKU Sportbay=126167 | SKU Seller=PAI-126167 (7 tag(s))
+2026-08-13 15:26:22,672 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 15:26:24,258 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 15:26:26,573 [INFO]   Tag "Tipo de Capacete" / "Off-Road Infantil" -> "Tipo de Capacete — Off-Road Infantil / Design off-road: ideal para crianças apaixonadas por aventuras." (score 0.99)
+2026-08-13 15:26:28,943 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 15:26:31,513 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 15:26:34,294 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 15:26:37,533 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-13 15:26:40,071 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 15:26:42,342 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-13 15:26:42,595 [INFO]   Salvo com sucesso.
+2026-08-13 15:26:42,595 [INFO] [9/9] SKU Sportbay=124852 | SKU Seller=PAI-124852 (8 tag(s))
+2026-08-13 15:26:44,843 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 15:26:46,847 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 15:26:48,682 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-13 15:26:50,917 [INFO]   Tag "Tipo de Viseira" / "Viseira Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-13 15:26:53,949 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 15:26:56,308 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 15:26:59,174 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 15:27:01,807 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 15:27:04,207 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-13 15:27:06,773 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 15:27:07,017 [INFO]   Salvo com sucesso.
+2026-08-13 15:27:07,370 [INFO] Concluído: 9 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-13 15:38:05,212 [INFO] 3 linha(s) de tag lidas -> 1 grupo(s) de SKU a processar.
+2026-08-13 15:38:06,826 [INFO] Abrindo página de login...
+2026-08-13 15:38:10,435 [INFO] Login OK, sessão iniciada.
+2026-08-13 15:38:10,435 [INFO] [1/1] SKU Sportbay=4902A | SKU Seller=PAI-4902A (3 tag(s))
+2026-08-13 15:38:12,095 [INFO]   Código SKU da Sportbay: "4902A" -> "4902" (sufixo A removido)
+2026-08-13 15:38:13,030 [INFO]   Curva ABC "Curva B" selecionada.
+2026-08-13 15:38:14,504 [INFO]   Categoria "EQUIPAMENTOS" -> "EQUIPAMENTOS" (score 1.00)
+2026-08-13 15:38:16,288 [INFO]   Tag "Marca" / "Jett" -> "Marca — Jett / Bota Jett: estrutura articulada, conforto e absorção de impactos." (score 0.99)
+2026-08-13 15:38:18,624 [INFO]   Tag "Tipo de Proteção" / "Bota Motocross" -> "Tipo de Proteção — Bota Motocross / -" (score 0.97)
+2026-08-13 15:38:21,594 [INFO]   Tag "Público-alvo" / "Pilotos Off-Road" -> "Público-alvo — Pilotos Off-Road / -" (score 0.97)
+2026-08-13 15:38:21,784 [INFO]   [DRY-RUN] não vou clicar em Salvar. Screenshot: C:\Users\Protork\Desktop\Enriquecimento de SKUs\bot\logs\dry_run_grupo_1.png
+2026-08-13 15:38:22,615 [INFO] Concluído: 1 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-13 15:38:52,843 [INFO] 3 linha(s) de tag lidas -> 1 grupo(s) de SKU a processar.
+2026-08-13 15:38:54,260 [INFO] Abrindo página de login...
+2026-08-13 15:38:57,424 [INFO] Login OK, sessão iniciada.
+2026-08-13 15:38:57,424 [INFO] [1/1] SKU Sportbay=4902A | SKU Seller=PAI-4902A (3 tag(s))
+2026-08-13 15:38:58,782 [INFO]   Código SKU da Sportbay: "4902A" -> "4902" (sufixo A removido)
+2026-08-13 15:38:59,722 [INFO]   Curva ABC "Curva B" selecionada.
+2026-08-13 15:39:01,074 [INFO]   Categoria "EQUIPAMENTOS" -> "EQUIPAMENTOS" (score 1.00)
+2026-08-13 15:39:02,799 [INFO]   Tag "Marca" / "Jett" -> "Marca — Jett / Bota Jett: estrutura articulada, conforto e absorção de impactos." (score 0.99)
+2026-08-13 15:39:05,054 [INFO]   Tag "Tipo de Proteção" / "Bota Motocross" -> "Tipo de Proteção — Bota Motocross / -" (score 0.97)
+2026-08-13 15:39:08,044 [INFO]   Tag "Público-alvo" / "Pilotos Off-Road" -> "Público-alvo — Pilotos Off-Road / -" (score 0.97)
+2026-08-13 15:39:08,278 [INFO]   Salvo com sucesso.
+2026-08-13 15:39:08,741 [INFO] Concluído: 1 grupo(s) ok, 0 grupo(s) com falha.
+2026-08-13 16:33:20,574 [INFO] 62 linha(s) de tag lidas -> 10 grupo(s) de SKU a processar.
+2026-08-13 16:33:22,036 [INFO] Abrindo página de login...
+2026-08-13 16:33:26,503 [INFO] Login OK, sessão iniciada.
+2026-08-13 16:33:26,526 [INFO] [1/10] SKU Sportbay=124926 | SKU Seller=PAI-124926 (10 tag(s))
+2026-08-13 16:33:29,415 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:33:30,983 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 16:33:33,085 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-13 16:33:35,444 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-13 16:33:39,409 [INFO]   Tag "Forro" / "Forro antialérgico removível" -> "Forro — Forro antialérgico removível / Forro antialérgico e removível: fácil higienização e conforto." (score 0.99)
+2026-08-13 16:33:42,013 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 16:33:44,510 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 16:33:46,986 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 16:33:50,266 [INFO]   Tag "Ventilação" / "Entradas de ar frontal" -> "Ventilação — Entradas de ar frontal / Entradas de ar frontais para ventilação." (score 0.99)
+2026-08-13 16:33:52,801 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 16:33:55,121 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-13 16:33:58,646 [INFO]   Tag "Recursos" / "Estabilizador aerodinâmico" -> "Recursos — Estabilizador aerodinâmico / Estabilizador aerodinâmico: reduz turbulências em alta velocidade." (score 0.99)
+2026-08-13 16:33:58,900 [INFO]   Salvo com sucesso.
+2026-08-13 16:33:58,900 [INFO] [2/10] SKU Sportbay=125622 | SKU Seller=PAI-125622 (3 tag(s))
+2026-08-13 16:34:01,312 [INFO]   Curva ABC "Curva B" selecionada.
+2026-08-13 16:34:02,841 [INFO]   Categoria "EQUIPAMENTOS" -> "EQUIPAMENTOS" (score 1.00)
+2026-08-13 16:34:04,596 [INFO]   Tag "Marca" / "Jett" -> "Marca — Jett / Bota Jett: estrutura articulada, conforto e absorção de impactos." (score 0.99)
+2026-08-13 16:34:06,821 [INFO]   Tag "Tipo de Proteção" / "Bota Motocross" -> "Tipo de Proteção — Bota Motocross / -" (score 0.97)
+2026-08-13 16:34:09,756 [INFO]   Tag "Público-alvo" / "Pilotos Off-Road" -> "Público-alvo — Pilotos Off-Road / -" (score 0.97)
+2026-08-13 16:34:09,991 [INFO]   Salvo com sucesso.
+2026-08-13 16:34:09,991 [INFO] [3/10] SKU Sportbay=5170A | SKU Seller=PAI-5170A (7 tag(s))
+2026-08-13 16:34:11,488 [INFO]   Código SKU da Sportbay: "5170A" -> "5170" (sufixo A removido)
+2026-08-13 16:34:12,424 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:34:13,846 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 16:34:15,711 [INFO]   Tag "Tipo de Capacete" / "Fechado" -> "Tipo de Capacete — Fechado / Capacete fechado garante maior proteção e segurança." (score 0.99)
+2026-08-13 16:34:17,931 [INFO]   Tag "Tipo de Viseira" / "Viseira Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-13 16:34:20,966 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 16:34:23,501 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 16:34:26,301 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 16:34:29,241 [INFO]   Tag "Recursos da Viseira" / "Botão automático" -> "Recursos da Viseira — Botão automático / Sistema automático para abertura da viseira, trazendo facilidade de uso." (score 0.99)
+2026-08-13 16:34:31,726 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 16:34:31,982 [INFO]   Salvo com sucesso.
+2026-08-13 16:34:31,982 [INFO] [4/10] SKU Sportbay=126441 | SKU Seller=PAI-126441 (5 tag(s))
+2026-08-13 16:34:34,462 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:34:35,711 [INFO]   Categoria "PEÇAS" -> "PEÇAS" (score 1.00)
+2026-08-13 16:34:37,596 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 16:34:39,651 [INFO]   Tag "Tipo de Peça" / "Escapamento" -> "Tipo de Peça — Escapamento / Escapamento para moto: proporciona maior rendimento e melhor desempenho." (score 0.99)
+2026-08-13 16:34:42,356 [INFO]   Tag "Material" / "Aço Carbono" -> "Material — Aço Carbono / Confeccionado em aço carbono para suportar calor e pressão." (score 0.99)
+2026-08-13 16:34:45,891 [INFO]   Tag "Linha da Peça" / "Powercore 3 Steel Technology" -> "Linha da Peça — Powercore 3 Steel Technology / Linha Powercore 3 Steel Technology: engenharia em aço para alto rendimento." (score 0.99)
+2026-08-13 16:34:49,112 [INFO]   Tag "Compatibilidade de Modelo (Spec)" / "NXR Bros 150 2009-2015" -> "Compatibilidade de Modelo (Spec) — NXR Bros 150 2009-2015 / Encaixe sob medida para modelos Honda NXR Bros 160 de 2009 a 2015." (score 0.99)
+2026-08-13 16:34:49,348 [INFO]   Salvo com sucesso.
+2026-08-13 16:34:49,348 [INFO] [5/10] SKU Sportbay=126442 | SKU Seller=PAI-126442 (5 tag(s))
+2026-08-13 16:34:51,830 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:34:53,301 [INFO]   Categoria "PEÇAS" -> "PEÇAS" (score 1.00)
+2026-08-13 16:34:55,166 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 16:34:57,252 [INFO]   Tag "Tipo de Peça" / "Escapamento" -> "Tipo de Peça — Escapamento / Escapamento para moto: proporciona maior rendimento e melhor desempenho." (score 0.99)
+2026-08-13 16:34:59,956 [INFO]   Tag "Material" / "Aço Carbono" -> "Material — Aço Carbono / Confeccionado em aço carbono para suportar calor e pressão." (score 0.99)
+2026-08-13 16:35:03,496 [INFO]   Tag "Linha da Peça" / "Powercore 3 Steel Technology" -> "Linha da Peça — Powercore 3 Steel Technology / Linha Powercore 3 Steel Technology: engenharia em aço para alto rendimento." (score 0.99)
+2026-08-13 16:35:06,796 [INFO]   Tag "Compatibilidade de Modelo (Spec)" / "NXR Bros 125 2003-2005" -> "Compatibilidade de Modelo (Spec) — NXR Bros 125 2003-2005 / Encaixe sob medida para modelos Honda NXR Bros 160 de 2003 a 2005." (score 0.99)
+2026-08-13 16:35:07,033 [INFO]   Salvo com sucesso.
+2026-08-13 16:35:07,033 [INFO] [6/10] SKU Sportbay=124885 | SKU Seller=PAI-124885 (5 tag(s))
+2026-08-13 16:35:09,513 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:35:10,916 [INFO]   Categoria "PEÇAS" -> "PEÇAS" (score 1.00)
+2026-08-13 16:35:12,836 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 16:35:14,866 [INFO]   Tag "Tipo de Peça" / "Escapamento" -> "Tipo de Peça — Escapamento / Escapamento para moto: proporciona maior rendimento e melhor desempenho." (score 0.99)
+2026-08-13 16:35:17,551 [INFO]   Tag "Material" / "Aço Carbono" -> "Material — Aço Carbono / Confeccionado em aço carbono para suportar calor e pressão." (score 0.99)
+2026-08-13 16:35:21,092 [INFO]   Tag "Linha da Peça" / "Powercore 3 Steel Technology" -> "Linha da Peça — Powercore 3 Steel Technology / Linha Powercore 3 Steel Technology: engenharia em aço para alto rendimento." (score 0.99)
+2026-08-13 16:35:24,441 [INFO]   Tag "Compatibilidade de Modelo (Spec)" / "XR 250 Tornado 2001-2008" -> "Compatibilidade de Modelo (Spec) — XR 250 Tornado 2001-2008 / Encaixe sob medida para modelos XR 250 Tornado 2001 a 2008." (score 0.99)
+2026-08-13 16:35:24,683 [INFO]   Salvo com sucesso.
+2026-08-13 16:35:24,683 [INFO] [7/10] SKU Sportbay=123902 | SKU Seller=PAI-123902 (8 tag(s))
+2026-08-13 16:35:26,980 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:35:28,363 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 16:35:30,436 [INFO]   Tag "Tipo de Capacete" / "Escamoteável" -> "Tipo de Capacete — Escamoteável / Modelo escamoteável articulado: versatilidade e segurança no uso urbano." (score 0.99)
+2026-08-13 16:35:32,641 [INFO]   Tag "Tipo de Viseira" / "Viseira Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-13 16:35:35,641 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 16:35:38,146 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 16:35:40,916 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 16:35:43,236 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 16:35:45,751 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 16:35:49,251 [INFO]   Tag "Ventilação" / "Entradas e saídas reguláveis" -> "Ventilação — Entradas e saídas reguláveis / Entradas e saídas de ar reguláveis para garantir um maior conforto e frescor na pilotagem" (score 0.99)
+2026-08-13 16:35:49,492 [INFO]   Salvo com sucesso.
+2026-08-13 16:35:49,492 [INFO] [8/10] SKU Sportbay=126979 | SKU Seller=PAI-126979 (8 tag(s))
+2026-08-13 16:35:51,776 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:35:53,327 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 16:35:55,126 [INFO]   Tag "Tipo de Capacete" / "Aberto" -> "Tipo de Capacete — Aberto / Capacete aberto garante praticidade, conforto e visibilidade." (score 0.99)
+2026-08-13 16:35:57,417 [INFO]   Tag "Tipo de Viseira" / "Viseira Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-13 16:36:00,466 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 16:36:03,017 [INFO]   Tag "Marca" / "Pro Tork" -> "Marca — Pro Tork / Qualidade e tradição no segmento de motopeças." (score 0.98)
+2026-08-13 16:36:05,321 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 16:36:08,126 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 16:36:10,646 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 16:36:12,941 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-13 16:36:13,198 [INFO]   Salvo com sucesso.
+2026-08-13 16:36:13,199 [INFO] [9/10] SKU Sportbay=120382 | SKU Seller=PAI-120382 (3 tag(s))
+2026-08-13 16:36:15,554 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:36:17,021 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 16:36:19,117 [INFO]   Tag "Tipo de Viseira" / "Viseira Fumê" -> "Tipo de Viseira — Viseira Fumê / Viseira fumê: em policarbonato com 2 mm de espessura" (score 0.99)
+2026-08-13 16:36:21,591 [INFO]   Tag "Tipo de Capacete" / "Mixs MX2 e Gladiator" -> "Tipo de Capacete — Mixs MX2 e Gladiator / -" (score 0.97)
+2026-08-13 16:36:25,891 [INFO]   Tag "Recursos da Viseira" / "Fabricada em Policarbonato e Dupla Curvatura" -> "Recursos da Viseira — Fabricada em Policarbonato e Dupla Curvatura / -" (score 0.99)
+2026-08-13 16:36:26,145 [INFO]   Salvo com sucesso.
+2026-08-13 16:36:26,146 [INFO] [10/10] SKU Sportbay=121164 | SKU Seller=PAI-121164 (8 tag(s))
+2026-08-13 16:36:28,470 [INFO]   Curva ABC "Curva A" selecionada.
+2026-08-13 16:36:29,913 [INFO]   Categoria "CAPACETES" -> "CAPACETES" (score 1.00)
+2026-08-13 16:36:31,946 [INFO]   Tag "Tipo de Capacete" / "Infantil" -> "Tipo de Capacete — Infantil / Capacete infantil: ergonomia e tamanho projetados para crianças." (score 0.99)
+2026-08-13 16:36:34,146 [INFO]   Tag "Tipo de Viseira" / "Viseira Cristal" -> "Tipo de Viseira — Viseira Cristal / Viseira cristal transparente em policarbonato com 2 mm de espessura." (score 0.99)
+2026-08-13 16:36:37,226 [INFO]   Tag "Forro" / "Forro antialérgico" -> "Forro — Forro antialérgico / Previne irritações e garante maior conforto." (score 0.99)
+2026-08-13 16:36:39,721 [INFO]   Tag "Marca" / "Etceter" -> "Marca — Etceter / Produto original Etceter, focado em estilo, conforto e segurança." (score 0.99)
+2026-08-13 16:36:42,021 [INFO]   Tag "Material do Casco" / "ABS" -> "Material do Casco — ABS / Casco injetado em ABS: alta resistência contra impactos e durabilidade." (score 0.99)
+2026-08-13 16:36:44,911 [INFO]   Tag "Sistema de Retenção" / "Cinta Jugular" -> "Sistema de Retenção — Cinta Jugular / Cinta jugular com sistema de fecho micrométrico." (score 0.99)
+2026-08-13 16:36:47,431 [INFO]   Tag "Certificação" / "INMETRO" -> "Certificação — INMETRO / Certificado pelo INMETRO: atende a todas as normas de segurança." (score 0.99)
+2026-08-13 16:36:49,696 [INFO]   Tag "Certificação" / "DOT" -> "Certificação — DOT / Certificação americana DOT: atende a altos padrões de segurança." (score 0.99)
+2026-08-13 16:36:49,984 [INFO]   Salvo com sucesso.
+2026-08-13 16:36:50,427 [INFO] Concluído: 10 grupo(s) ok, 0 grupo(s) com falha.
