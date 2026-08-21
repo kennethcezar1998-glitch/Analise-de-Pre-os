@@ -137,8 +137,15 @@ def ler_planilha(caminho):
 # ------------------------------------------------------------------ navegador
 
 def abrir_navegador():
+    """Chrome sem janela: o robô roda só no terminal.
+
+    Sem janela não existe "maximizar", e o tamanho padrão do headless é pequeno
+    demais — a captura de tela do modo teste sairia cortada e elementos fora da
+    viewport atrapalhariam os cliques. Daí o --window-size explícito.
+    """
     opcoes = Options()
-    opcoes.add_argument('--start-maximized')
+    opcoes.add_argument('--headless=new')
+    opcoes.add_argument('--window-size=1920,1080')
     opcoes.add_argument('--disable-gpu')
     opcoes.add_argument('--no-sandbox')
     opcoes.add_argument('--disable-dev-shm-usage')
@@ -460,8 +467,11 @@ def main():
     parser.add_argument('--planilha', default=os.path.join(PASTA, NOME_PLANILHA))
     args = parser.parse_args()
 
-    load_dotenv(os.path.join(os.path.dirname(PASTA), '.env'))
-    load_dotenv(os.path.join(PASTA, '.env'))
+    # .env compartilhado: hoje fica em "Analise de preços site\Analise";
+    # a raiz e a pasta deste script continuam valendo como reserva.
+    raiz = os.path.dirname(PASTA)
+    for pasta_env in (os.path.join(raiz, 'Analise'), raiz, PASTA):
+        load_dotenv(os.path.join(pasta_env, '.env'))
     usuario = os.getenv('SPORTBAY_USUARIO')
     senha = os.getenv('SPORTBAY_SENHA')
     if not usuario or not senha:

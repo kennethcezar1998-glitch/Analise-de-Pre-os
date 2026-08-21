@@ -4240,3 +4240,23 @@ Stacktrace:
 2026-08-11 15:47:27,497 - INFO -   TOTAL MEDIDO              1121.61s
 2026-08-11 15:47:27,497 - INFO - ============================================================
 2026-08-14 10:52:58,870 - WARNING -   ⚠ Chip de filtro 'P-ANLDG969WO' não saiu da tela após clicar no 'x'
+2026-08-14 13:51:27,787 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=57253): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente")': /session/053241d0a2baa3ae7ff07b36e2be05a8
+2026-08-14 13:51:31,854 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=57253): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente")': /session/053241d0a2baa3ae7ff07b36e2be05a8
+2026-08-14 13:51:35,923 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=57253): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente")': /session/053241d0a2baa3ae7ff07b36e2be05a8
+2026-08-14 13:53:06,218 - WARNING -   ⚠ Clique em remover não reduziu o total da coleção (continua em 16) — tentativa 1 de 3
+2026-08-14 13:53:11,250 - WARNING -   ⚠ Clique em remover não reduziu o total da coleção (continua em 16) — tentativa 2 de 3
+2026-08-14 13:53:16,366 - WARNING -   ⚠ Clique em remover não reduziu o total da coleção (continua em 16) — tentativa 3 de 3
+2026-08-18 16:12:22,014 - INFO - [TESTE SEM SALVAR] Coleção alvo: 'Mais Potência'
+2026-08-18 16:12:25,237 - INFO - Acessando página de login...
+2026-08-18 16:12:28,518 - INFO - ✓ Login realizado com sucesso
+2026-08-18 16:12:28,518 - INFO - Navegando direto para: https://www.marketplace.sportbay.com.br/dashboard/categories
+2026-08-18 16:12:30,035 - INFO - ✓ Página de lista de categorias/coleções carregada
+2026-08-18 16:12:30,036 - INFO - Procurando coleção: 'Mais Potência'
+2026-08-18 16:12:35,526 - INFO - ✓ Coleção aberta para edição
+2026-08-18 16:12:35,531 - INFO - [TESTE] Diagnóstico IMEDIATO (como era antes da correção): {'editor': False}
+2026-08-18 16:12:36,823 - INFO - Editor de SEO: 52 blocos, 22 parágrafo(s) vazio(s), 22 antes de heading
+2026-08-18 16:12:37,332 - INFO - ✓ SEO normalizado: 22 parágrafo(s) vazio(s) removido(s) via quill
+2026-08-18 16:12:37,333 - INFO - [TESTE] Espera + limpeza levaram 7.3s desde abrir a coleção
+2026-08-18 16:12:37,333 - INFO - [TESTE] Resultado: {'editor_encontrado': True, 'removidos': 22, 'restantes': 0, 'metodo': 'quill', 'texto_preservado': True}
+2026-08-18 16:12:37,345 - INFO - [TESTE] HTML do editor salvo (5375 chars) em seo_depois.html
+2026-08-18 16:12:37,346 - INFO - [TESTE] Encerrando SEM clicar em Salvar — nada foi persistido

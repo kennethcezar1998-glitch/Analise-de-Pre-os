@@ -49,8 +49,13 @@ LARGURA_COL_G = 34.875
 COL_SKU_PAI = 3                 # coluna C
 PREFIXOS_SKU_PAI = ("PAI-",)    # prefixos a remover do "SKU do Pai" (vazio = não mexe)
 
+# Caminhos resolvidos a partir da pasta deste script — hoje
+# "Analise de preços site\Limpar Planilhas de coleção".
+PASTA_SCRIPT = Path(__file__).resolve().parent
+PASTA_RAIZ = PASTA_SCRIPT.parent            # raiz "Analise de preços site"
+
 # Base de pais: coluna A = Código Auxiliar, coluna B = SKU na Plataforma
-PASTA_BASE = r"C:\Users\Protork\Desktop\Analise de preços site\Limpar Planilhas de coleção\Base dos Pais"
+PASTA_BASE = PASTA_SCRIPT / "Base dos Pais"
 ARQUIVO_BASE = None             # None = procura o .xlsx da pasta acima
 ABA_BASE = "BASE DE PRODUTOS SITE SPORTBAY"   # None = primeira aba
 COL_BASE_AUXILIAR = 1           # coluna A

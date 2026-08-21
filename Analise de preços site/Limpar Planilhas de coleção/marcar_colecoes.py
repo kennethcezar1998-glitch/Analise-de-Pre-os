@@ -25,13 +25,20 @@ from pathlib import Path
 import openpyxl
 
 # ------------------------------------------------------------------ ajustes
-PASTA_PRECOS = r"C:\Users\Protork\Desktop\Analise de preços site"
+# Caminhos resolvidos a partir da pasta deste script. A raiz do projeto
+# "Analise de preços site" fica um nível acima; dentro dela, a pasta
+# "Analise" guarda o Resultado_Menor_Preco*.xlsx gerado pelo robô de preços.
+PASTA_SCRIPT = Path(__file__).resolve().parent
+PASTA_RAIZ = PASTA_SCRIPT.parent
+
+PASTA_PRECOS = PASTA_RAIZ / "Analise"
 ARQ_PRECOS = None               # None = procura "Resultado_Menor_Preco*.xlsx" na pasta acima
 ABA_PRECOS = "Resultado"        # None = primeira aba
 COL_PRECOS_CODIGO = 1           # coluna A - Código Fabrica
 COL_PRECOS_DESTINO = 10         # coluna J - onde entra o texto da coleção
 
-PASTA_CONSOLIDADO = PASTA_PRECOS   # troque se o consolidado ficar em outra pasta
+# O consolidado é gerado pelo limpar_planilhas.py, aqui mesmo nesta pasta.
+PASTA_CONSOLIDADO = PASTA_SCRIPT   # troque se o consolidado ficar em outra pasta
 ARQ_CONSOLIDADO = None          # None = procura "*CONSOLIDADO*.xlsx" na pasta acima
 ABA_CONSOLIDADO = "Produtos Associados"
 COL_CONS_CODIGO = 3             # coluna C - SKU do Pai

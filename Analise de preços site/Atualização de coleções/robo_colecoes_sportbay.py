@@ -30,25 +30,40 @@ from selenium.common.exceptions import (
     ElementClickInterceptedException,
 )
 
+# Módulo compartilhado com os bots de produtos e departamentos — precisa estar
+# na mesma pasta deste script (ou no PYTHONPATH).
+from limpador_seo import limpar_paragrafos_vazios_seo
+
+# --- CAMINHOS ---
+# PASTA_SCRIPT = a pasta "Atualização de coleções"
+# PASTA_RAIZ   = a raiz "Analise de preços site"
+# PASTA_ANALISE = a subpasta "Analise", onde hoje mora o .env compartilhado.
+# Planilha, log e credenciais saem daqui, não do diretório atual do terminal.
+PASTA_SCRIPT = os.path.dirname(os.path.abspath(__file__))
+PASTA_RAIZ = os.path.dirname(PASTA_SCRIPT)
+PASTA_ANALISE = os.path.join(PASTA_RAIZ, 'Analise')
+
 # --- CONFIGURAÇÕES DE LOGGING ---
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('robo_colecoes.log', encoding='utf-8'),
+        logging.FileHandler(os.path.join(PASTA_SCRIPT, 'robo_colecoes.log'), encoding='utf-8'),
         logging.StreamHandler(),
     ],
 )
 logger = logging.getLogger(__name__)
 
 # --- CONFIGURAÇÕES ---
-load_dotenv()
+# Procura o .env em "Analise" (onde ele fica hoje), depois na raiz do projeto
+# e por fim na pasta do script. O primeiro que existir define as credenciais.
+for _pasta_env in (PASTA_ANALISE, PASTA_RAIZ, PASTA_SCRIPT):
+    load_dotenv(os.path.join(_pasta_env, '.env'))
 
 URL_LOGIN = "https://www.marketplace.sportbay.com.br/"
 USUARIO = os.getenv("SPORTBAY_USUARIO")
 SENHA = os.getenv("SPORTBAY_SENHA")
 
-PASTA_SCRIPT = os.path.dirname(os.path.abspath(__file__))
 NOME_PLANILHA = os.path.join(PASTA_SCRIPT, "ATUALIZAÇÃO DE COLEÇÕES.xlsx")
 
 # Layout da planilha "ATUALIZAÇÃO DE COLEÇÕES" (1 linha de cabeçalho):
@@ -479,24 +494,75 @@ def _classificar_tabela_categoria(driver, timeout=TIMEOUT_ELEMENTO):
 # Localiza a PRIMEIRA linha da tabela informada, procura o ícone de remover
 # DENTRO dela e clica — tudo num único tick de JS. Devolve a própria linha para
 # que quem chamou possa esperar a staleness dela (prova de que a remoção
-# aconteceu de fato, e não só de que o clique foi disparado).
+# aconteceu de fato, e não só de que o clique foi disparado), e também se a
+# tabela está CONCLUSIVAMENTE vazia (mensagem "Nenhum produto encontrado").
+#
+# Essa distinção é essencial: "não achei linha agora" NÃO quer dizer "acabaram
+# os produtos". Logo depois de cada remoção o React reconstrói o <tbody>, e há
+# um instante em que ele não tem linha nenhuma — quem tratar isso como fim de
+# lista para de remover no meio, com a coleção ainda cheia.
 _JS_REMOVER_PRIMEIRA_LINHA = """
     const seletorLinhas = arguments[0];
+    const seletorCorpo = arguments[1];
+    const mensagemVazia = arguments[2];
+
     const linhas = document.evaluate(
         seletorLinhas, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null
     );
-    if (linhas.snapshotLength === 0) { return {clicou: false, linha: null, restantes: 0}; }
-
-    const linha = linhas.snapshotItem(0);
-    const alvo = linha.querySelector("[data-testid='RemoveCircleIcon'], [aria-label='Remover produto']");
-    if (!alvo) { return {clicou: false, linha: null, restantes: linhas.snapshotLength}; }
-
-    alvo.scrollIntoView({block: 'center'});
-    for (const tipo of ['mousedown', 'mouseup', 'click']) {
-        alvo.dispatchEvent(new MouseEvent(tipo, {bubbles: true, cancelable: true, view: window}));
+    for (let i = 0; i < linhas.snapshotLength; i++) {
+        const linha = linhas.snapshotItem(i);
+        const alvo = linha.querySelector("[data-testid='RemoveCircleIcon'], [aria-label='Remover produto']");
+        if (!alvo) { continue; }
+        alvo.scrollIntoView({block: 'center'});
+        for (const tipo of ['mousedown', 'mouseup', 'click']) {
+            alvo.dispatchEvent(new MouseEvent(tipo, {bubbles: true, cancelable: true, view: window}));
+        }
+        // Se o painel tirar a linha do DOM de forma SÍNCRONA (dentro do próprio
+        // dispatchEvent), ela já está desconectada aqui — devolvê-la faria o
+        // chromedriver estourar StaleElementReference ao serializar o retorno.
+        // Nesse caso a remoção já se provou concluída e o `null` diz a quem
+        // chamou que não há staleness pra esperar.
+        return {
+            clicou: true, vazia: false, restantes: linhas.snapshotLength,
+            linha: linha.isConnected ? linha : null,
+        };
     }
-    return {clicou: true, linha: linha, restantes: linhas.snapshotLength};
+
+    const corpo = document.evaluate(
+        seletorCorpo, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
+    ).singleNodeValue;
+    const vazia = !!corpo && (corpo.textContent || '').trim().toLowerCase().includes(mensagemVazia);
+    return {clicou: false, linha: null, vazia: vazia, restantes: linhas.snapshotLength};
 """
+
+
+def _remover_primeira_linha_categoria(driver, timeout=TIMEOUT_ELEMENTO):
+    """Remove o primeiro produto da tabela 'Produtos da categoria'.
+
+    Insiste até um dos dois desfechos CONCLUSIVOS: clicou em algum ícone de
+    remover, ou a tabela mostrou "Nenhum produto encontrado". Uma consulta
+    isolada não serve como prova de fim de lista — entre uma remoção e a
+    seguinte o <tbody> passa por um estado sem linhas, e desistir aí para a
+    remoção com a coleção ainda cheia.
+
+    Retorna (linha_removida, situacao), com situacao em
+    'removido' | 'vazia' | 'indefinida'. `linha_removida` vem None quando a
+    linha já saiu do DOM durante o próprio clique — não há o que esperar."""
+    fim = time.time() + timeout
+    while True:
+        resposta = driver.execute_script(
+            _JS_REMOVER_PRIMEIRA_LINHA,
+            SELETOR_LINHAS_CATEGORIA,
+            _SELETOR_TBODY_CATEGORIA,
+            MENSAGEM_TABELA_VAZIA,
+        )
+        if resposta.get('clicou'):
+            return resposta.get('linha'), 'removido'
+        if resposta.get('vazia'):
+            return None, 'vazia'
+        if time.time() >= fim:
+            return None, 'indefinida'
+        time.sleep(0.05)
 
 
 def remover_todos_produtos_atuais(driver):
@@ -532,26 +598,41 @@ def remover_todos_produtos_atuais(driver):
             "(nem a mensagem de vazio, nem linha com ícone de remover) — seguindo com a remoção"
         )
 
-    seletor_linhas_categoria = SELETOR_LINHAS_CATEGORIA
-    seletor_proxima_pagina = SELETOR_PROXIMA_PAGINA_CATEGORIA
-
     total_removidos = 0
+    total_esperado, cache_paginacao = _ler_total_produtos_categoria(driver)
+    sem_progresso = 0
+
     for _ in range(MAX_ITERACOES_REMOCAO):
         with _medir('remocao_item'):
             # Localizar + rolar + clicar num único bloco de JS: antes eram 3 a 4
             # round-trips ao chromedriver por produto (WebDriverWait com XPath
             # `following::table[1]`, scrollIntoView, click) mais um
             # `find_elements` com XPath grande só pra checar modal — tudo isso
-            # multiplicado por centenas de produtos. Aqui vira 1 chamada, e o
-            # ícone é procurado DENTRO da primeira linha (não no escopo da
+            # multiplicado por centenas de produtos. Aqui vira 1 chamada por
+            # tentativa, e o ícone é procurado DENTRO da linha (não no escopo da
             # tabela inteira), então nunca há dúvida sobre qual produto sai.
-            resposta = driver.execute_script(_JS_REMOVER_PRIMEIRA_LINHA, seletor_linhas_categoria)
+            linha_removida, situacao = _remover_primeira_linha_categoria(driver)
 
-            if not resposta.get('clicou'):
-                proxima = _tentar_localizar(driver, [seletor_proxima_pagina], timeout=3, clicavel=True)
+            if situacao != 'removido':
+                # Só procura próxima página se ainda houver produto em algum
+                # lugar: com a tabela conclusivamente vazia e o contador em 0,
+                # não há por que gastar o timeout do seletor de paginação.
+                restante, cache_paginacao = _ler_total_produtos_categoria(driver, cache_paginacao)
+                if situacao == 'vazia' and restante == 0:
+                    break
+                if situacao == 'indefinida':
+                    logger.warning(
+                        "  ⚠ A tabela 'Produtos da categoria' não mostrou nem linha removível nem a "
+                        f"mensagem de vazio (total no contador: {restante})"
+                    )
+                proxima = _tentar_localizar(
+                    driver, [SELETOR_PROXIMA_PAGINA_CATEGORIA], timeout=3, clicavel=True
+                )
                 if proxima:
                     try:
-                        _clicar_proxima_pagina_e_aguardar(driver, proxima, seletor_linhas_categoria, timeout_fallback=1)
+                        _clicar_proxima_pagina_e_aguardar(
+                            driver, proxima, SELETOR_LINHAS_CATEGORIA, timeout_fallback=1
+                        )
                         continue
                     except Exception:
                         break
@@ -561,14 +642,66 @@ def remover_todos_produtos_atuais(driver):
             # existe modal (remoção é instantânea ao clicar no ícone).
             _tratar_modal_confirmacao(driver)
 
-            linha_removida = resposta.get('linha')
-            try:
-                WebDriverWait(driver, 3, poll_frequency=0.05).until(EC.staleness_of(linha_removida))
-            except TimeoutException:
-                time.sleep(0.3)
+            # Prova de que o produto realmente SAIU da coleção: o contador da
+            # paginação caiu. A staleness do <tr> não serve como prova aqui — um
+            # simples re-render da tabela deixa o nó velho stale sem ter removido
+            # nada, e o laço acharia que avançou. Ela fica só como plano B para
+            # quando o contador não é legível.
+            confirmou = False
+            if total_esperado is not None:
+                alvo = total_esperado - 1
+                fim = time.time() + 5
+                while True:
+                    lido, cache_paginacao = _ler_total_produtos_categoria(driver, cache_paginacao)
+                    if lido is not None and lido <= alvo:
+                        total_esperado, confirmou = lido, True
+                        break
+                    if time.time() >= fim:
+                        break
+                    time.sleep(0.05)
+            elif linha_removida is not None:
+                try:
+                    WebDriverWait(driver, 3, poll_frequency=0.05).until(EC.staleness_of(linha_removida))
+                except TimeoutException:
+                    time.sleep(0.3)
+                confirmou = True
+            else:
+                confirmou = True
 
+            if not confirmou:
+                # Clicar de novo no mesmo ícone que já não fez efeito só repetiria
+                # isso até esgotar MAX_ITERACOES_REMOCAO (dezenas de minutos de
+                # laço mudo). Desiste depois de algumas tentativas e deixa a
+                # conferência final abortar o fluxo com o motivo.
+                sem_progresso += 1
+                logger.warning(
+                    f"  ⚠ Clique em remover não reduziu o total da coleção "
+                    f"(continua em {total_esperado}) — tentativa {sem_progresso} de 3"
+                )
+                if sem_progresso >= 3:
+                    break
+                continue
+
+            sem_progresso = 0
             total_removidos += 1
             logger.info(f"  ➖ Produto removido (total até agora: {total_removidos})")
+
+    # Conferência antes de liberar a próxima etapa: adicionar produtos por cima
+    # de uma coleção que não foi totalmente esvaziada produz um resultado errado
+    # e silencioso (foi o que aconteceu quando a remoção parou no 2º produto e o
+    # fluxo seguiu com 14 ainda na coleção). Aqui isso vira erro explícito.
+    restante, _ = _ler_total_produtos_categoria(driver)
+    if restante:
+        raise RuntimeError(
+            f"Remoção incompleta: {total_removidos} produto(s) removido(s), mas ainda restam "
+            f"{restante} na coleção — abortando antes de adicionar para não misturar os produtos "
+            f"antigos com os da planilha"
+        )
+    if restante is None:
+        logger.warning(
+            f"  ⚠ Não foi possível ler o total da coleção para confirmar que a remoção esvaziou tudo "
+            f"({total_removidos} removido(s)) — seguindo mesmo assim"
+        )
 
     logger.info(f"✓ Remoção concluída — {total_removidos} produto(s) removido(s)")
 
@@ -1066,6 +1199,20 @@ def _normalizar_codigo(codigo_planilha):
     return codigo
 
 
+def _sem_sufixo_letra(codigo_up):
+    """Devolve o código sem o sufixo de letra(s) do fim (ex.: '2264A' → '2264',
+    '2258P' → '2258'), ou '' quando não existe esse sufixo.
+
+    Na planilha "ATUALIZAÇÃO DE COLEÇÕES" alguns códigos da Coluna A carregam
+    uma letra no fim que o cadastro do site não tem ('2258P' na planilha x
+    'PAI-2258' no site) — o sufixo não é só o 'A', pode ser qualquer letra.
+    Só conta como sufixo a letra que vem DEPOIS de um dígito, então códigos
+    inteiramente alfabéticos não são mutilados.
+    """
+    match = re.fullmatch(r'(.*\d)([A-Z]+)', codigo_up)
+    return match.group(1) if match else ''
+
+
 def _codigo_bate_com_sku(codigo_planilha, sku_site, merchant_site):
     """Compara o código da Coluna A da planilha com o SKU mostrado na linha.
 
@@ -1074,9 +1221,10 @@ def _codigo_bate_com_sku(codigo_planilha, sku_site, merchant_site):
         planilha "ATUALIZAÇÃO DE COLEÇÕES" a Coluna A é 'Produto Pai', que
         pode vir com o prefixo (ex.: 'PAI-122361') ou só com o código cru
         (ex.: '122361') — os dois formatos batem com o SKU do site.
-      - Se o código da planilha terminar com 'A' e o SKU do site (já sem o
-        prefixo) bater com o código SEM o 'A', só é considerado válido se o
-        Merchant da linha for 'Sportbay' — fora esse caso o sufixo importa.
+      - Se o código da planilha terminar com sufixo de letra (ex.: '2264A',
+        '2258P') e o SKU do site (já sem o prefixo) bater com o código SEM
+        esse sufixo, só é considerado válido se o Merchant da linha for
+        'Sportbay' — fora esse caso o sufixo importa.
     """
     codigo_up = _normalizar_codigo(codigo_planilha)
     if not codigo_up:
@@ -1089,7 +1237,8 @@ def _codigo_bate_com_sku(codigo_planilha, sku_site, merchant_site):
     if sku == codigo_up:
         return True
 
-    if codigo_up.endswith('A') and sku == codigo_up[:-1]:
+    base_sem_sufixo = _sem_sufixo_letra(codigo_up)
+    if base_sem_sufixo and sku == base_sem_sufixo:
         return merchant_site.strip().upper() == 'SPORTBAY'
 
     return False
@@ -1296,7 +1445,8 @@ def _tentar_adicionar_um(driver, short_hash, codigo_esperado, seletores, total_a
 
         # Trava ANTES de clicar: confere se o SKU da linha realmente
         # corresponde ao código da planilha (Coluna A), tolerando o prefixo
-        # "PAI-" e, só para Merchant "Sportbay", a ausência do sufixo "A".
+        # "PAI-" e, só para Merchant "Sportbay", a ausência do sufixo de
+        # letra do fim do código (ex.: "2264A" → "2264", "2258P" → "2258").
         # SKU/Merchant já vieram na própria consulta de estado da espera — não
         # custa round-trip nenhum aqui.
         with _medir('validacao_sku'):
@@ -1552,6 +1702,28 @@ def conferir_resultado_final(driver, lista_shorthashes):
         logger.info(f"  ✓ Contagem final confere: {total_real} produto(s) na coleção")
 
 
+def normalizar_seo(driver):
+    """Tira os parágrafos vazios que o editor injeta antes de cada heading.
+
+    Roda logo depois de abrir a coleção e ANTES de mexer nos produtos: o
+    'Salvar' do fim do fluxo é o mesmo para tudo, então a correção do SEO pega
+    carona nele — sem clique de salvar extra e sem recarregar a página (o que
+    reintroduziria o bug).
+
+    Se o texto visível do SEO mudar durante a limpeza (não deveria: só linhas
+    vazias saem), o fluxo é ABORTADO aqui. Como nenhum produto foi tocado
+    ainda, abortar não deixa a coleção pela metade — e evita que o 'Salvar' no
+    fim persista um conteúdo danificado.
+    """
+    resultado = limpar_paragrafos_vazios_seo(driver, log=logger)
+    if not resultado['texto_preservado']:
+        raise RuntimeError(
+            "Limpeza do SEO alterou o texto da página — fluxo abortado antes de "
+            "mexer nos produtos. Nada foi salvo; confira a coleção manualmente."
+        )
+    return resultado
+
+
 def salvar(driver):
     """Clica no botão 'Salvar' e valida sucesso."""
     logger.info("Salvando alterações...")
@@ -1585,7 +1757,11 @@ def configurar_chrome():
     # todas as esperas do bot já são explícitas (via _tentar_localizar), não
     # dependem do evento de "página totalmente carregada".
     opcoes.page_load_strategy = 'eager'
-    opcoes.add_argument("--start-maximized")
+    opcoes.add_argument("--headless=new")
+    # O headless abre em 800x600 por padrão, largura em que o admin da VTEX cai
+    # no layout responsivo e quebra os XPaths de tabela, chips de filtro e
+    # paginação usados pelo bot — 1920x1080 força o layout desktop.
+    opcoes.add_argument("--window-size=1920,1080")
     opcoes.add_argument("--disable-gpu")
     opcoes.add_argument("--no-sandbox")
     opcoes.add_argument("--disable-dev-shm-usage")
@@ -1608,7 +1784,8 @@ def main():
     if not USUARIO or not SENHA:
         logger.critical(
             "Credenciais não encontradas. Defina SPORTBAY_USUARIO e SPORTBAY_SENHA "
-            "em um arquivo .env na pasta do script."
+            f"em um arquivo .env em {PASTA_ANALISE}, em {PASTA_RAIZ} "
+            "ou na pasta do script."
         )
         return
 
@@ -1665,6 +1842,7 @@ def main():
         login(driver)
         navegar_para_lista_categorias(driver)
         abrir_colecao(driver, nome_colecao)
+        normalizar_seo(driver)
         remover_todos_produtos_atuais(driver)
         limpar_filtro_merchant(driver)
         adicionar_produtos(driver, lista_produtos)

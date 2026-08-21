@@ -165,3 +165,579 @@
 09:39:57 | INFO    | linha 16   | 127051       | ordem 13   | Oferta do Dia        | OK
 09:39:57 | INFO    | linha 17   | 117524A      | ordem 2    | Oferta do Dia        | OK
 09:39:57 | INFO    | 16 de 16 processados com sucesso.
+14:09:04 | INFO    | 13 linha(s) para processar. Salvar: sim
+14:09:05 | INFO    | Abrindo a tela de login...
+14:09:09 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+14:09:09 | INFO    | ======================================================================
+14:09:09 | INFO    | COLEÇÃO "Oferta do Dia" — 13 produto(s)
+14:09:15 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+14:09:17 | INFO    | Produtos por página: 10 -> maior opção (13 produtos na coleção).
+14:09:18 | INFO    | 13 produtos lidos na coleção.
+14:09:18 | INFO    | ----------------------------------------------------------------------
+14:09:18 | INFO    | Linha 2 | SKU 110731A (painel: PAI-110731A) | ordem 2 | Capacete Fechado Pro Tork Sport Moto 788
+14:09:25 | INFO    | Ordenação: "" -> "2".
+14:09:28 | INFO    | Salvo.
+14:09:28 | INFO    | ----------------------------------------------------------------------
+14:09:28 | INFO    | Linha 3 | SKU 121163 (painel: PAI-121163) | ordem 4 | Capacete Aberto Etceter Open
+14:09:33 | INFO    | Ordenação: "" -> "4".
+14:09:37 | INFO    | Salvo.
+14:09:37 | INFO    | ----------------------------------------------------------------------
+14:09:37 | INFO    | Linha 4 | SKU 116086A (painel: PAI-116086A) | ordem 1 | Capacete Fechado Pro Tork R8
+14:09:41 | INFO    | Ordenação: "" -> "1".
+14:09:45 | INFO    | Salvo.
+14:09:45 | INFO    | ----------------------------------------------------------------------
+14:09:45 | INFO    | Linha 5 | SKU 124799 (painel: PAI-124799) | ordem 6 | Triciclo Infantil Ultra Bikes Top Boy Jr [roda Em Pp]
+14:09:49 | INFO    | Ordenação: "" -> "6".
+14:09:53 | INFO    | Salvo.
+14:09:53 | INFO    | ----------------------------------------------------------------------
+14:09:53 | INFO    | Linha 6 | SKU 127020 (painel: 127020) | ordem 3 | Escapamento Powercore 3 Steel Technology NXR Bros 160 2016-2025 Pro Tork
+14:09:56 | INFO    | Ordenação: "2" -> "3".
+14:09:59 | INFO    | Salvo.
+14:09:59 | INFO    | ----------------------------------------------------------------------
+14:09:59 | INFO    | Linha 7 | SKU 119942 (painel: 119942) | ordem 5 | Escapamento Competition para Pop 100 2007 a 2015 Pro Tork
+14:10:03 | INFO    | Ordenação: "2" -> "5".
+14:10:06 | INFO    | Salvo.
+14:10:06 | INFO    | ----------------------------------------------------------------------
+14:10:06 | INFO    | Linha 8 | SKU 112481 (painel: PAI-112481) | ordem 7 | Kit Carenagem 5 Peças Pro Tork Biz 100 1998/05
+14:10:10 | INFO    | Ordenação: "" -> "7".
+14:10:13 | INFO    | Salvo.
+14:10:13 | INFO    | ----------------------------------------------------------------------
+14:10:13 | INFO    | Linha 9 | SKU 112178A (painel: 112178) | ordem 9 | Baú Moto 80 Litros Pro Tork
+14:10:17 | INFO    | Ordenação: "1" -> "9".
+14:10:20 | INFO    | Salvo.
+14:10:20 | INFO    | ----------------------------------------------------------------------
+14:10:20 | INFO    | Linha 10 | SKU 126442 (painel: 126442) | ordem 8 | Escapamento Powercore 3 Steel Technology para NXR Bros 125 2003 a 2005 Pro Tork
+14:10:24 | INFO    | Ordenação: "" -> "8".
+14:10:27 | INFO    | Salvo.
+14:10:27 | INFO    | ----------------------------------------------------------------------
+14:10:27 | INFO    | Linha 11 | SKU 126937 (painel: 126937) | ordem 11 | Calça Motocross Brave 2025 Pro Tork
+14:10:33 | INFO    | Ordenação: "" -> "11".
+14:10:37 | INFO    | Salvo.
+14:10:37 | INFO    | ----------------------------------------------------------------------
+14:10:37 | INFO    | Linha 12 | SKU 126936 (painel: 126936) | ordem 10 | Camisa Motocross Brave 2025 Pro Tork
+14:10:44 | INFO    | Ordenação: "" -> "10".
+14:10:48 | INFO    | Salvo.
+14:10:48 | INFO    | ----------------------------------------------------------------------
+14:10:48 | INFO    | Linha 13 | SKU 126769 (painel: 126769) | ordem 13 | Calça Motocross Next 2024 Pro Tork
+14:10:56 | INFO    | Ordenação: "" -> "13".
+14:10:59 | INFO    | Salvo.
+14:10:59 | INFO    | ----------------------------------------------------------------------
+14:10:59 | INFO    | Linha 14 | SKU 126771 (painel: 126771) | ordem 12 | Camisa Motocross Next 2024 Pro Tork
+14:11:06 | INFO    | Ordenação: "" -> "12".
+14:11:09 | INFO    | Salvo.
+14:11:12 | INFO    | ======================================================================
+14:11:12 | INFO    | linha 2    | 110731A      | ordem 2    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 3    | 121163       | ordem 4    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 4    | 116086A      | ordem 1    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 5    | 124799       | ordem 6    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 6    | 127020       | ordem 3    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 7    | 119942       | ordem 5    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 8    | 112481       | ordem 7    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 9    | 112178A      | ordem 9    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 10   | 126442       | ordem 8    | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 11   | 126937       | ordem 11   | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 12   | 126936       | ordem 10   | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 13   | 126769       | ordem 13   | Oferta do Dia        | OK
+14:11:12 | INFO    | linha 14   | 126771       | ordem 12   | Oferta do Dia        | OK
+14:11:12 | INFO    | 13 de 13 processados com sucesso.
+14:12:49 | INFO    | 14 linha(s) para processar. Salvar: sim
+14:12:51 | INFO    | Abrindo a tela de login...
+14:12:54 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+14:12:54 | INFO    | ======================================================================
+14:12:54 | INFO    | COLEÇÃO "Mais Vendidos em Capacetes" — 14 produto(s)
+14:13:00 | INFO    | Coleção "Mais Vendidos em Capacetes" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/7873d445-1893-41f5-a8a0-61c09e3fcfbb).
+14:13:02 | INFO    | Produtos por página: 10 -> maior opção (14 produtos na coleção).
+14:13:03 | INFO    | 14 produtos lidos na coleção.
+14:13:03 | INFO    | ----------------------------------------------------------------------
+14:13:03 | INFO    | Linha 2 | SKU 116746A (painel: PAI-116746A) | ordem 1 | Capacete Fechado Pro Tork R8 Vis. Fumê
+14:13:07 | INFO    | Ordenação: "1" -> "1".
+14:13:10 | INFO    | Salvo.
+14:13:10 | INFO    | ----------------------------------------------------------------------
+14:13:10 | INFO    | Linha 3 | SKU 119943 (painel: PAI-119943) | ordem 2 | Capacete Fechado Pro Tork Evolution 788 G8 Evo
+14:13:15 | INFO    | Ordenação: "" -> "2".
+14:13:19 | INFO    | Salvo.
+14:13:19 | INFO    | ----------------------------------------------------------------------
+14:13:19 | INFO    | Linha 4 | SKU 124969 (painel: 124969) | ordem 5 | Capacete Sport Moto 788 Pro Tork com Viseira Fumê
+14:13:22 | INFO    | Ordenação: "6" -> "5".
+14:13:25 | INFO    | Salvo.
+14:13:25 | INFO    | ----------------------------------------------------------------------
+14:13:25 | INFO    | Linha 5 | SKU 5478A (painel: 5478) | ordem 7 | Capacete Aberto New Atomic Solid Fosco Pro Tork
+14:13:28 | INFO    | Ordenação: "1" -> "7".
+14:13:32 | INFO    | Salvo.
+14:13:32 | INFO    | ----------------------------------------------------------------------
+14:13:32 | INFO    | Linha 6 | SKU 126178 (painel: 126178) | ordem 4 | Capacete Aberto New Atomic Universe Brilhante Pro Tork
+14:13:35 | INFO    | Ordenação: "4" -> "4".
+14:13:39 | INFO    | Salvo.
+14:13:39 | INFO    | ----------------------------------------------------------------------
+14:13:39 | INFO    | Linha 7 | SKU 117524A (painel: 117524) | ordem 6 | Capacete Escamoteável Attack Evo Fosco Pro Tork
+14:13:47 | INFO    | Ordenação: "2" -> "6".
+14:13:51 | INFO    | Salvo.
+14:13:51 | INFO    | ----------------------------------------------------------------------
+14:13:51 | INFO    | Linha 8 | SKU 121059 (painel: PAI-121059) | ordem 3 | Capacete Aberto Pro Tork New Liberty 3 Solid Viseira Fumê
+14:13:56 | INFO    | Ordenação: "" -> "3".
+14:13:59 | INFO    | Salvo.
+14:13:59 | INFO    | ----------------------------------------------------------------------
+14:13:59 | INFO    | Linha 9 | SKU 4634A (painel: 4634) | ordem 9 | Capacete Pro Tork New Liberty Four
+14:14:05 | INFO    | Ordenação: "8" -> "9".
+14:14:09 | INFO    | Salvo.
+14:14:09 | INFO    | ----------------------------------------------------------------------
+14:14:09 | INFO    | Linha 10 | SKU 119949 (painel: 119949) | ordem 8 | Capacete New Atomic Elite Pro Tork
+14:14:13 | INFO    | Ordenação: "6" -> "8".
+14:14:17 | INFO    | Salvo.
+14:14:17 | INFO    | ----------------------------------------------------------------------
+14:14:17 | INFO    | Linha 11 | SKU 127051 (painel: 127051) | ordem 11 | Capacete Aberto New Liberty 3 Frequency Pro Tork
+14:14:21 | INFO    | Ordenação: "13" -> "11".
+14:14:24 | INFO    | Salvo.
+14:14:24 | INFO    | ----------------------------------------------------------------------
+14:14:24 | INFO    | Linha 12 | SKU 5170A (painel: 5170) | ordem 10 | Capacete Sport Moto For Girls Pro Tork
+14:14:28 | INFO    | Ordenação: "" -> "10".
+14:14:31 | INFO    | Salvo.
+14:14:31 | INFO    | ----------------------------------------------------------------------
+14:14:31 | INFO    | Linha 13 | SKU 121016 (painel: 121016) | ordem 12 | Capacete Pro Tork Fast Tech Limited Edition
+14:14:35 | INFO    | Ordenação: "15" -> "12".
+14:14:38 | INFO    | Salvo.
+14:14:38 | INFO    | ----------------------------------------------------------------------
+14:14:38 | INFO    | Linha 14 | SKU 116735A (painel: 116735) | ordem 13 | Capacete Escamoteável V-Pro Jet 3 Viseira Fumê Pro Tork
+14:14:44 | INFO    | Ordenação: "5" -> "13".
+14:14:47 | INFO    | Salvo.
+14:14:47 | INFO    | ----------------------------------------------------------------------
+14:14:47 | INFO    | Linha 15 | SKU 119776A (painel: 119776) | ordem 14 | Capacete Mixs Mx2 Storm Fosco
+14:14:52 | INFO    | Ordenação: "1" -> "14".
+14:14:56 | INFO    | Salvo.
+14:14:59 | INFO    | ======================================================================
+14:14:59 | INFO    | linha 2    | 116746A      | ordem 1    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 3    | 119943       | ordem 2    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 4    | 124969       | ordem 5    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 5    | 5478A        | ordem 7    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 6    | 126178       | ordem 4    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 7    | 117524A      | ordem 6    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 8    | 121059       | ordem 3    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 9    | 4634A        | ordem 9    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 10   | 119949       | ordem 8    | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 11   | 127051       | ordem 11   | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 12   | 5170A        | ordem 10   | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 13   | 121016       | ordem 12   | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 14   | 116735A      | ordem 13   | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | linha 15   | 119776A      | ordem 14   | Mais Vendidos em Capacetes | OK
+14:14:59 | INFO    | 14 de 14 processados com sucesso.
+16:44:20 | INFO    | 14 linha(s) para processar. Salvar: sim
+16:44:21 | INFO    | Abrindo a tela de login...
+16:44:25 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+16:44:25 | INFO    | ======================================================================
+16:44:25 | INFO    | COLEÇÃO "Oferta do Dia" — 14 produto(s)
+16:44:31 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+16:44:33 | INFO    | Produtos por página: 10 -> maior opção (14 produtos na coleção).
+16:44:34 | INFO    | 14 produtos lidos na coleção.
+16:44:34 | INFO    | ----------------------------------------------------------------------
+16:44:34 | INFO    | Linha 2 | SKU 5478A (painel: 5478) | ordem 6 | Capacete Aberto New Atomic Solid Fosco Pro Tork
+16:44:37 | INFO    | Ordenação: "7" -> "6".
+16:44:41 | INFO    | Salvo.
+16:44:41 | INFO    | ----------------------------------------------------------------------
+16:44:41 | INFO    | Linha 3 | SKU 116746A (painel: PAI-116746A) | ordem 1 | Capacete Fechado Pro Tork R8 Vis. Fumê
+16:44:44 | INFO    | Ordenação: "" -> "1".
+16:44:48 | INFO    | Salvo.
+16:44:48 | INFO    | ----------------------------------------------------------------------
+16:44:48 | INFO    | Linha 4 | SKU 116695A (painel: 116695) | ordem 3 | Capacete Fechado New Liberty Four Viseira Fumê Pro Tork
+16:44:53 | INFO    | Ordenação: "1" -> "3".
+16:44:56 | INFO    | Salvo.
+16:44:56 | INFO    | ----------------------------------------------------------------------
+16:44:56 | INFO    | Linha 5 | SKU 110866 (painel: 110866) | ordem 2 | Capacete Aberto New Liberty Three Pro Tork
+16:45:02 | INFO    | Ordenação: "7" -> "2".
+16:45:06 | INFO    | Salvo.
+16:45:06 | INFO    | ----------------------------------------------------------------------
+16:45:06 | INFO    | Linha 6 | SKU 117524A (painel: 117524) | ordem 7 | Capacete Escamoteável Attack Evo Fosco Pro Tork
+16:45:11 | INFO    | Ordenação: "6" -> "7".
+16:45:15 | INFO    | Salvo.
+16:45:15 | INFO    | ----------------------------------------------------------------------
+16:45:15 | INFO    | Linha 7 | SKU 119944 (painel: PAI-119944) | ordem 4 | Capacete Fechado Pro Tork Evolution 788 G8 Evo Solid
+16:45:21 | INFO    | Ordenação: "" -> "4".
+16:45:24 | INFO    | Salvo.
+16:45:24 | INFO    | ----------------------------------------------------------------------
+16:45:24 | INFO    | Linha 8 | SKU 1223 (painel: 1223) | ordem 8 | Ponteira Modelo Original CBX 250 Twister 2002-2008 Pro Tork
+16:45:28 | INFO    | Ordenação: "1" -> "8".
+16:45:31 | INFO    | Salvo.
+16:45:31 | INFO    | ----------------------------------------------------------------------
+16:45:31 | INFO    | Linha 9 | SKU 5501A (painel: PAI-5501A) | ordem 9 | Bauleto Plástico Superior 28 Litros Pro Tork Smart Box
+16:45:34 | INFO    | Ordenação: "" -> "9".
+16:45:37 | INFO    | Salvo.
+16:45:37 | INFO    | ----------------------------------------------------------------------
+16:45:37 | INFO    | Linha 10 | SKU 124886 (painel: 124886) | ordem 11 | Escapamento Powercore 3 Steel Technology para CRF 230F Pro Tork
+16:45:41 | INFO    | Ordenação: "" -> "11".
+16:45:45 | INFO    | Salvo.
+16:45:45 | INFO    | ----------------------------------------------------------------------
+16:45:45 | INFO    | Linha 11 | SKU 119834 (painel: 119834) | ordem 10 | Escapamento Competition para Pop 110 Pro Tork
+16:45:49 | INFO    | Ordenação: "" -> "10".
+16:45:52 | INFO    | Salvo.
+16:45:52 | INFO    | ----------------------------------------------------------------------
+16:45:52 | INFO    | Linha 12 | SKU 5499A (painel: 5499) | ordem 12 | Baú 45 Litros Smart Box 2 Pro Tork
+16:45:56 | INFO    | Ordenação: "1" -> "12".
+16:45:59 | INFO    | Salvo.
+16:45:59 | INFO    | ----------------------------------------------------------------------
+16:45:59 | INFO    | Linha 13 | SKU 3621 (painel: PAI-3621) | ordem 13 | Protetor De Motor Pro Tork Barra Dupla Fan 125 2014/15
+16:46:03 | INFO    | Ordenação: "" -> "13".
+16:46:06 | INFO    | Salvo.
+16:46:06 | INFO    | ----------------------------------------------------------------------
+16:46:06 | INFO    | Linha 14 | SKU 125649 (painel: PAI-125649) | ordem 14 | Protetor De Carenagem Cromo Forte Shield Com Pedaleira Retrátil Nxr 150 2009/ Nxr 160
+16:46:09 | INFO    | Ordenação: "" -> "14".
+16:46:12 | INFO    | Salvo.
+16:46:12 | INFO    | ----------------------------------------------------------------------
+16:46:12 | INFO    | Linha 15 | SKU 127063 (painel: 127063) | ordem 5 | Baú Moto Stronger 90 Litros Pro Tork
+16:46:17 | INFO    | Ordenação: "14" -> "5".
+16:46:20 | INFO    | Salvo.
+16:46:22 | INFO    | ======================================================================
+16:46:22 | INFO    | linha 2    | 5478A        | ordem 6    | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 3    | 116746A      | ordem 1    | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 4    | 116695A      | ordem 3    | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 5    | 110866       | ordem 2    | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 6    | 117524A      | ordem 7    | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 7    | 119944       | ordem 4    | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 8    | 1223         | ordem 8    | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 9    | 5501A        | ordem 9    | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 10   | 124886       | ordem 11   | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 11   | 119834       | ordem 10   | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 12   | 5499A        | ordem 12   | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 13   | 3621         | ordem 13   | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 14   | 125649       | ordem 14   | Oferta do Dia        | OK
+16:46:22 | INFO    | linha 15   | 127063       | ordem 5    | Oferta do Dia        | OK
+16:46:22 | INFO    | 14 de 14 processados com sucesso.
+16:48:34 | INFO    | 1 linha(s) para processar. Salvar: NÃO (teste)
+16:48:35 | INFO    | Abrindo a tela de login...
+16:48:39 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+16:48:39 | INFO    | ======================================================================
+16:48:39 | INFO    | COLEÇÃO "Oferta do Dia" — 1 produto(s)
+16:48:45 | INFO    | Coleção "Oferta do Dia" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/bfc29e0c-214c-42de-ab30-d5210ce492ff).
+16:48:47 | INFO    | Produtos por página: 10 -> maior opção (14 produtos na coleção).
+16:48:48 | INFO    | 14 produtos lidos na coleção.
+16:48:48 | INFO    | ----------------------------------------------------------------------
+16:48:48 | INFO    | Linha 2 | SKU 5478A (painel: 5478) | ordem 6 | Capacete Aberto New Atomic Solid Fosco Pro Tork
+16:48:52 | INFO    | Ordenação: "6" -> "6".
+16:48:52 | INFO    | Captura de tela salva em C:\Users\Protork\Desktop\Analise de preços site\Ordenação de Produtos\teste_ordenacao.png
+16:48:52 | INFO    | MODO TESTE: "Atualizar" localizado, mas NÃO foi clicado.
+16:48:55 | INFO    | ======================================================================
+16:48:55 | INFO    | linha 2    | 5478A        | ordem 6    | Oferta do Dia        | TESTE (não salvo)
+16:48:55 | INFO    | 1 de 1 processados com sucesso.
+16:50:59 | INFO    | 12 linha(s) para processar. Salvar: sim
+16:51:00 | INFO    | Abrindo a tela de login...
+16:51:04 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+16:51:04 | INFO    | ======================================================================
+16:51:04 | INFO    | COLEÇÃO "Mais Potência" — 12 produto(s)
+16:51:10 | INFO    | Coleção "Mais Potência" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/ecc8ed20-ecf2-4043-b1a5-25a6affaf434).
+16:51:11 | INFO    | Produtos por página: 10 -> maior opção (12 produtos na coleção).
+16:51:12 | INFO    | 12 produtos lidos na coleção.
+16:51:12 | INFO    | ----------------------------------------------------------------------
+16:51:12 | INFO    | Linha 2 | SKU 127020 (painel: 127020) | ordem 1 | Escapamento Powercore 3 Steel Technology NXR Bros 160 2016-2025 Pro Tork
+16:51:16 | INFO    | Ordenação: "3" -> "1".
+16:51:19 | INFO    | Salvo.
+16:51:19 | INFO    | ----------------------------------------------------------------------
+16:51:19 | INFO    | Linha 3 | SKU 119942 (painel: 119942) | ordem 2 | Escapamento Competition para Pop 100 2007 a 2015 Pro Tork
+16:51:23 | INFO    | Ordenação: "5" -> "2".
+16:51:26 | INFO    | Salvo.
+16:51:26 | INFO    | ----------------------------------------------------------------------
+16:51:26 | INFO    | Linha 4 | SKU 126960 (painel: 126960) | ordem 5 | Escapamento Modelo Original para Titan 160 2024 a 2025, Fan 160 2024 a 2025 e Start 160 2024 a 2025 Pro Tork
+16:51:29 | INFO    | Ordenação: "7" -> "5".
+16:51:32 | INFO    | Salvo.
+16:51:32 | INFO    | ----------------------------------------------------------------------
+16:51:32 | INFO    | Linha 5 | SKU 111784 (painel: PAI-111784) | ordem 8 | Escape Pro Tork Mini Gp Titan 150 Ks-es 2004 - 2008
+16:51:35 | INFO    | Ordenação: "" -> "8".
+16:51:39 | INFO    | Salvo.
+16:51:39 | INFO    | ----------------------------------------------------------------------
+16:51:39 | INFO    | Linha 6 | SKU 124285 (painel: 124285) | ordem 9 | Escapamento Modelo Original para YBR 125 2000 a 2009 Cromo Forte
+16:51:42 | INFO    | Ordenação: "10" -> "9".
+16:51:45 | INFO    | Salvo.
+16:51:45 | INFO    | ----------------------------------------------------------------------
+16:51:45 | INFO    | Linha 7 | SKU 125731 (painel: 125731) | ordem 4 | Ponteira Modelo Original para XTZ 125 2003 a 2016 Cromo Forte
+16:51:49 | INFO    | Ordenação: "" -> "4".
+16:51:52 | INFO    | Salvo.
+16:51:52 | INFO    | ----------------------------------------------------------------------
+16:51:52 | INFO    | Linha 8 | SKU 112038 (painel: 112038) | ordem 10 | Escapamento Modelo Original para Titan 1995 a 1999 Pro Tork
+16:51:56 | INFO    | Ordenação: "" -> "10".
+16:51:59 | INFO    | Salvo.
+16:51:59 | INFO    | ----------------------------------------------------------------------
+16:51:59 | INFO    | Linha 9 | SKU 124885 (painel: 124885) | ordem 3 | Escapamento Powercore 3 Steel Technology para XR 250 Tornado Pro Tork
+16:52:03 | INFO    | Ordenação: "6" -> "3".
+16:52:06 | INFO    | Salvo.
+16:52:06 | INFO    | ----------------------------------------------------------------------
+16:52:06 | INFO    | Linha 10 | SKU 119822 (painel: 119822) | ordem 7 | Escapamento Competition para Titan 150 2009 a 2013 e Fan 150 2009 a 2013 e Fan 125 2009 a 2014 Pro Tork
+16:52:10 | INFO    | Ordenação: "16" -> "7".
+16:52:13 | INFO    | Salvo.
+16:52:13 | INFO    | ----------------------------------------------------------------------
+16:52:13 | INFO    | Linha 11 | SKU 126442 (painel: 126442) | ordem 6 | Escapamento Powercore 3 Steel Technology para NXR Bros 125 2003 a 2005 Pro Tork
+16:52:17 | INFO    | Ordenação: "8" -> "6".
+16:52:20 | INFO    | Salvo.
+16:52:20 | INFO    | ----------------------------------------------------------------------
+16:52:20 | INFO    | Linha 12 | SKU 124251 (painel: 124251) | ordem 11 | Escapamento Modelo Original B para YBR 125 2000 a 2008 Cromo Forte
+16:52:23 | INFO    | Ordenação: "" -> "11".
+16:52:26 | INFO    | Salvo.
+16:52:26 | INFO    | ----------------------------------------------------------------------
+16:52:26 | INFO    | Linha 13 | SKU 124238 (painel: 124238) | ordem 12 | Escapamento Power para Fan 125 KS ES 2006 a 2008 Cromo Forte
+16:52:30 | INFO    | Ordenação: "" -> "12".
+16:52:33 | INFO    | Salvo.
+16:52:36 | INFO    | ======================================================================
+16:52:36 | INFO    | linha 2    | 127020       | ordem 1    | Mais Potência        | OK
+16:52:36 | INFO    | linha 3    | 119942       | ordem 2    | Mais Potência        | OK
+16:52:36 | INFO    | linha 4    | 126960       | ordem 5    | Mais Potência        | OK
+16:52:36 | INFO    | linha 5    | 111784       | ordem 8    | Mais Potência        | OK
+16:52:36 | INFO    | linha 6    | 124285       | ordem 9    | Mais Potência        | OK
+16:52:36 | INFO    | linha 7    | 125731       | ordem 4    | Mais Potência        | OK
+16:52:36 | INFO    | linha 8    | 112038       | ordem 10   | Mais Potência        | OK
+16:52:36 | INFO    | linha 9    | 124885       | ordem 3    | Mais Potência        | OK
+16:52:36 | INFO    | linha 10   | 119822       | ordem 7    | Mais Potência        | OK
+16:52:36 | INFO    | linha 11   | 126442       | ordem 6    | Mais Potência        | OK
+16:52:36 | INFO    | linha 12   | 124251       | ordem 11   | Mais Potência        | OK
+16:52:36 | INFO    | linha 13   | 124238       | ordem 12   | Mais Potência        | OK
+16:52:36 | INFO    | 12 de 12 processados com sucesso.
+16:54:50 | INFO    | 14 linha(s) para processar. Salvar: sim
+16:54:53 | INFO    | Abrindo a tela de login...
+16:54:56 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+16:54:56 | INFO    | ======================================================================
+16:54:56 | INFO    | COLEÇÃO "Mais Vendidos em Capacetes" — 14 produto(s)
+16:55:02 | INFO    | Coleção "Mais Vendidos em Capacetes" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/7873d445-1893-41f5-a8a0-61c09e3fcfbb).
+16:55:04 | INFO    | Produtos por página: 10 -> maior opção (14 produtos na coleção).
+16:55:05 | INFO    | 14 produtos lidos na coleção.
+16:55:05 | INFO    | ----------------------------------------------------------------------
+16:55:05 | INFO    | Linha 2 | SKU 121163 (painel: PAI-121163) | ordem 5 | Capacete Aberto Etceter Open
+16:55:09 | INFO    | Ordenação: "" -> "5".
+16:55:12 | INFO    | Salvo.
+16:55:12 | INFO    | ----------------------------------------------------------------------
+16:55:12 | INFO    | Linha 3 | SKU 110731A (painel: PAI-110731A) | ordem 4 | Capacete Fechado Pro Tork Sport Moto 788
+16:55:17 | INFO    | Ordenação: "" -> "4".
+16:55:20 | INFO    | Salvo.
+16:55:20 | INFO    | ----------------------------------------------------------------------
+16:55:20 | INFO    | Linha 4 | SKU 124963 (painel: 124963) | ordem 2 | Capacete Fechado Stealth Concept Brilhante Viseira Fumê Pro Tork
+16:55:25 | INFO    | Ordenação: "3" -> "2".
+16:55:29 | INFO    | Salvo.
+16:55:29 | INFO    | ----------------------------------------------------------------------
+16:55:29 | INFO    | Linha 5 | SKU 116086A (painel: PAI-116086A) | ordem 1 | Capacete Fechado Pro Tork R8
+16:55:35 | INFO    | Ordenação: "" -> "1".
+16:55:39 | INFO    | Salvo.
+16:55:39 | INFO    | ----------------------------------------------------------------------
+16:55:39 | INFO    | Linha 6 | SKU 126167 (painel: 126167) | ordem 6 | Capacete Motocross Infantil Cartoon Racing Pro Tork
+16:55:45 | INFO    | Ordenação: "16" -> "6".
+16:55:48 | INFO    | Salvo.
+16:55:48 | INFO    | ----------------------------------------------------------------------
+16:55:48 | INFO    | Linha 7 | SKU 125058 (painel: 125058) | ordem 3 | Capacete Infantil Pro Tork Liberty Four Kids Paint Fosco
+16:55:51 | INFO    | Ordenação: "" -> "3".
+16:55:54 | INFO    | Salvo.
+16:55:54 | INFO    | ----------------------------------------------------------------------
+16:55:54 | INFO    | Linha 8 | SKU 126979 (painel: 126979) | ordem 7 | Capacete Aberto New Liberty Three Cristo Pro Tork
+16:55:57 | INFO    | Ordenação: "" -> "7".
+16:56:01 | INFO    | Salvo.
+16:56:01 | INFO    | ----------------------------------------------------------------------
+16:56:01 | INFO    | Linha 9 | SKU 117523A (painel: 117523) | ordem 8 | Capacete Escamoteável Attack Evo Brilhante Pro Tork
+16:56:05 | INFO    | Ordenação: "6" -> "8".
+16:56:08 | INFO    | Salvo.
+16:56:08 | INFO    | ----------------------------------------------------------------------
+16:56:08 | INFO    | Linha 10 | SKU 121164 (painel: PAI-121164) | ordem 13 | Capacete Fechado Infantil Etceter Kids
+16:56:13 | INFO    | Ordenação: "" -> "13".
+16:56:16 | INFO    | Salvo.
+16:56:16 | INFO    | ----------------------------------------------------------------------
+16:56:16 | INFO    | Linha 11 | SKU 124915 (painel: 124915) | ordem 9 | Capacete Fechado Stealth Concept Pro Tork
+16:56:21 | INFO    | Ordenação: "1" -> "9".
+16:56:24 | INFO    | Salvo.
+16:56:24 | INFO    | ----------------------------------------------------------------------
+16:56:24 | INFO    | Linha 12 | SKU 126976 (painel: 126976) | ordem 11 | Capacete Fechado Infantil Liberty Four Kids Paint Fosco Viseira Fumê Pro Tork
+16:56:30 | INFO    | Ordenação: "" -> "11".
+16:56:33 | INFO    | Salvo.
+16:56:33 | INFO    | ----------------------------------------------------------------------
+16:56:33 | INFO    | Linha 13 | SKU 5351A (painel: 5351) | ordem 10 | Capacete Moto Escamoteável Robocop Pro Tork V-pro Jet
+16:56:37 | INFO    | Ordenação: "" -> "10".
+16:56:40 | INFO    | Salvo.
+16:56:40 | INFO    | ----------------------------------------------------------------------
+16:56:40 | INFO    | Linha 14 | SKU 124921 (painel: 124921) | ordem 12 | Capacete Fechado Stealth Solid Fosco Viseira Fumê Pro Tork
+16:56:45 | INFO    | Ordenação: "5" -> "12".
+16:56:48 | INFO    | Salvo.
+16:56:48 | INFO    | ----------------------------------------------------------------------
+16:56:48 | INFO    | Linha 15 | SKU 120304 (painel: PAI-120304) | ordem 14 | Capacete Fechado Pro Tork New Sport Moto
+16:56:54 | INFO    | Ordenação: "" -> "14".
+16:56:58 | INFO    | Salvo.
+16:57:01 | INFO    | ======================================================================
+16:57:01 | INFO    | linha 2    | 121163       | ordem 5    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 3    | 110731A      | ordem 4    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 4    | 124963       | ordem 2    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 5    | 116086A      | ordem 1    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 6    | 126167       | ordem 6    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 7    | 125058       | ordem 3    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 8    | 126979       | ordem 7    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 9    | 117523A      | ordem 8    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 10   | 121164       | ordem 13   | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 11   | 124915       | ordem 9    | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 12   | 126976       | ordem 11   | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 13   | 5351A        | ordem 10   | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 14   | 124921       | ordem 12   | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | linha 15   | 120304       | ordem 14   | Mais Vendidos em Capacetes | OK
+16:57:01 | INFO    | 14 de 14 processados com sucesso.
+16:58:55 | INFO    | 14 linha(s) para processar. Salvar: sim
+16:58:56 | INFO    | Abrindo a tela de login...
+16:58:59 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+16:58:59 | INFO    | ======================================================================
+16:58:59 | INFO    | COLEÇÃO "Renove sua Moto" — 14 produto(s)
+16:59:06 | INFO    | Coleção "Renove sua Moto" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/0cf8bfab-11b5-416b-a05b-3b803df39873).
+16:59:07 | INFO    | Produtos por página: 10 -> maior opção (14 produtos na coleção).
+16:59:08 | INFO    | 14 produtos lidos na coleção.
+16:59:08 | INFO    | ----------------------------------------------------------------------
+16:59:08 | INFO    | Linha 2 | SKU 3399 (painel: 3399) | ordem 7 | Sub Tampa Lateral Titan 150 2004 a 2008 Pro Tork
+16:59:12 | INFO    | Ordenação: "" -> "7".
+16:59:15 | INFO    | Salvo.
+16:59:15 | INFO    | ----------------------------------------------------------------------
+16:59:15 | INFO    | Linha 3 | SKU 115770 (painel: PAI-115770) | ordem 8 | Porta Capacete Biz 100 Anos 1998 1999 2000 2001 2002 2003 2004 Pro Tork Preto
+16:59:18 | INFO    | Ordenação: "" -> "8".
+16:59:21 | INFO    | Salvo.
+16:59:21 | INFO    | ----------------------------------------------------------------------
+16:59:21 | INFO    | Linha 4 | SKU 115234 (painel: 115234) | ordem 9 | Tampa Lateral Fazer 150 2014 Pro Tork
+16:59:25 | INFO    | Ordenação: "" -> "9".
+16:59:28 | INFO    | Salvo.
+16:59:28 | INFO    | ----------------------------------------------------------------------
+16:59:28 | INFO    | Linha 5 | SKU 123481 (painel: PAI-123481) | ordem 1 | Kit Carenagem 4 Peças Cromo Forte Biz 125 2011/13
+16:59:31 | INFO    | Ordenação: "" -> "1".
+16:59:34 | INFO    | Salvo.
+16:59:34 | INFO    | ----------------------------------------------------------------------
+16:59:34 | INFO    | Linha 6 | SKU 112488 (painel: 112488) | ordem 2 | Kit Carenagem 7 Peças CB 300R 2010 a 2012 Pro Tork
+16:59:38 | INFO    | Ordenação: "" -> "2".
+16:59:41 | INFO    | Salvo.
+16:59:41 | INFO    | ----------------------------------------------------------------------
+16:59:41 | INFO    | Linha 7 | SKU 110543 (painel: 110543) | ordem 3 | Kit Carenagem Completo NXR Bros 150 2003 a 2008 Pro Tork
+16:59:44 | INFO    | Ordenação: "" -> "3".
+16:59:47 | INFO    | Salvo.
+16:59:47 | INFO    | ----------------------------------------------------------------------
+16:59:47 | INFO    | Linha 8 | SKU 110284 (painel: 110284) | ordem 4 | Kit Carenagem 3 Peças YBR 125 2000 a 2008 Pro Tork
+16:59:50 | INFO    | Ordenação: "" -> "4".
+16:59:53 | INFO    | Salvo.
+16:59:53 | INFO    | ----------------------------------------------------------------------
+16:59:53 | INFO    | Linha 9 | SKU 2523 (painel: 2523) | ordem 10 | Tampa Lateral Par CB 300R 2010 a 2012 Pro Tork
+16:59:57 | INFO    | Ordenação: "" -> "10".
+17:00:00 | INFO    | Salvo.
+17:00:00 | INFO    | ----------------------------------------------------------------------
+17:00:00 | INFO    | Linha 10 | SKU 3391 (painel: PAI-3391) | ordem 11 | Porta Capacete Pro Tork Biz 100/125 Es/ks 2012 - 2013
+17:00:03 | INFO    | Ordenação: "" -> "11".
+17:00:06 | INFO    | Salvo.
+17:00:06 | INFO    | ----------------------------------------------------------------------
+17:00:06 | INFO    | Linha 11 | SKU 116129 (painel: 116129) | ordem 12 | Protetor de Pernas para Biz 100 1998 a 2005 Pro Tork
+17:00:09 | INFO    | Ordenação: "" -> "12".
+17:00:12 | INFO    | Salvo.
+17:00:12 | INFO    | ----------------------------------------------------------------------
+17:00:12 | INFO    | Linha 12 | SKU 115232 (painel: PAI-115232) | ordem 6 | Carenagem Do Farol Pro Tork Fazer 150 2014
+17:00:15 | INFO    | Ordenação: "" -> "6".
+17:00:19 | INFO    | Salvo.
+17:00:19 | INFO    | ----------------------------------------------------------------------
+17:00:19 | INFO    | Linha 13 | SKU 2184 (painel: 2184) | ordem 5 | Aba do Tanque Par NXR 150 Bros 2009 a 2012 Pro Tork
+17:00:22 | INFO    | Ordenação: "" -> "5".
+17:00:25 | INFO    | Salvo.
+17:00:25 | INFO    | ----------------------------------------------------------------------
+17:00:25 | INFO    | Linha 14 | SKU 2433 (painel: 2433) | ordem 13 | Paralama Traseiro Biz 100 1998 a 2005 Pro Tork
+17:00:29 | INFO    | Ordenação: "" -> "13".
+17:00:32 | INFO    | Salvo.
+17:00:32 | INFO    | ----------------------------------------------------------------------
+17:00:32 | INFO    | Linha 15 | SKU 3387 (painel: 3387) | ordem 14 | Capa do Painel Biz 100 KS ES 2012 e 2013 e Biz 125 KS ES + EX 2011 a 2017 Pro Tork
+17:00:35 | INFO    | Ordenação: "" -> "14".
+17:00:38 | INFO    | Salvo.
+17:00:41 | INFO    | ======================================================================
+17:00:41 | INFO    | linha 2    | 3399         | ordem 7    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 3    | 115770       | ordem 8    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 4    | 115234       | ordem 9    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 5    | 123481       | ordem 1    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 6    | 112488       | ordem 2    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 7    | 110543       | ordem 3    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 8    | 110284       | ordem 4    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 9    | 2523         | ordem 10   | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 10   | 3391         | ordem 11   | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 11   | 116129       | ordem 12   | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 12   | 115232       | ordem 6    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 13   | 2184         | ordem 5    | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 14   | 2433         | ordem 13   | Renove sua Moto      | OK
+17:00:41 | INFO    | linha 15   | 3387         | ordem 14   | Renove sua Moto      | OK
+17:00:41 | INFO    | 14 de 14 processados com sucesso.
+17:04:44 | INFO    | 17 linha(s) para processar. Salvar: sim
+17:04:45 | INFO    | Abrindo a tela de login...
+17:04:48 | INFO    | Login concluído (https://www.marketplace.sportbay.com.br/dashboard/ecommerce).
+17:04:48 | INFO    | ======================================================================
+17:04:48 | INFO    | COLEÇÃO "Feito para Campeões" — 17 produto(s)
+17:04:54 | INFO    | Coleção "Feito para Campeões" aberta (https://www.marketplace.sportbay.com.br/dashboard/categories/c078c5dd-6248-42be-aaef-898af4cb62ca).
+17:04:56 | INFO    | Produtos por página: 10 -> maior opção (17 produtos na coleção).
+17:04:57 | INFO    | 17 produtos lidos na coleção.
+17:04:57 | INFO    | ----------------------------------------------------------------------
+17:04:57 | INFO    | Linha 2 | SKU 212A (painel: PAI-212A) | ordem 5 | Colete Motocross Adulto Pro Tork 788
+17:05:00 | INFO    | Ordenação: "" -> "5".
+17:05:03 | INFO    | Salvo.
+17:05:03 | INFO    | ----------------------------------------------------------------------
+17:05:03 | INFO    | Linha 3 | SKU 126794 (painel: 126794) | ordem 1 | Capacete Motocross Infantil Fast Next Brilhante Pro Tork
+17:05:07 | INFO    | Ordenação: "20" -> "1".
+17:05:10 | INFO    | Salvo.
+17:05:10 | INFO    | ----------------------------------------------------------------------
+17:05:10 | INFO    | Linha 4 | SKU 4902A (painel: 4902) | ordem 2 | Bota Motocross Jett Lite
+17:05:14 | INFO    | Ordenação: "7" -> "2".
+17:05:17 | INFO    | Salvo.
+17:05:17 | INFO    | ----------------------------------------------------------------------
+17:05:17 | INFO    | Linha 5 | SKU 126957 (painel: 126957) | ordem 3 | Capacete Motocross Fast Brave Pro Tork
+17:05:22 | INFO    | Ordenação: "" -> "3".
+17:05:25 | INFO    | Salvo.
+17:05:25 | INFO    | ----------------------------------------------------------------------
+17:05:25 | INFO    | Linha 6 | SKU 126759 (painel: 126759) | ordem 4 | Bota Motocross Articulada Jett Lite New Color Grey & Blue
+17:05:30 | INFO    | Ordenação: "" -> "4".
+17:05:33 | INFO    | Salvo.
+17:05:33 | INFO    | ----------------------------------------------------------------------
+17:05:33 | INFO    | Linha 7 | SKU 126182 (painel: 126182) | ordem 6 | Capacete Motocross Fast 788 Gray Fosco Pro Tork
+17:05:38 | INFO    | Ordenação: "" -> "6".
+17:05:41 | INFO    | Salvo.
+17:05:42 | INFO    | ----------------------------------------------------------------------
+17:05:42 | INFO    | Linha 8 | SKU 2218 (painel: PAI-2218) | ordem 7 | Colete Motocross Adulto Pro Tork 788 Armor
+17:05:47 | INFO    | Ordenação: "" -> "7".
+17:05:50 | INFO    | Salvo.
+17:05:50 | INFO    | ----------------------------------------------------------------------
+17:05:50 | INFO    | Linha 9 | SKU 126769 (painel: 126769) | ordem 12 | Calça Motocross Next 2024 Pro Tork
+17:05:54 | INFO    | Ordenação: "13" -> "12".
+17:05:57 | INFO    | Salvo.
+17:05:57 | INFO    | ----------------------------------------------------------------------
+17:05:57 | INFO    | Linha 10 | SKU 115695A (painel: 115695) | ordem 11 | Bota Motocross Combat 4 Pro Tork
+17:06:03 | INFO    | Ordenação: "1" -> "11".
+17:06:06 | INFO    | Salvo.
+17:06:06 | INFO    | ----------------------------------------------------------------------
+17:06:06 | INFO    | Linha 11 | SKU 126926 (painel: 126926) | ordem 9 | Bota Motocross Infantil Jett Hi-Vis
+17:06:12 | INFO    | Ordenação: "" -> "9".
+17:06:15 | INFO    | Salvo.
+17:06:15 | INFO    | ----------------------------------------------------------------------
+17:06:15 | INFO    | Linha 12 | SKU 5323 (painel: PAI-5323) | ordem 10 | Colete Motocross Adulto Jett Lite
+17:06:20 | INFO    | Ordenação: "" -> "10".
+17:06:23 | INFO    | Salvo.
+17:06:23 | INFO    | ----------------------------------------------------------------------
+17:06:23 | INFO    | Linha 13 | SKU 126935 (painel: 126935) | ordem 13 | Calça Motocross Infantil Brave 2025 Pro Tork
+17:06:27 | INFO    | Ordenação: "" -> "13".
+17:06:30 | INFO    | Salvo.
+17:06:30 | INFO    | ----------------------------------------------------------------------
+17:06:30 | INFO    | Linha 14 | SKU 126771 (painel: 126771) | ordem 15 | Camisa Motocross Next 2024 Pro Tork
+17:06:36 | INFO    | Ordenação: "12" -> "15".
+17:06:39 | INFO    | Salvo.
+17:06:39 | INFO    | ----------------------------------------------------------------------
+17:06:39 | INFO    | Linha 15 | SKU 126934 (painel: 126934) | ordem 14 | Camisa Motocross Infantil Brave 2025 Pro Tork
+17:06:45 | INFO    | Ordenação: "" -> "14".
+17:06:48 | INFO    | Salvo.
+17:06:48 | INFO    | ----------------------------------------------------------------------
+17:06:48 | INFO    | Linha 16 | SKU 119603A (painel: PAI-119603A) | ordem 8 | Camisa Motocross Adulto Pro Tork Insane X
+17:06:55 | INFO    | Ordenação: "11" -> "8".
+17:06:58 | INFO    | Salvo.
+17:06:58 | INFO    | ----------------------------------------------------------------------
+17:06:58 | INFO    | Linha 17 | SKU 119668A (painel: 119668) | ordem 16 | Camisa Motocross Infantil Pro Tork Insane X
+17:07:05 | INFO    | Ordenação: "" -> "16".
+17:07:08 | INFO    | Salvo.
+17:07:08 | INFO    | ----------------------------------------------------------------------
+17:07:08 | INFO    | Linha 18 | SKU 249 (painel: 249) | ordem 17 | Calça Motocross Infantil Insane in Black
+17:07:14 | INFO    | Ordenação: "" -> "17".
+17:07:17 | INFO    | Salvo.
+17:07:19 | INFO    | ======================================================================
+17:07:19 | INFO    | linha 2    | 212A         | ordem 5    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 3    | 126794       | ordem 1    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 4    | 4902A        | ordem 2    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 5    | 126957       | ordem 3    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 6    | 126759       | ordem 4    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 7    | 126182       | ordem 6    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 8    | 2218         | ordem 7    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 9    | 126769       | ordem 12   | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 10   | 115695A      | ordem 11   | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 11   | 126926       | ordem 9    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 12   | 5323         | ordem 10   | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 13   | 126935       | ordem 13   | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 14   | 126771       | ordem 15   | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 15   | 126934       | ordem 14   | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 16   | 119603A      | ordem 8    | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 17   | 119668A      | ordem 16   | Feito para Campeões  | OK
+17:07:19 | INFO    | linha 18   | 249          | ordem 17   | Feito para Campeões  | OK
+17:07:19 | INFO    | 17 de 17 processados com sucesso.
